@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Str;
 
-$DATABASE_URL = parse_url("postgres://enefgslwdakkrf:a57aa0ba0ab49f0867dc440129a600b941f91c36d80c3215b55fa8b91e4b6305@ec2-184-72-236-57.compute-1.amazonaws.com:5432/d50khm52i1r6db");
+$DATABASE_URL = parse_url(env('DATABASE_URL',"postgres://enefgslwdakkrf:a57aa0ba0ab49f0867dc440129a600b941f91c36d80c3215b55fa8b91e4b6305@ec2-184-72-236-57.compute-1.amazonaws.com:5432/d50khm52i1r6db"));
 
 return [
 
@@ -73,7 +73,7 @@ return [
             'url' => $DATABASE_URL,
             'host' => $DATABASE_URL["host"],
             'port' => $DATABASE_URL["port"],
-            'database' => ltrim($DATABASE_URL["path"],"/"),
+            'database' => substr($DATABASE_URL["path"],1),
             'username' => $DATABASE_URL["user"],
             'password' => $DATABASE_URL["pass"],
             'charset' => 'utf8',

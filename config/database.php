@@ -2,8 +2,6 @@
 
 use Illuminate\Support\Str;
 
-$DATABASE_URL = parse_url(env('DATABASE_URL',"postgres://enefgslwdakkrf:a57aa0ba0ab49f0867dc440129a600b941f91c36d80c3215b55fa8b91e4b6305@ec2-184-72-236-57.compute-1.amazonaws.com:5432/d50khm52i1r6db"));
-
 return [
 
     /*
@@ -40,62 +38,20 @@ return [
 
     'connections' => [
 
-        'sqlite' => [
-            'driver' => 'sqlite',
-            'url' => env('DATABASE_URL'),
-            'database' => env('DB_DATABASE', database_path('database.sqlite')),
-            'prefix' => '',
-            'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
-        ],
-
-        'mysql' => [
-            'driver' => 'mysql',
+        'pgsql' => [
+            'driver' => 'pgsql',
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '3306'),
+            'port' => env('DB_PORT', '5432'),
             'database' => env('DB_DATABASE', 'forge'),
             'username' => env('DB_USERNAME', 'forge'),
             'password' => env('DB_PASSWORD', ''),
-            'unix_socket' => env('DB_SOCKET', ''),
-            'charset' => 'utf8mb4',
-            'collation' => 'utf8mb4_unicode_ci',
-            'prefix' => '',
-            'prefix_indexes' => true,
-            'strict' => true,
-            'engine' => null,
-            'options' => extension_loaded('pdo_mysql') ? array_filter([
-                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
-            ]) : [],
-        ],
-
-        'pgsql' => [
-            'driver' => 'pgsql',
-            'url' => $DATABASE_URL,
-            'host' => $DATABASE_URL["host"],
-            'port' => $DATABASE_URL["port"],
-            'database' => substr($DATABASE_URL["path"],"1"),
-            'username' => $DATABASE_URL["user"],
-            'password' => $DATABASE_URL["pass"],
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
             'schema' => 'public',
             'sslmode' => 'prefer',
         ],
-
-        'sqlsrv' => [
-            'driver' => 'sqlsrv',
-            'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', 'localhost'),
-            'port' => env('DB_PORT', '1433'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
-            'charset' => 'utf8',
-            'prefix' => '',
-            'prefix_indexes' => true,
-        ],
-
 
     ],
 

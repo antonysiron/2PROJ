@@ -13,7 +13,6 @@
                 </tr>
                 @foreach($surveys as $survey)
                     <tr class = "text-center">
-                        <td>{{ $survey->id }}</td>
                         <td>{{ $survey->name }}</td>
                         <td>{{ $survey->category }}</td>
                         <td>{{ $survey->description }}</td>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use http\Client\Curl\User;
 use Illuminate\Http\Request;
 use App\Survey;
 
@@ -42,6 +43,7 @@ class SurveyController extends Controller
         $survey = new Survey();
         //input method is used to get the value of input with its
         //name specified
+        $survey->creator_id = auth()->user()->id;
         $survey->name = $request->input('name');
         $survey->category = $request->input('category');
         $survey->description = $request->input('description');
@@ -90,8 +92,11 @@ class SurveyController extends Controller
         //Retrieve the survey
         $survey = Survey::find($id);
         //delete
-        $survey->delete();
-        return redirect()->route('surveys.index');
+        if(auth()->user()->id == $survey->creator_id){
+            $survey->delete();
+            return redirect()->route('surveys.index');
+        }
+        return redirect()->back();
     }
 
 }

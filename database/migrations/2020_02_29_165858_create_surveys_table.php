@@ -19,6 +19,7 @@ class CreateSurveysTable extends Migration
             $table->string('category');
             $table->string('description');
             $table->tinyInteger('duration')->default('0');
+            $table->foreign('creator_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

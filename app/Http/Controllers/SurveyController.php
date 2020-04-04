@@ -61,7 +61,12 @@ class SurveyController extends Controller
     {
         //Find the survey
         $survey = Survey::find($id);
-        return view('survey.edit',['survey'=> $survey]);
+        if(auth()->user()->id == $survey->creator_id) {
+            return view('survey.edit', ['survey' => $survey]);
+        }
+        else{
+            return redirect()->back();
+        }
     }
     /**
      * Update the specified resource in storage.

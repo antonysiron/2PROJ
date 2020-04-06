@@ -17,8 +17,10 @@
                         <td>{{ $survey->category }}</td>
                         <td>{{ $survey->description }}</td>
                         <td>{{ $survey->duration }}</td>
+                        @if(auth()->user()->id == $survey->creator_id)
                         <td><a href="{{route('surveys.edit',['id'=>$survey->id])}}" class = "btn btn-info">Edit</a></td>
                         <td><a href="{{route('surveys.destroy',['id'=>$survey->id])}}" class = "btn btn-danger">Delete</a></td>
+                        @endif
                     </tr>
                 @endforeach
             </table>

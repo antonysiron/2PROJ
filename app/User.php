@@ -36,4 +36,10 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function results() {
+        return $this->belongsToMany('App\Survey', 'survey_user','user_id','survey_id')
+            ->withPivot('status')
+            ->withTimestamps();;
+    }
 }

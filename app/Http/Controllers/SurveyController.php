@@ -9,99 +9,100 @@ use App\Survey;
 
 class SurveyController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        //Show all surveys from the database and return to view
         $surveys = Survey::all();
         return view('survey.index',['surveys'=>$surveys]);
     }
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
-        //Return view to create survey
         return view('survey.create');
     }
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
-        //Persist the survey in the database
-        //form data is available in the request object
         $survey = new Survey();
-        //input method is used to get the value of input with its
-        //name specified
+        $action = $_POST['btn-action'];
+        if($action == 'publish') {
+            $survey->status_survey = 'PUBLISHED';
+            $msg = 'Survey Published Successfully';
+        } else {
+            $msg = 'Survey Saved Successfully';
+            // this is a comment
+        }
         $survey->creator_id = auth()->user()->id;
         $survey->name = $request->input('name');
         $survey->category = $request->input('category');
         $survey->description = $request->input('description');
         $survey->duration = $request->input('duration');
-        $survey->save(); //persist the data
-        return redirect()->route('surveys.index')->with('info','Survey Added Successfully');
+        $survey->status_survey = 'SAVED';
+        $survey->save();
+        return redirect()->route('surveys.index')->with('msg',$msg);
     }
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit($id)
     {
-        //Find the survey
         $survey = Survey::find($id);
         if(auth()->user()->id == $survey->creator_id) {
             return view('survey.edit', ['survey' => $survey]);
         }
-        else{
-            return redirect()->back();
-        }
+        return redirect()->back();
     }
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request)
     {
-        //Retrieve the employee and update
         $survey = Survey::find($request->input('id'));
-        $survey->name = $request->input('name');
-        $survey->category = $request->input('category');
-        $survey->description = $request->input('description');
-        $survey->duration = $request->input('duration');
-        $survey->save(); //persist the data
-        return redirect()->route('surveys.index')->with('info','Survey Updated Successfully');
-    }
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //Retrieve the survey
-        $survey = Survey::find($id);
-        //delete
-        if(auth()->user()->id == $survey->creator_id){
-            $survey->delete();
-            return redirect()->route('surveys.index');
+        $action = $_POST['btn-action'];
+        if($survey->creator_id == auth()->user()->id) {
+            if ($action == 'delete') {
+                return redirect()->route('surveys.destroy', ['id' => $survey->id]);
+            } elseif ($action == 'publish') {
+                $survey->status_survey = 'PUBLISHED';
+                $msg = 'Survey Published Successfully';
+            } else {
+                $msg = 'Survey Saved Successfully';
+            }
+            $survey->name = $request->input('name');
+            $survey->category = $request->input('category');
+            $survey->description = $request->input('description');
+            $survey->duration = $request->input('duration');
+            $survey->save();
+            return redirect()->route('surveys.index')->with('msg', $msg);
         }
         return redirect()->back();
     }
 
+    public function destroy($id)
+    {
+        $survey = Survey::find($id);
+        if($survey->creator_id == auth()->user()->id){
+            $survey->delete();
+            return redirect()->route('surveys.index')->with('msg','Survey Deleted Successfully');
+        }
+        return redirect()->back();
+    }
+
+    public function stop($id)
+    {
+        $survey = Survey::find($id);
+        if($survey->creator_id == auth()->user()->id) {
+            $survey->status_survey = "FINISHED";
+            $survey->save();
+            return redirect()->route('surveys.index')->with('msg', 'The survey ended before its end date');
+        }
+        return redirect()->back();
+    }
+
+    public function answer($id)
+    {
+        $surveys = Survey::all();
+        return view('survey.index',['surveys'=>$surveys]);
+    }
+
+    public function result($id)
+    {
+        $surveys = Survey::all();
+        return view('survey.index',['surveys'=>$surveys]);
+    }
 }

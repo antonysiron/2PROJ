@@ -1,15 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::get('/', function () {
     return view('welcome');
@@ -30,6 +20,9 @@ Route::get('/surveys/{id}/delete','SurveyController@destroy')->name('surveys.des
 Route::get('/survey/create','SurveyController@create')->name('surveys.create')->middleware('auth','verified');
 Route::post('/survey/create','SurveyController@store')->name('surveys.store')->middleware('auth','verified');
 Route::post('/survey/update','SurveyController@update')->name('surveys.update')->middleware('auth','verified');
+Route::get('/survey/{id}/stop','SurveyController@stop')->name('surveys.stop')->middleware('auth','verified');
+Route::get('/survey/{id}/answer','SurveyController@answer')->name('surveys.answer')->middleware('auth','verified');
+Route::get('/survey/{id}/result','SurveyController@result')->name('surveys.result')->middleware('auth','verified');
 
 Route::get('/user/profile','UserProfileController@index')->name('user.profile')->middleware('auth','verified');
 Route::post('/profile/store','UserProfileController@store')->name('profile.store')->middleware('auth','verified');

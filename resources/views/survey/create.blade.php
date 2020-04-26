@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('title','Create Survey')
 @section('content')
+    <a href="{{route('surveys.index')}}" >< Back</a>
     <div class="row mt-5">
         <div class="col-sm-8 offset-sm-2">
             <form action="{{route('surveys.store')}}" method = "post">
@@ -21,8 +22,15 @@
                     <label for="duration">Duration (days):</label>
                     <input type="number" min="0" step="1" oninput="validity.valid||(value='')" name = "duration" id = "duration" class="form-control" required>
                 </div>
-                <button type = "submit" class = "btn btn-success">Submit</button>
+                <!-- Add question -->
+                <div id ="div-add-question"></div>
+                <a href="" style="margin-top: 5px" id = "a-add-question">&nbsp;<i class="fa fa-plus"></i> Add Question</a>
+                <br>
+                <button type = "submit" name = "btn-action" class = "btn btn-success" value = "save">Save</button>
+                <button type = "submit" name = "btn-action" class = "btn btn-success" value = "publish" >Publish</button>
             </form>
         </div>
     </div>
+
+
 @endsection

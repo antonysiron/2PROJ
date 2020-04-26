@@ -22,7 +22,14 @@
                     <input type="text" name = "duration" min="0" step="1" oninput="validity.valid||(value='')" id = "duration" class="form-control" required value = "{{$survey->duration}}">
                 </div>
                 <input type="hidden" name="id" value = "{{$survey->id}}">
-                <button type = "submit" class = "btn btn-success">Submit</button>
+
+                <!-- Add question -->
+                <div id ="div-add-question"></div>
+                <a href="" style="margin-top: 5px" id = "a-add-question">&nbsp;<i class="fa fa-plus"></i> Add Question</a>
+                <br>
+                <button type = "submit" name = "btn-action" class = "btn btn-success" value = "save">Save</button>
+                <button type = "submit" name = "btn-action" class = "btn btn-success" value = "publish" >Publish</button>
+                <button type = "submit" name = "btn-action" class = "btn btn-success" value = "delete" >Delete</button>
             </form>
         </div>
     </div>

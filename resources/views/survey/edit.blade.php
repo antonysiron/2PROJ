@@ -15,7 +15,7 @@
                 </div>
                 <div class="form-group">
                     <label for="description">Description:</label>
-                    <input type="text" name = "description" id = "description" class="form-control" required value = "{{$survey->description}}">
+                    <input type="text" name = "description" id = "description" class="form-control" value = "{{$survey->description}}">
                 </div>
                 <div class="form-group">
                     <label for="duration">Duration (days):</label>

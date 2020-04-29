@@ -16,7 +16,7 @@
                 </div>
                 <div class="form-group">
                     <label for="description">Description:</label>
-                    <textarea type="text" name = "description" id = "description" class="form-control" required rows="5" cols="3"></textarea>
+                    <textarea type="text" name = "description" id = "description" class="form-control" rows="5" cols="3"></textarea>
                 </div>
                 <div class="form-group">
                     <label for="duration">Duration (days):</label>

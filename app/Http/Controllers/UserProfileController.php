@@ -27,13 +27,27 @@ class UserProfileController extends Controller
 
     public function store(Request $request){
         $user_id = auth()->user()->id;
-        User::where('id',$user_id) ->update([
-            'name'=>request('name'),
-            'email'=>request('email'),
-            'password'=>Hash::make(request('password')),
+        if($this->validator($request))
+        {
+            User::where('id', $user_id)
+            ->update([
+                'name'=>request('name'),
+                'email'=>request('email'),
+                'password'=>Hash::make(request('new-password')),
+            ]);
+            return redirect()->back()
+                ->with('message','Profile updated successfully');
+        }
+
+    }
+
+    protected function validator(Request $data)
+    {
+        return $data->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255'],
+            'new-password' => ['required', 'confirmed', 'string', 'min:8']
         ]);
-        return redirect()->back()
-            ->with('message','Profile updated successfully');
     }
 
     /**

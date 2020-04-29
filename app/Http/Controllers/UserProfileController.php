@@ -30,7 +30,7 @@ class UserProfileController extends Controller
         User::where('id',$user_id) ->update([
             'name'=>request('name'),
             'email'=>request('email'),
-            'password'=>request('password'),
+            'password'=>Hash::make(request('password')),
         ]);
         return redirect()->back()
             ->with('message','Profile updated successfully');

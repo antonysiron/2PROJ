@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use http\Client\Curl\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Survey;
 
@@ -12,6 +12,13 @@ class SurveyController extends Controller
     public function index()
     {
         $surveys = Survey::all();
+        foreach($surveys as $survey)
+        {
+            if($survey->expiration_date != null && $survey->status_survey == 'PUBLISHED' && $survey->expiration_date < Carbon::now()->toDateString())
+            {
+                $survey->status_survey = 'FINISHED';
+            }
+        }
         return view('survey.index',['surveys'=>$surveys]);
     }
 
@@ -29,13 +36,12 @@ class SurveyController extends Controller
             $msg = 'Survey Published Successfully';
         } else {
             $msg = 'Survey Saved Successfully';
-            // this is a comment
         }
         $survey->creator_id = auth()->user()->id;
         $survey->name = $request->input('name');
         $survey->category = $request->input('category');
         $survey->description = $request->input('description');
-        $survey->duration = $request->input('duration');
+        $survey->expiration_date = $request->input('expiration_date');
         $survey->status_survey = 'SAVED';
         $survey->save();
         return redirect()->route('surveys.index')->with('msg',$msg);
@@ -66,7 +72,7 @@ class SurveyController extends Controller
             $survey->name = $request->input('name');
             $survey->category = $request->input('category');
             $survey->description = $request->input('description');
-            $survey->duration = $request->input('duration');
+            $survey->expiration_date = $request->input('expiration_date');
             $survey->save();
             return redirect()->route('surveys.index')->with('msg', $msg);
         }

@@ -16,11 +16,11 @@
                 </div>
                 <div class="form-group">
                     <label for="description">Description:</label>
-                    <textarea type="text" name = "description" id = "description" class="form-control" rows="5" cols="3"></textarea>
+                    <textarea name = "description" id = "description" class="form-control" rows="5" cols="3"></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="duration">Duration (days):</label>
-                    <input type="number" min="0" step="1" oninput="validity.valid||(value='')" name = "duration" id = "duration" class="form-control" required>
+                    <label for="expiration_date">Expiration Date:</label>
+                    <input type="date" min="{{Carbon\Carbon::now()->toDateString()}}" name = "expiration_date" id = "expiration_date" class="form-control">
                 </div>
                 <!-- Add question -->
                 <div id ="div-add-question"></div>

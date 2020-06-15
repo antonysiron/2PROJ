@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <html lang="en">
 <head>
-    <title>@yield('Survey')</title>
+    <title>@yield('title')</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -67,8 +67,8 @@
                                     {{ __('Survey') }} <span class="caret"></span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('surveys.index') }}"> {{ __('View Survey') }}</a>
-                                    <a class="dropdown-item" href="{{ route('surveys.create') }}">{{ __('Create Survey') }}</a>
+                                    <a class="dropdown-item" href="{{ route('surveys.index') }}"> {{ __('View Surveys') }}</a>
+                                    <a class="dropdown-item" href="{{ route('surveys.create') }}">{{ __('New Survey') }}</a>
                                 </div>
                             </li>
                             <li class="nav-item dropdown">

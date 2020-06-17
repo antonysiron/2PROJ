@@ -1,5 +1,8 @@
 @extends('layouts.app')
 @section('title','Surveys')
+@section('path')
+    / Surveys
+@endsection
 @section('content')
     @if (\Session::has('msg'))
         <div class="alert alert-success">

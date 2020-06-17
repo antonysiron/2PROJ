@@ -95,6 +95,9 @@
                 </div>
             </div>
         </nav>
+        <div style="margin-top: 15px">
+            @yield('path')
+        </div>
 
         <main class="py-4">
             @yield('content')

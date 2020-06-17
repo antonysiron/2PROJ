@@ -1,7 +1,10 @@
 @extends('layouts.app')
 @section('title','Create Survey')
+@section('path')
+    / <a href="{{route('surveys.index')}}">Surveys</a>
+    / Create
+@endsection
 @section('content')
-    <a href="{{route('surveys.index')}}" >< Back</a>
     <div class="row mt-5">
         <div class="col-sm-8 offset-sm-2">
             <form action="{{route('surveys.store')}}" method = "post">

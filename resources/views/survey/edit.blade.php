@@ -1,5 +1,9 @@
 @extends('layouts.app')
 @section('title','Edit Survey')
+@section('path')
+    / <a href="{{route('surveys.index')}}">Surveys</a>
+    / Edit
+@endsection
 @section('content')
     <div class="row">
         <div class="col-sm-8 offset-sm-2">
@@ -19,19 +23,22 @@
                 </div>
                 <div class="form-group">
                     <label for="expiration_date">Expiration Date:</label>
-                    <input type="date" min="{{Carbon\Carbon::now()->toDateString()}}" name = "expiration_date" id = "expiration_date" class="form-control" value="{{$survey->expiration_date}}">
+                    <input type="date" min="{{Carbon\Carbon::now()->toDateString()}}" name = "expiration_date" id = "expiration_date" class="form-control" value="{{$survey->expiration_date < Carbon\Carbon::now()->toDateString() ? Carbon\Carbon::now()->toDateString() : $survey->expiration_date}}">
                 </div>
                 <input type="hidden" name="id" value = "{{$survey->id}}">
 
-                <!-- Add question -->
-                <div id ="div-add-question"></div>
-                <a href="" style="margin-top: 5px" id = "a-add-question">&nbsp;<i class="fa fa-plus"></i> Add Question</a>
-                <br>
-                <button type = "submit" name = "btn-action" class = "btn btn-success" value = "save">Save</button>
-                @if($survey->status_survey != 'PUBLISHED')
-                    <button type = "submit" name = "btn-action" class = "btn btn-success" value = "publish" >Publish</button>
-                @endif
-                <button type = "submit" name = "btn-action" class = "btn btn-success" value = "delete" >Delete</button>
+                <!-- submit buttons -->
+                <div style="text-align: center; margin-top:32px;">
+                    <button type = "submit" name = "btn-action" class = "btn btn-success" value = "save" style="margin-bottom:8px; width:49.7%">Save</button>
+                    @if($survey->status_survey != 'PUBLISHED')
+                        <button type = "submit" name = "btn-action" class = "btn btn-success" value = "publish" style="margin-bottom:8px; width:49.7%">Publish</button>
+                    @endif
+                    <br>
+                    <button type = "submit" name = "btn-action" class = "btn btn-info" value = "questions" style="margin-bottom:8px; width:100%">Edit Questions</button>
+                    <br>
+                    <button type = "submit" name = "btn-action" class = "btn btn-danger" value = "delete" style="width:100%">Delete</button>
+                </div>
+
             </form>
         </div>
     </div>

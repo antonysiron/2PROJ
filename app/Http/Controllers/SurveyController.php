@@ -61,7 +61,9 @@ class SurveyController extends Controller
         $survey = Survey::find($request->input('id'));
         $action = $_POST['btn-action'];
         if($survey->creator_id == auth()->user()->id) {
-            if ($action == 'delete') {
+            if($action == 'questions'){
+                return redirect()->route('questions.index', ['id' => $survey->id]);
+            } elseif ($action == 'delete') {
                 return redirect()->route('surveys.destroy', ['id' => $survey->id]);
             } elseif ($action == 'publish') {
                 $survey->status_survey = 'PUBLISHED';
@@ -109,6 +111,6 @@ class SurveyController extends Controller
     public function result($id)
     {
         $surveys = Survey::all();
-        return view('survey.index',['surveys'=>$surveys]);
+        return view('survey.result',['surveys'=>$surveys]);
     }
 }

@@ -27,9 +27,10 @@ Route::get('/surveys/{id}/answer','SurveyController@answer')->name('surveys.answ
 Route::get('/surveys/{id}/result','SurveyController@result')->name('surveys.result')->middleware('auth','verified');
 // Survey Questions
 Route::get('/surveys/{id}/questions','QuestionController@index')->name('questions.index')->middleware('auth','verified','ownSurvey');
-Route::get('/surveys/{id}/questions/create/{question_type}','QuestionController@create')->name('questions.create')->middleware('auth','verified','ownSurvey');
-Route::get('/surveys/{id}/questions/{question_id}','QuestionController@edit')->name('questions.edit')->middleware('auth','verified','ownSurvey');
-Route::get('/surveys/{id}/questions/{question_id}/destroy','QuestionController@destroy')->name('questions.destroy')->middleware('auth','verified','ownSurvey');
+Route::get('/surveys/{id}/questions/{question_id}/edit','QuestionController@edit')->name('questions.edit')->middleware('auth','verified','ownSurvey');
+Route::get('/surveys/{id}/questions/{question_id}/delete','QuestionController@destroy')->name('questions.destroy')->middleware('auth','verified','ownSurvey');
+Route::get('/surveys/{id}/questions/create','QuestionController@create')->name('questions.create')->middleware('auth','verified','ownSurvey');
+Route::post('/surveys/{id}/questions/create','QuestionController@store')->name('questions.store')->middleware('auth','verified','ownSurvey');
 
 
 Route::get('/user/profile','UserProfileController@index')->name('user.profile')->middleware('auth','verified');

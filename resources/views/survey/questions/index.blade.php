@@ -17,7 +17,8 @@
             </div>
         @endif
     @endif
-    <div class="row mt-5">
+    <a href="{{route('questions.create', ['id'=>$id])}}" class="btn btn-success"> + New Question</a>
+    <div class="row mt-4">
         <div class="col-sm-12">
             <table class="table">
                 <tr>

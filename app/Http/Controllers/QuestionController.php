@@ -17,13 +17,37 @@ class QuestionController extends Controller
 
     public function create($id)
     {
-        //
+        return view('survey.questions.create', ['id'=>$id]);
     }
 
 
     public function store($id, Request $request)
     {
-        //
+        $questions = Question::all()->where('survey_id', '=', $id)->sortBy('order_nb');
+
+        $question = new Question();
+        $question->survey_id = $id;
+        if($questions->count() == 0)
+            $question->order_nb = 0;
+        else
+            $question->order_nb = $questions->last()->order_nb+1;
+        $question->question = $request->input('question');
+        $question->question_type = $request->input('question_type');
+        switch ($request->input('question_type')){
+            case 'MULTIPLE_CHOICE':
+                $question->choices = $request->input('choices');
+                break;
+            case 'RATING':
+                $question->rating_scale = $request->input('rating_scale');
+                break;
+            default:
+                break;
+        }
+        $question->save();
+
+        $msg = "Question Created Successfully";
+        $questions = Question::all()->where('survey_id', '=', $id)->sortBy('order_nb');
+        return view('survey.questions.index', ['id'=>$id, 'questions'=>$questions])->with('msg', $msg);
     }
 
 
@@ -55,7 +79,7 @@ class QuestionController extends Controller
         foreach ($answers as $answer)
             $answer->delete();
         $question = Question::find($question_id);
-        //$question->delete();
+        $question->delete();
         $msg = "Question Deleted Successfully";
         } catch (\Exception $e) {
             return redirect()->route('questions.index', ['id'=>$id])->with('msg',$msg);

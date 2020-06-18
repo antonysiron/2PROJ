@@ -25,12 +25,7 @@
                     <label for="expiration_date">Expiration Date:</label>
                     <input type="date" min="{{Carbon\Carbon::now()->toDateString()}}" name = "expiration_date" id = "expiration_date" class="form-control" value="{{Carbon\Carbon::now()->toDateString()}}">
                 </div>
-                <!-- Add question -->
-                <div id ="div-add-question"></div>
-                <a href="" style="margin-top: 5px" id = "a-add-question">&nbsp;<i class="fa fa-plus"></i> Add Question</a>
-                <br>
-                <button type = "submit" name = "btn-action" class = "btn btn-success" value = "save">Save</button>
-                <button type = "submit" name = "btn-action" class = "btn btn-success" value = "publish" >Publish</button>
+                <button type = "submit" name = "btn-action" class = "btn btn-success" value = "next">Next</button>
             </form>
         </div>
     </div>

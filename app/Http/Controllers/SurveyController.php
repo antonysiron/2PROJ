@@ -44,7 +44,9 @@ class SurveyController extends Controller
         $survey->description = $request->input('description');
         $survey->expiration_date = $request->input('expiration_date');
         $survey->save();
-        return redirect()->route('surveys.index')->with('msg',$msg);
+        if($action == 'next')
+            return redirect()->route('questions.create', ['id'=>$survey->id]);
+        return redirect()->route('survey.index')->with('msg',$msg);
     }
 
     public function edit($id)

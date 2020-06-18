@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', 'Home')
 @section('path')
-    / <a href="{{route('home')}}">Home</a>
+    / Home
 @endsection
 @section('content')
 <div class="container">

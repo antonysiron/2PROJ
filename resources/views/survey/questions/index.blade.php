@@ -6,6 +6,17 @@
     / Questions
 @endsection
 @section('content')
+    @if (Session::has('msg'))
+        @if(stripos(Session::get('msg'), 'error'))
+            <div class="alert alert-danger">
+                {!! Session::get('msg') !!}
+            </div>
+        @else
+            <div class="alert alert-success">
+                {!! Session::get('msg') !!}
+            </div>
+        @endif
+    @endif
     <div class="row mt-5">
         <div class="col-sm-12">
             <table class="table">
@@ -36,6 +47,7 @@
                             </td>
                             <td>
                                 <a href="{{route('questions.edit', ['id'=>$question->survey_id, 'question_id'=>$question->id])}}" class="btn btn-info" >Edit</a>
+                                <a href="{{route('questions.destroy', ['id'=>$question->survey_id, 'question_id'=>$question->id])}}" class="btn btn-danger">Delete</a>
                             </td>
                         </tr>
                     @endforeach

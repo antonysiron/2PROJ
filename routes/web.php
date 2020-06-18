@@ -11,6 +11,8 @@ Route::get('/', function () {
 Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/examples', 'HomeController@examples')->name('examples');
+Route::get('/prices', 'HomeController@prices')->name('prices');
 
 // Survey routes
 Route::get('/surveys', 'SurveyController@index')->name('surveys.index');
@@ -24,9 +26,10 @@ Route::get('/surveys/{id}/stop','SurveyController@stop')->name('surveys.stop')->
 Route::get('/surveys/{id}/answer','SurveyController@answer')->name('surveys.answer')->middleware('auth','verified');
 Route::get('/surveys/{id}/result','SurveyController@result')->name('surveys.result')->middleware('auth','verified');
 // Survey Questions
-Route::get('/surveys/{id}/questions','QuestionsController@index')->name('questions.index')->middleware('auth','verified','ownSurvey');
-Route::get('/surveys/{id}/questions/create/{question_type}','QuestionsController@create')->name('questions.create')->middleware('auth','verified','ownSurvey');
-Route::get('/surveys/{id}/questions/{question_id}','QuestionsController@edit')->name('questions.edit')->middleware('auth','verified','ownSurvey');
+Route::get('/surveys/{id}/questions','QuestionController@index')->name('questions.index')->middleware('auth','verified','ownSurvey');
+Route::get('/surveys/{id}/questions/create/{question_type}','QuestionController@create')->name('questions.create')->middleware('auth','verified','ownSurvey');
+Route::get('/surveys/{id}/questions/{question_id}','QuestionController@edit')->name('questions.edit')->middleware('auth','verified','ownSurvey');
+Route::get('/surveys/{id}/questions/{question_id}/destroy','QuestionController@destroy')->name('questions.destroy')->middleware('auth','verified','ownSurvey');
 
 
 Route::get('/user/profile','UserProfileController@index')->name('user.profile')->middleware('auth','verified');

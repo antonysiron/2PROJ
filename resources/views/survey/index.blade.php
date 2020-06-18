@@ -21,31 +21,29 @@
                     <td></td>
                 </tr>
                 @foreach($surveys as $survey)
-                    @if($survey->creator_id == auth()->user()->id)
-                        <tr class = "text-center">
-                            <td>{{ $survey->name }}</td>
-                            <td>{{ $survey->category }}</td>
-                            <td>{{ $survey->description}}</td>
-                            <td>{{ $survey->expiration_date }}</td>
-                            <td>
-                                @if($survey->status_survey == 'PUBLISHED')
-                                    Published
-                                @else
-                                    Private
-                                @endif
-                            </td>
-                            <td>
-                                @if($survey->status_survey == 'PUBLISHED')
-                                    <a href="{{route('surveys.answer',['id'=>$survey->id])}}" class = "btn btn-success">Answer</a>
-                                @endif
-                                <a href="{{route('surveys.result',['id'=>$survey->id])}}" class = "btn btn-success">Results</a>
-                                <a href="{{route('surveys.edit',['id'=>$survey->id])}}" class = "btn btn-info">Edit</a>
-                                @if($survey->status_survey == 'PUBLISHED')
-                                    <a href="{{route('surveys.stop',['id'=>$survey->id])}}" class = "btn btn-danger">Stop</a>
-                                @endif
-                            </td>
-                        </tr>
-                    @endif
+                    <tr>
+                        <td>{{ $survey->name }}</td>
+                        <td>{{ $survey->category }}</td>
+                        <td>{{ $survey->description}}</td>
+                        <td>{{ $survey->expiration_date }}</td>
+                        <td>
+                            @if($survey->status_survey == 'PUBLISHED')
+                                Published
+                            @else
+                                Private
+                            @endif
+                        </td>
+                        <td>
+                            @if($survey->status_survey == 'PUBLISHED')
+                                <a href="{{route('surveys.answer',['id'=>$survey->id])}}" class = "btn btn-success">Answer</a>
+                            @endif
+                            <a href="{{route('surveys.result',['id'=>$survey->id])}}" class = "btn btn-success">Results</a>
+                            <a href="{{route('surveys.edit',['id'=>$survey->id])}}" class = "btn btn-info">Edit</a>
+                            @if($survey->status_survey == 'PUBLISHED')
+                                <a href="{{route('surveys.stop',['id'=>$survey->id])}}" class = "btn btn-danger">Stop</a>
+                            @endif
+                        </td>
+                    </tr>
                 @endforeach
             </table>
         </div>

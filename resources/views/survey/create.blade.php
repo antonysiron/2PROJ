@@ -23,7 +23,7 @@
                 </div>
                 <div class="form-group">
                     <label for="expiration_date">Expiration Date:</label>
-                    <input type="date" min="{{Carbon\Carbon::now()->toDateString()}}" name = "expiration_date" id = "expiration_date" class="form-control">
+                    <input type="date" min="{{Carbon\Carbon::now()->toDateString()}}" name = "expiration_date" id = "expiration_date" class="form-control" value="{{Carbon\Carbon::now()->toDateString()}}">
                 </div>
                 <!-- Add question -->
                 <div id ="div-add-question"></div>

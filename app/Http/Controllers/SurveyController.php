@@ -11,7 +11,7 @@ class SurveyController extends Controller
 {
     public function index()
     {
-        $surveys = Survey::all();
+        $surveys = Survey::all()->where('creator_id', '=', auth()->user()->id);
         foreach($surveys as $survey)
         {
             if($survey->expiration_date != null && $survey->status_survey == 'PUBLISHED' && $survey->expiration_date < Carbon::now()->toDateString())
@@ -35,6 +35,7 @@ class SurveyController extends Controller
             $survey->status_survey = 'PUBLISHED';
             $msg = 'Survey Published Successfully';
         } else {
+            $survey->status_survey = 'SAVED';
             $msg = 'Survey Saved Successfully';
         }
         $survey->creator_id = auth()->user()->id;
@@ -42,7 +43,6 @@ class SurveyController extends Controller
         $survey->category = $request->input('category');
         $survey->description = $request->input('description');
         $survey->expiration_date = $request->input('expiration_date');
-        $survey->status_survey = 'SAVED';
         $survey->save();
         return redirect()->route('surveys.index')->with('msg',$msg);
     }
@@ -50,56 +50,43 @@ class SurveyController extends Controller
     public function edit($id)
     {
         $survey = Survey::find($id);
-        if(auth()->user()->id == $survey->creator_id) {
-            return view('survey.edit', ['survey' => $survey]);
-        }
-        return redirect()->back();
+        return view('survey.edit', ['survey' => $survey]);
     }
 
     public function update(Request $request)
     {
         $survey = Survey::find($request->input('id'));
         $action = $_POST['btn-action'];
-        if($survey->creator_id == auth()->user()->id) {
-            if($action == 'questions'){
-                return redirect()->route('questions.index', ['id' => $survey->id]);
-            } elseif ($action == 'delete') {
-                return redirect()->route('surveys.destroy', ['id' => $survey->id]);
-            } elseif ($action == 'publish') {
-                $survey->status_survey = 'PUBLISHED';
-                $msg = 'Survey Published Successfully';
-            } else {
-                $msg = 'Survey Saved Successfully';
-            }
-            $survey->name = $request->input('name');
-            $survey->category = $request->input('category');
-            $survey->description = $request->input('description');
-            $survey->expiration_date = $request->input('expiration_date');
-            $survey->save();
-            return redirect()->route('surveys.index')->with('msg', $msg);
+        if($action == 'questions'){
+            return redirect()->route('questions.index', ['id' => $survey->id]);
+        } elseif ($action == 'delete') {
+            return redirect()->route('surveys.destroy', ['id' => $survey->id]);
+        } elseif ($action == 'publish') {
+            $survey->status_survey = 'PUBLISHED';
+            $msg = 'Survey Published Successfully';
+        } else {
+            $msg = 'Survey Saved Successfully';
         }
-        return redirect()->back();
+        $survey->name = $request->input('name');
+        $survey->category = $request->input('category');
+        $survey->description = $request->input('description');
+        $survey->expiration_date = $request->input('expiration_date');
+        $survey->save();
+        return redirect()->route('surveys.index')->with('msg', $msg);
     }
 
     public function destroy($id)
     {
         $survey = Survey::find($id);
-        if($survey->creator_id == auth()->user()->id){
-            $survey->delete();
-            return redirect()->route('surveys.index')->with('msg','Survey Deleted Successfully');
-        }
-        return redirect()->back();
+        $survey->delete();
+        return redirect()->route('surveys.index')->with('msg','Survey Deleted Successfully');
     }
 
     public function stop($id)
     {
-        $survey = Survey::find($id);
-        if($survey->creator_id == auth()->user()->id) {
-            $survey->status_survey = "FINISHED";
-            $survey->save();
-            return redirect()->route('surveys.index')->with('msg', 'The survey ended before its end date');
-        }
-        return redirect()->back();
+        $survey = Survey::find($id);$survey->status_survey = "FINISHED";
+        $survey->save();
+        return redirect()->route('surveys.index')->with('msg', 'The survey ended before its end date');
     }
 
     public function answer($id)

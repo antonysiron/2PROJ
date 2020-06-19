@@ -50,8 +50,14 @@ class SurveyController extends Controller
         } elseif ($action == 'delete') {
             return redirect()->route('surveys.destroy', ['id' => $survey->id]);
         } elseif ($action == 'publish') {
-            $survey->status_survey = 'PUBLISHED';
-            $msg = 'Survey Published Successfully';
+            if($survey->nb_questions > 0) {
+                $survey->status_survey = 'PUBLISHED';
+                $msg = 'Survey Published Successfully';
+            }
+            else {
+                $survey->status_survet = 'SAVED';
+                $msg = ' Error : Survey Requires One Question To Be Published';
+            }
         } else {
             $msg = 'Survey Saved Successfully';
         }

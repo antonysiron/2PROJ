@@ -29,9 +29,11 @@
 
                 <!-- submit buttons -->
                 <div style="text-align: center; margin-top:32px;">
-                    <button type = "submit" name = "btn-action" class = "btn btn-success" value = "save" style="margin-bottom:8px; width:49.7%">Save</button>
-                    @if($survey->status_survey != 'PUBLISHED')
+                    @if($survey->status_survey != 'PUBLISHED' && $survey->nb_questions != 0)
+                        <button type = "submit" name = "btn-action" class = "btn btn-success" value = "save" style="margin-bottom:8px; width:49.7%">Save</button>
                         <button type = "submit" name = "btn-action" class = "btn btn-success" value = "publish" style="margin-bottom:8px; width:49.7%">Publish</button>
+                    @else
+                        <button type = "submit" name = "btn-action" class = "btn btn-success" value = "save" style="margin-bottom:8px; width:100%">Save</button>
                     @endif
                     <br>
                     <button type = "submit" name = "btn-action" class = "btn btn-info" value = "questions" style="margin-bottom:8px; width:100%">Edit Questions</button>

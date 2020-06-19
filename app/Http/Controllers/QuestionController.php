@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Answer;
 use App\Question;
+use App\Survey;
 use Illuminate\Http\Request;
 
 class QuestionController extends Controller
@@ -44,6 +45,10 @@ class QuestionController extends Controller
                 break;
         }
         $question->save();
+
+        $survey = Survey::find($id);
+        $survey->nb_questions++;
+        $survey->save();
 
         $msg = "Question Created Successfully";
         $questions = Question::all()->where('survey_id', '=', $id)->sortBy('order_nb');
@@ -92,6 +97,10 @@ class QuestionController extends Controller
             $question->save();
             $i++;
         }
+
+        $survey = Survey::find($id);
+        $survey->nb_questions = $i;
+        $survey->save();
 
         return redirect()->route('questions.index', ['id'=>$id])->with('msg',$msg);
     }

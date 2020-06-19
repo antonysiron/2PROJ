@@ -4,11 +4,6 @@
     / Surveys
 @endsection
 @section('content')
-    @if (\Session::has('msg'))
-        <div class="alert alert-success">
-            {!! \Session::get('msg') !!}
-        </div>
-    @endif
     <div class="row mt-5">
         <div class="col-sm-12">
             <table class="table">
@@ -29,6 +24,8 @@
                         <td>
                             @if($survey->status_survey == 'PUBLISHED')
                                 Published
+                            @elseif($survey->status_survey == 'FINISHED')
+                                Finished
                             @else
                                 Private
                             @endif
@@ -37,10 +34,17 @@
                             @if($survey->status_survey == 'PUBLISHED')
                                 <a href="{{route('surveys.answer',['id'=>$survey->id])}}" class = "btn btn-success">Answer</a>
                             @endif
-                            <a href="{{route('surveys.result',['id'=>$survey->id])}}" class = "btn btn-success">Results</a>
-                            <a href="{{route('surveys.edit',['id'=>$survey->id])}}" class = "btn btn-info">Edit</a>
+                            @if($survey->status_survey == 'PUBLISHED' || $survey->status_survey == 'FINISHED')
+                                <a href="{{route('surveys.result',['id'=>$survey->id])}}" class = "btn btn-success">Results</a>
+                            @endif
+                            @if($survey->status_survey == 'SAVED')
+                                <a href="{{route('surveys.edit',['id'=>$survey->id])}}" class = "btn btn-info">Edit</a>
+                            @endif
                             @if($survey->status_survey == 'PUBLISHED')
                                 <a href="{{route('surveys.stop',['id'=>$survey->id])}}" class = "btn btn-danger">Stop</a>
+                            @endif
+                            @if($survey->status_survey == 'SAVED' || $survey->status_survey == 'FINISHED')
+                                <a href="{{route('surveys.destroy',['id'=>$survey->id])}}" class = "btn btn-danger">Delete</a>
                             @endif
                         </td>
                     </tr>

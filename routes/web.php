@@ -15,7 +15,7 @@ Route::get('/examples', 'HomeController@examples')->name('examples');
 Route::get('/prices', 'HomeController@prices')->name('prices');
 
 // Survey routes
-Route::get('/surveys', 'SurveyController@index')->name('surveys.index');
+Route::get('/surveys', 'SurveyController@index')->name('surveys.index')->middleware('surveyExpiry');
 // Only authenticated users may enter...
 Route::get('/surveys/{id}/edit','SurveyController@edit')->name('surveys.edit')->middleware('auth','verified','ownSurvey');
 Route::get('/surveys/{id}/delete','SurveyController@destroy')->name('surveys.destroy')->middleware('auth','verified','ownSurvey');

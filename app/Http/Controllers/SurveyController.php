@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Answer;
+use App\Question;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Survey;
@@ -12,13 +14,6 @@ class SurveyController extends Controller
     public function index()
     {
         $surveys = Survey::all()->where('creator_id', '=', auth()->user()->id);
-        foreach($surveys as $survey)
-        {
-            if($survey->expiration_date != null && $survey->status_survey == 'PUBLISHED' && $survey->expiration_date < Carbon::now()->toDateString())
-            {
-                $survey->status_survey = 'FINISHED';
-            }
-        }
         return view('survey.index',['surveys'=>$surveys]);
     }
 
@@ -30,23 +25,14 @@ class SurveyController extends Controller
     public function store(Request $request)
     {
         $survey = new Survey();
-        $action = $_POST['btn-action'];
-        if($action == 'publish') {
-            $survey->status_survey = 'PUBLISHED';
-            $msg = 'Survey Published Successfully';
-        } else {
-            $survey->status_survey = 'SAVED';
-            $msg = 'Survey Saved Successfully';
-        }
         $survey->creator_id = auth()->user()->id;
         $survey->name = $request->input('name');
         $survey->category = $request->input('category');
         $survey->description = $request->input('description');
         $survey->expiration_date = $request->input('expiration_date');
+        $survey->status_survey = 'SAVED';
         $survey->save();
-        if($action == 'next')
-            return redirect()->route('questions.create', ['id'=>$survey->id]);
-        return redirect()->route('survey.index')->with('msg',$msg);
+        return redirect()->route('questions.create', ['id'=>$survey->id]);
     }
 
     public function edit($id)
@@ -79,9 +65,22 @@ class SurveyController extends Controller
 
     public function destroy($id)
     {
-        $survey = Survey::find($id);
-        $survey->delete();
-        return redirect()->route('surveys.index')->with('msg','Survey Deleted Successfully');
+        $msg = " Survey Deleted Successfully";
+        try {
+            $questions = Question::all()->where('survey_id', '=', $id);
+            foreach ($questions as $question) {
+                $answers = Answer::all()->where('question_id', '=', $question->id);
+                foreach ($answers as $answer)
+                    $answer->delete();
+                $question->delete();
+            }
+            $survey = Survey::find($id);
+            $survey->delete();
+        } catch (\Exception $e) {
+            $msg = " Error : Failed To Delete the Survey";
+        }
+
+        return redirect()->route('surveys.index')->with('msg',$msg);
     }
 
     public function stop($id)

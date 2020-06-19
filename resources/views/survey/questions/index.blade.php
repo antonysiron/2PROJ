@@ -6,17 +6,6 @@
     / Questions
 @endsection
 @section('content')
-    @if (Session::has('msg'))
-        @if(stripos(Session::get('msg'), 'error'))
-            <div class="alert alert-danger">
-                {!! Session::get('msg') !!}
-            </div>
-        @else
-            <div class="alert alert-success">
-                {!! Session::get('msg') !!}
-            </div>
-        @endif
-    @endif
     <a href="{{route('questions.create', ['id'=>$id])}}" class="btn btn-success"> + New Question</a>
     <div class="row mt-4">
         <div class="col-sm-12">

@@ -16,7 +16,7 @@ class CreateAnswersOpenEnded extends Migration
         Schema::create('answers_open-ended', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('question_id')->unsigned();
-            $table->foreign('question_id')->references('id')->on('questions_open-ended');
+            $table->foreign('question_id')->references('id')->on('questions');
             $table->text('answer');
             $table->timestamps();
         });

@@ -16,7 +16,7 @@ class CreateAnswersMultipleChoice extends Migration
         Schema::create('answers_multiple_choice', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('question_id')->unsigned();
-            $table->foreign('question_id')->references('id')->on('questions_multiple_choice');
+            $table->foreign('question_id')->references('id')->on('questions');
             $table->text('answers');
             $table->timestamps();
         });

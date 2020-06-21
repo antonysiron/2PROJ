@@ -16,7 +16,7 @@ class CreateAnswersRating extends Migration
         Schema::create('answers_rating', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('question_id')->unsigned();
-            $table->foreign('question_id')->references('id')->on('questions_rating');
+            $table->foreign('question_id')->references('id')->on('questions');
             $table->integer('answer');
             $table->timestamps();
         });

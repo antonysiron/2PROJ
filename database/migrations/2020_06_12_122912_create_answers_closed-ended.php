@@ -16,7 +16,7 @@ class CreateAnswersClosedEnded extends Migration
         Schema::create('answers_closed-ended', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('question_id')->unsigned();
-            $table->foreign('question_id')->references('id')->on('questions_closed-ended');
+            $table->foreign('question_id')->references('id')->on('questions');
             $table->boolean('answer');
             $table->timestamps();
         });

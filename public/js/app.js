@@ -48,5 +48,18 @@ $(document).ready(function () {
 
 });
 
+function UpdateDisplayCreateQuestion(questionType) {
+    $('.type').hide().removeClass('form-group');
+    $('.REQUIRED').prop('required', false);
+
+    const target = $('#' + questionType);
+    if(questionType === 'NUMERICAL' || questionType === 'RATING' || questionType === 'MULTIPLE_CHOICE') {
+        target.addClass('form-group');
+        if(questionType !== 'NUMERICAL')
+            $('.' + questionType + '_REQUIRED').prop('required', true);
+        target.show();
+    }
+}
+
 
 

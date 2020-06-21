@@ -17,7 +17,7 @@ class CreateSurveysTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('category');
-            $table->string('description');
+            $table->string('description')->nullable();
             $table->string('status_survey')->nullable();
             $table->string('status_result')->nullable();
             $table->date('expiration_date')->nullable();

@@ -2,7 +2,7 @@
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 //
@@ -35,4 +35,3 @@ Route::post('/surveys/{id}/questions/create','QuestionController@store')->name('
 
 Route::get('/user/profile','UserProfileController@index')->name('user.profile')->middleware('auth','verified');
 Route::post('/profile/store','UserProfileController@store')->name('profile.store')->middleware('auth','verified');
-

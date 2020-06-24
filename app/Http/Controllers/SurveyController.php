@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Answer;
 use App\Question;
+use App\UserAnswerSurvey;
 use Illuminate\Http\Request;
 use App\Survey;
 
@@ -32,6 +33,19 @@ class SurveyController extends Controller
         $survey->status_survey = 'SAVED';
         $survey->save();
         return redirect()->route('questions.create', ['id'=>$survey->id]);
+    }
+
+    public function show($id)
+    {
+        $survey = Survey::find($id);
+        $user_answer_survey = UserAnswerSurvey::all()
+            ->where('user_id', '=', auth()->user()->id)
+            ->where('survey_id', '=', $id);
+        if($user_answer_survey->count()>0)
+            $user_answer_survey = $user_answer_survey->first();
+        else
+            $user_answer_survey = null;
+        return view('survey.view', ['survey'=>$survey, 'user_answer_survey'=>$user_answer_survey]);
     }
 
     public function edit($id)
@@ -93,12 +107,6 @@ class SurveyController extends Controller
         $survey = Survey::find($id);$survey->status_survey = "FINISHED";
         $survey->save();
         return redirect()->route('surveys.index')->with('msg', 'The survey ended before its end date');
-    }
-
-    public function answer($id)
-    {
-        $surveys = Survey::all();
-        return view('survey.index',['surveys'=>$surveys]);
     }
 
     public function result($id)

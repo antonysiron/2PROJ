@@ -18,11 +18,13 @@
 <div class="card-container">
     <div class="icon-card">
         <img src="/images/cadena.png" alt="">
+        <h3>SECURITE</h3>
         <p>Récolte de données conforme à la RGPD. Nous ne conservons, ni stockons vos questionnaires, les réponses et les analyses</p>
     </div>
 
     <div class="icon-card">
         <img src="/images/multilangues.png" alt="">
+        <h3>MULTILANGUES</h3>
         <p>
             Ouverture sur le monde. Possibilité de créer des questionnaires pour vos clients à travers le monde
         </p>
@@ -30,6 +32,7 @@
 
     <div class="icon-card">
         <img src="/images/questions.png" alt="">
+        <h3>QUESTIONS</h3>
         <p>
             Sondages ouverts ou fermés. Définissez une durée pour vos questionnaire et ils s'acieront et se fermeront automatiquement.
         </p>
@@ -37,6 +40,7 @@
 
     <div class="icon-card">
         <img src="/images/formats.png" alt="">
+        <h3>FORMATS</h3>
         <p>
             Exportation des réponses en PDF ou CSV. Afin de permettre une meilleure analyse des résultats et faciliter vos rapports.
         </p>
@@ -60,7 +64,7 @@
 </div>
 
 <div class="text-center column justify-content-center p-4">
-    <h1>Ils nous faits confiance</h1>
+    <h1>Ils nous font confiance</h1>
     <p>- Vos avis, des améliorations -</p>
 </div>
 

@@ -32,11 +32,23 @@
 
 .icon-card {
   width: 300px;
-  margin: 20px;
+  margin: 24px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .icon-card img {
   height: 220px;
+}
+
+.icon-card h3 {
+  text-align: center;
+}
+
+.icon-card p {
+  text-align: justify;
 }
 
 .banner {
@@ -76,6 +88,7 @@
   padding: 50px;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .footer img {

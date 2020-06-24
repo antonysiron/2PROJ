@@ -21,6 +21,18 @@
     img{
         height: 220px;
     }
+
+    h3{
+        text-align: center;
+    }
+
+    p{
+        text-align: justify;
+    }
     width:300px;
-    margin: 20px;
+    margin: 24px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

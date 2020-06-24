@@ -29,7 +29,7 @@ class QuestionController extends Controller
         $question = new Question();
         $question->survey_id = $id;
         if($questions->count() == 0)
-            $question->order_nb = 0;
+            $question->order_nb = 1;
         else
             $question->order_nb = $questions->last()->order_nb+1;
         $question->question = $request->input('question');
@@ -93,9 +93,9 @@ class QuestionController extends Controller
         $i = 0;
         $questions = Question::all()->where('survey_id', '=', $id)->sortBy('order_nb');
         foreach ($questions as $question){
+            $i++;
             $question->order_nb = $i;
             $question->save();
-            $i++;
         }
 
         $survey = Survey::find($id);

@@ -45,7 +45,6 @@ $(document).ready(function () {
             "                        </div>";
         $( "#answer-group" ).append(answer_group);
     });
-
 });
 
 function UpdateDisplayCreateQuestion(questionType) {

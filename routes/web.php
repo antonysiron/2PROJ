@@ -25,6 +25,7 @@ Route::post('/surveys/update','SurveyController@update')->name('surveys.update')
 Route::get('/surveys/{id}/stop','SurveyController@stop')->name('surveys.stop')->middleware('auth','verified','ownSurvey');
 Route::get('/surveys/{id}/result','SurveyController@result')->name('surveys.result')->middleware('auth','verified');
 Route::get('/surveys/{id}', 'SurveyController@show')->name('surveys.view')->middleware('auth', 'verified', 'publishedSurvey');
+Route::get('/surveys/{id}/reset', 'SurveyController@reset')->name('surveys.reset')->middleware('auth', 'verified', 'ownSurvey');
 // Survey Questions
 Route::get('/surveys/{id}/questions','QuestionController@index')->name('questions.index')->middleware('auth','verified','ownSurvey');
 Route::get('/surveys/{id}/questions/{question_id}/edit','QuestionController@edit')->name('questions.edit')->middleware('auth','verified','ownSurvey');

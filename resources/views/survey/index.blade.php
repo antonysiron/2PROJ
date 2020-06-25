@@ -38,6 +38,9 @@
                             @if($survey->status_survey == 'PUBLISHED' || $survey->status_survey == 'FINISHED')
                                 <a href="{{route('surveys.result',['id'=>$survey->id])}}" class = "btn btn-success">Results</a>
                             @endif
+                            @if($survey->status_survey == 'FINISHED')
+                                <a href="{{route('surveys.reset',['id'=>$survey->id])}}" class = "btn btn-danger">Reset</a>
+                            @endif
                             @if($survey->status_survey == 'SAVED')
                                 <a href="{{route('surveys.edit',['id'=>$survey->id])}}" class = "btn btn-info">Edit</a>
                             @endif

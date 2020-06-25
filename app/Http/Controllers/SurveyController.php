@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Answer;
 use App\Question;
+use App\User;
 use App\UserAnswerSurvey;
 use Illuminate\Http\Request;
 use App\Survey;
@@ -107,6 +108,26 @@ class SurveyController extends Controller
         $survey = Survey::find($id);$survey->status_survey = "FINISHED";
         $survey->save();
         return redirect()->route('surveys.index')->with('msg', 'The survey ended before its end date');
+    }
+
+    public function reset($id)
+    {
+        $questions = Question::all()->where('survey_id', '=', $id);
+        foreach ($questions as $question)
+        {
+            $answers = Answer::all()->where('question_id', '=', $question->id);
+            foreach ($answers as $answer)
+                $answer->delete();
+        }
+        $users_answer_survey = UserAnswerSurvey::all()->where('survey_id', '=', $id);
+        foreach ($users_answer_survey as $user_answer_survey)
+            $user_answer_survey->delete();
+
+        $survey = Survey::find($id);
+        $survey->status_survey = "SAVED";
+        $survey->save();
+
+        return redirect()->route('surveys.index')->with('msg', 'The survey has been reset');
     }
 
     public function result($id)

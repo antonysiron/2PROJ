@@ -13,16 +13,16 @@
                     {{ $question->question }}
                 </h3>
             </div>
-            <form action="{{route('answer.store', ['id'=>$id])}}" method = "post">
+            <form action="{{route('answer.store', ['id'=>$id, 'question'=>$question])}}" method = "post">
             @csrf
                 @if($question->question_type == 'CLOSED-ENDED')
                     <div style="margin-top:10px; text-align: center">
                         <label for="yes" class="btn-success btn-lg" style="margin-right: 50px;">
-                            <input id="yes" type="radio" name="closed-ended" required>
+                            <input id="yes" type="radio" name="closed-ended" value="yes" required>
                             YES
                         </label>
                         <label for="no" class="btn-danger btn-lg">
-                            <input id="no" type="radio" name="closed-ended">
+                            <input id="no" type="radio" name="closed-ended" value="no">
                             NO
                         </label>
                     </div>
@@ -37,7 +37,7 @@
                     @for($i=0; $i<sizeof($choices); $i++)
                         <label for="{{$i}}" class="row" style=" font-size:large; margin:15px">
                             <div class="col-2">
-                                <input id="{{$i}}" name="multiple_choice{{$i}}" type="checkbox">
+                                <input id="{{$i}}" name="multiple_choice{{$i}}" type="checkbox" value="{{$choices[$i]}}">
                             </div>
                             <div class="col">
                                 {{$choices[$i]}}
@@ -46,7 +46,7 @@
                     @endfor
                 @endif
                 <div style="text-align: right;">
-                    <button type = "submit" name = "btn-action" class = "btn btn-info" value = "save" style="margin-top: 100px;">
+                    <button type = "submit" name = "btn-action" class = "btn btn-info" value = "{{$question->question_type}}" style="margin-top: 100px;">
                         @if($question->order_nb >= $survey->nb_questions)
                             Complete
                         @else

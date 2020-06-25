@@ -22,10 +22,12 @@
   display: inline-flex;
   text-align: center;
   flex-direction: column;
+  padding: 32px;
 }
 
 .cards img {
-  width: 120px;
+  width: 180px;
+  height: 200px;
   margin: 0 auto;
   padding: 25px 0;
 }
@@ -78,8 +80,45 @@
 
 .info-container {
   background-color: #3B79B6;
-  height: 400px;
   margin-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: auto;
+  background-color: #F5F2F2;
+  padding: 30px;
+}
+
+.info-container .item2 {
+  background-color: #ffffff;
+  width: 500px;
+  flex: 0 0 auto;
+  margin: 0px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+}
+
+.info-container .item {
+  padding-top: 100px;
+  background-color: #AFDD92;
+  width: 500px;
+  flex: 0 0 auto;
+  margin: 0px;
+}
+
+.info-container .item2 p {
+  margin: 16px;
+  text-align: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.info-container .item2 h1 {
+  margin: 16px;
+  padding-top: 8px;
 }
 
 .footer {

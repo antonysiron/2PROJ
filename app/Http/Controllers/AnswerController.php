@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Answer;
 use App\Question;
 use App\Survey;
 use App\UserAnswerSurvey;
@@ -49,9 +50,59 @@ class AnswerController extends Controller
         //
     }
 
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
-        //
+        $user_answer_survey = UserAnswerSurvey::all()
+            ->where('user_id', '=', auth()->user()->id)
+            ->where('survey_id', '=', $id)->first();
+
+        $question = Question::all()
+            ->where('survey_id', '=', $id)
+            ->where('order_nb', '=', $user_answer_survey->last_question_nb+1)
+            ->first();
+
+        $answer = new Answer();
+        $answer->question_id = $question->id;
+        $answer->answer_type = $question->question_type;
+
+        switch ($question->question_type) {
+            case('CLOSED-ENDED'):
+                $answer->closed_ended = $request->input('closed-ended') == "yes";
+                break;
+            case('OPEN-ENDED'):
+                $answer->open_ended = $request->input('open-ended');
+                break;
+            case('NUMERICAL'):
+                $answer->numerical = $request->input('numerical');
+                break;
+            case('RATING'):
+                $answer->rating = $request->input('rating');
+                break;
+            case('MULTIPLE_CHOICE'):
+                $choices = "";
+                $nb_choices = substr_count($question->choices, ';')+1;
+                for($i=0; $i<$nb_choices; $i++) {
+                    if($request->has('multiple_choice' . $i)) {
+                        $choice = $request->input('multiple_choice' . $i);
+                        if($choices != "")
+                            $choices .= ';';
+                        $choices .= $choice;
+                    }
+                }
+                $answer->multiple_choice = $choices;
+                break;
+            default:
+                break;
+        }
+        $answer->save();
+
+        $user_answer_survey = UserAnswerSurvey::all()
+            ->where('user_id', '=', auth()->user()->id)
+            ->where('survey_id', '=', $id)->first();
+        $user_answer_survey->last_question_nb++;
+        $user_answer_survey->save();
+
+        return redirect()->route('answer.index', ['id'=>$id]);
     }
 
     public function show($id)

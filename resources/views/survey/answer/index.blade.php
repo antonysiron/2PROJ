@@ -45,7 +45,10 @@
                         </label>
                     @endfor
                 @endif
-                <div style="text-align: right;">
+                <div style="margin-top: 50px">
+                    {{$question->order_nb}} / {{$survey->nb_questions}}
+                </div>
+                <div>
                     <button type = "submit" name = "btn-action" class = "btn btn-info" value = "{{$question->question_type}}" style="margin-top: 100px;">
                         @if($question->order_nb >= $survey->nb_questions)
                             Complete

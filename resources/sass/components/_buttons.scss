@@ -1,0 +1,23 @@
+#btn-main{
+    color: $color-white;
+    background-color: $color-blue;
+    border-radius: 16px;
+    width: 100px;
+    text-align: center;
+}
+
+#btn{
+    border: 2px solid $color-blue;
+    border-radius: 16px;
+    width: 100px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+#btn-green{
+    background-color: $color-green;
+    width: 100%;
+    border-radius: 16px;
+    padding: 12px;
+    border: none;
+}

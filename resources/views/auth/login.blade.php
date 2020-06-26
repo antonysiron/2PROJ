@@ -7,6 +7,8 @@
     <div class="row justify-content-center p-4 m-4">
         <div class="col-md-8 text-center">
             <h1>Connectez-vous à votre compte</h1>
+        </div>
+
             <div class="card">
 
                 <div class="card-body">

@@ -6,7 +6,7 @@
     / Answer
 @endsection
 @section('content')
-    <h1>
+    <h1 style="text-align: center; margin-top: 50px">
         Thank you for completing this survey!
     </h1>
 @endsection

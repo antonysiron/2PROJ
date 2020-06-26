@@ -23,7 +23,7 @@ Route::get('/surveys/create','SurveyController@create')->name('surveys.create')-
 Route::post('/surveys/create','SurveyController@store')->name('surveys.store')->middleware('auth','verified');
 Route::post('/surveys/update','SurveyController@update')->name('surveys.update')->middleware('auth','verified','ownSurvey');
 Route::get('/surveys/{id}/stop','SurveyController@stop')->name('surveys.stop')->middleware('auth','verified','ownSurvey');
-Route::get('/surveys/{id}/result','SurveyController@result')->name('surveys.result')->middleware('auth','verified');
+Route::get('/surveys/{id}/results/{question_nb}','SurveyController@result')->name('surveys.result')->middleware('auth','verified', 'ownSurvey');
 Route::get('/surveys/{id}', 'SurveyController@show')->name('surveys.view')->middleware('auth', 'verified', 'publishedSurvey');
 Route::get('/surveys/{id}/reset', 'SurveyController@reset')->name('surveys.reset')->middleware('auth', 'verified', 'ownSurvey');
 // Survey Questions

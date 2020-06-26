@@ -36,7 +36,7 @@
                                 <a href="{{route('answer.index',['id'=>$survey->id])}}" class = "btn btn-success">Answer</a>
                             @endif
                             @if($survey->status_survey == 'PUBLISHED' || $survey->status_survey == 'FINISHED')
-                                <a href="{{route('surveys.result',['id'=>$survey->id])}}" class = "btn btn-success">Results</a>
+                                <a href="{{route('surveys.result',['id'=>$survey->id, 'question_nb'=>1])}}" class = "btn btn-success">Results</a>
                             @endif
                             @if($survey->status_survey == 'FINISHED')
                                 <a href="{{route('surveys.reset',['id'=>$survey->id])}}" class = "btn btn-danger">Reset</a>

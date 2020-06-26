@@ -13,6 +13,8 @@ Auth::routes(['verify' => true]);
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/examples', 'HomeController@examples')->name('examples');
 Route::get('/prices', 'HomeController@prices')->name('prices');
+Route::get('/feedback', 'FeedbackController@index')->name('feedback.index');
+Route::post('/feedback', 'FeedbackController@store')->name('feedback.store');
 
 // Survey routes
 Route::get('/surveys', 'SurveyController@index')->name('surveys.index')->middleware('auth', 'verified', 'surveyExpiry');

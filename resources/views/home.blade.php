@@ -7,7 +7,7 @@
 
 <div class="banner">
     <h1>Poser des questions n'a jamais été aussi SIMPLE.</h1>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        <img src="/images/robo.svg" alt="robot image">
 </div>
 
 <div class="text-center column justify-content-center p-4">

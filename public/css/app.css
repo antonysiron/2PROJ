@@ -42,8 +42,13 @@
 }
 
 .bg-main {
-  background-color: #54C1D8;
-  height: 30%;
+  background-image: url("/images/robo-bg.svg");
+  background-repeat: no-repeat;
+  height: 30rem;
+}
+
+.bg-main img {
+  height: 400px;
 }
 
 .cards {
@@ -89,13 +94,19 @@
 .banner {
   background: #54C1D8;
   color: #ffffff;
-  padding: 8em 12em;
-  height: 42em;
+  padding: 2em 8em;
   margin-bottom: 80px;
+  display: flex;
 }
 
 .banner h1 {
   width: 10em;
+  padding-top: 100px;
+}
+
+.banner img {
+  height: 600px;
+  margin-left: 200px;
 }
 
 .card-container {

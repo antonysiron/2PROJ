@@ -2,9 +2,7 @@
 
 @section('content')
 <div class="bg-main">
-
     <div class="container">
-
         <div class="row justify-content-center p-4 m-3">
             <div class="col-md-8 text-center">
                 <h1>Créer un compte GRATUIT</h1>
@@ -12,6 +10,7 @@
                 <div class="p-2 m-3">
                     <a href="/login">Se connecter</a>
                 </div>
+            </div>
                 <div class="card">
 
                     <div class="card-body">

@@ -2,12 +2,19 @@
 
     h1{
         width: 10em;
+        padding-top: 100px;
     }
+
+    img{
+        height: 600px;
+        margin-left:200px;
+    }
+    
     background: $color-azure;
     color: $color-white;
-    padding: 8em 12em;
-    height: 42em;
+    padding: 2em 8em;
     margin-bottom: 80px;
+    display: flex;
 }
 
 .card-container{

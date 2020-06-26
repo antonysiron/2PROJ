@@ -28,10 +28,11 @@ Route::get('/surveys/{id}', 'SurveyController@show')->name('surveys.view')->midd
 Route::get('/surveys/{id}/reset', 'SurveyController@reset')->name('surveys.reset')->middleware('auth', 'verified', 'ownSurvey');
 // Survey Questions
 Route::get('/surveys/{id}/questions','QuestionController@index')->name('questions.index')->middleware('auth','verified','ownSurvey');
-Route::get('/surveys/{id}/questions/{question_id}/edit','QuestionController@edit')->name('questions.edit')->middleware('auth','verified','ownSurvey');
+Route::get('/surveys/{id}/questions/{question_id}/edit','QuestionController@edit')->name('questions.edit')->middleware('auth','verified','ownSurvey', 'savedSurvey');
 Route::get('/surveys/{id}/questions/{question_id}/delete','QuestionController@destroy')->name('questions.destroy')->middleware('auth','verified','ownSurvey');
 Route::get('/surveys/{id}/questions/create','QuestionController@create')->name('questions.create')->middleware('auth','verified','ownSurvey');
 Route::post('/surveys/{id}/questions/create','QuestionController@store')->name('questions.store')->middleware('auth','verified','ownSurvey');
+Route::post('/surveys/{id}/questions/{question_id}/update', 'QuestionController@update')->name('questions.update')->middleware('auth', 'verified', 'ownSurvey', 'savedSurvey');
 // Survey Answer
 Route::get('/surveys/{id}/answer', 'AnswerController@index')->name('answer.index')->middleware('auth', 'verified', 'publishedSurvey', 'answeredSurvey');
 Route::post('/surveys/{id}/answer', 'AnswerController@store')->name('answer.store')->middleware('auth', 'verified', 'publishedSurvey', 'answeredSurvey');

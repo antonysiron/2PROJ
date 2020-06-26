@@ -69,9 +69,30 @@ class QuestionController extends Controller
     }
 
 
-    public function update(Request $request, $id)
+    public function update(Request $request, $id, $question_id)
     {
-        //
+        $question = Question::find($question_id);
+
+        $question->question = $request->input('question');
+        $question->question_type = $request->input('question_type');
+
+        $question->choices = null;
+        $question->rating_scale = null;
+
+        switch ($request->input('question_type')){
+            case 'MULTIPLE_CHOICE':
+                $question->choices = $request->input('choices');
+                break;
+            case 'RATING':
+                $question->rating_scale = $request->input('rating_scale');
+                break;
+            default:
+                break;
+        }
+        $question->save();
+
+        $msg = 'Question updated successfully';
+        return redirect()->route('questions.index', ['id'=>$id])->with('msg', $msg);
     }
 
 

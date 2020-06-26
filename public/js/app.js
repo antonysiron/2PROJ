@@ -49852,10 +49852,8 @@ function UpdateDisplayCreateQuestion(questionType) {
     $('.REQUIRED').prop('required', false);
 
     const target = $('#' + questionType);
-    if(questionType === 'NUMERICAL' || questionType === 'RATING' || questionType === 'MULTIPLE_CHOICE') {
-        target.addClass('form-group');
-        if(questionType !== 'NUMERICAL')
-            $('.' + questionType + '_REQUIRED').prop('required', true);
-        target.show();
-    }
+    target.addClass('form-group');
+    if(questionType === 'RATING' || questionType === 'MULTIPLE_CHOICE')
+        $('.' + questionType + '_REQUIRED').prop('required', true);
+    target.show();
 }

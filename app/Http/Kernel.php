@@ -65,6 +65,7 @@ class Kernel extends HttpKernel
         'surveyExpiry' => \App\Http\Middleware\CheckSurveyExpiry::class,
         'publishedSurvey' => \App\Http\Middleware\CheckPublishedSurvey::class,
         'answeredSurvey' => \App\Http\Middleware\CheckSurveyAlreadyAnswered::class,
+        'savedSurvey' => \App\Http\Middleware\CheckSavedSurvey::class,
     ];
 
     /**

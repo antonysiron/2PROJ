@@ -50,7 +50,7 @@
 
 <div class="info-container">
     <div class="item">
-        <img src="" alt="">
+        <img src="/images/chat.png" alt="">
   </div>
 
   <div class="item2">

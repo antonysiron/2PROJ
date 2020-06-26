@@ -9,7 +9,7 @@
         height: 600px;
         margin-left:200px;
     }
-    
+
     background: $color-azure;
     color: $color-white;
     padding: 2em 8em;
@@ -38,26 +38,29 @@
     flex-direction: row;
     justify-content: center;
     align-items: auto;
-    background-color:$color-cream;
+    // background-color:$color-cream;
     padding:30px;
 
     .item2{
-      background-color:$color-white;
-      width:500px;
+      // background-color:$color-white;
+      width:450px;
       flex: 0 0 auto;
       margin: 0px;
       text-align:center;
       justify-content:center;
       align-items:center;
-      padding:60px 0;
+      padding-top:8rem;
     }
 
     .item{
-      padding-top:100px;
-      background-color:$color-green;
-      width:500px;
-      flex: 0 0 auto;
-      margin: 0px;
+
+    img{
+        width:20rem;
+    }
+    padding-top:100px;
+    width:450px;
+    flex: 0 0 auto;
+    margin: 0px;
     }
 
     .item2 p{

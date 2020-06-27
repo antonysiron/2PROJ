@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="124.375" height="115" viewBox="0 0 124.375 115">
+  <defs>
+    <filter id="fond" x="0" y="0" width="115" height="115" filterUnits="userSpaceOnUse">
+      <feOffset dx="-5" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Flèche_G" data-name="Flèche G" transform="translate(-1653 -633)">
+    <g transform="matrix(1, 0, 0, 1, 1653, 633)" filter="url(#fond)">
+      <g id="fond-2" data-name="fond" transform="translate(14 4)" fill="#fff" stroke="#707070" stroke-width="1">
+        <circle cx="48.5" cy="48.5" r="48.5" stroke="none"/>
+        <circle cx="48.5" cy="48.5" r="48" fill="none"/>
+      </g>
+    </g>
+    <path id="Tracé_3" data-name="Tracé 3" d="M0,.457,28.636,0,21.607,28.113" transform="matrix(0.788, 0.616, -0.616, 0.788, 1707.365, 664.828)" fill="none" stroke="#000" stroke-width="3"/>
+    <g id="Tracé_4" data-name="Tracé 4" transform="translate(1777.375 659.921) rotate(90)" fill="#fff">
+      <path d="M63.607,0h0Z" stroke="none"/>
+      <path d="M 3.814697265625e-06 0 L 63.60655975341797 0 L 3.814697265625e-06 0 Z" stroke="none"/>
+    </g>
+  </g>
+</svg>

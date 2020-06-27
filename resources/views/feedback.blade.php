@@ -4,8 +4,26 @@
     / Feedback
 @endsection
 @section('content')
+    <img src="/images/feedback_background.png" style="width: 100%; position:absolute; z-index: -999">
+    <h1 class="font-weight-bold" style="text-align: center; color: white; font-family: 'Segoe UI'; font-size:3vw; margin-top:6vw; text-shadow: 2px 2px 8px black">Ils nous font confiance</h1>
+    <div style="text-align: center; margin-top:2vw; margin-bottom: 10%">
+        <div class="container-fluid">
+            <div class="row align-items-center" style="height: 35vw">
+                <div class="col-2">
+                    <img src="/images/arrow_left.svg" style="width: 8vw; margin-left: 6vw">
+                </div>
+                <div class="col">
+                    <img src="/images/feedback_banner_card.svg" style="width: 60vw">
+                </div>
+                <div class="col-2">
+                    <img src="/images/arrow_right.svg" style="width: 8vw; margin-right: 6vw">
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="row mt-5">
         <div class="col-sm-8 offset-sm-2">
+            <h2 class="font-weight-bold" style="text-align: center; margin: 50px">Laissez nous votre avis, nous nous améliorons</h2>
             @foreach($feedbacks as $feedback)
                 <div class="row border-top" style="padding: 50px">
                     <div class="col-10">

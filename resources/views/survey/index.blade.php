@@ -8,11 +8,11 @@
         <div class="col-sm-12">
             <table class="table">
                 <tr>
-                    <th>Name</th>
-                    <th>Category</th>
+                    <th>Nom</th>
+                    <th>Categorie</th>
                     <th>Description</th>
-                    <th>Expiration Date</th>
-                    <th>State</th>
+                    <th>Date d'expiration</th>
+                    <th>Etat</th>
                     <td></td>
                 </tr>
                 @foreach($surveys as $survey)
@@ -23,32 +23,32 @@
                         <td>{{ $survey->expiration_date }}</td>
                         <td>
                             @if($survey->status_survey == 'PUBLISHED')
-                                Published
+                                Publié
                             @elseif($survey->status_survey == 'FINISHED')
-                                Finished
+                                Terminé
                             @else
-                                Private
+                                Privé
                             @endif
                         </td>
                         <td>
                             @if($survey->status_survey == 'PUBLISHED')
-                                <a href="{{route('surveys.view',['id'=>$survey->id])}}" class = "btn btn-info">View</a>
-                                <a href="{{route('answer.index',['id'=>$survey->id])}}" class = "btn btn-success">Answer</a>
+                                <a href="{{route('surveys.view',['id'=>$survey->id])}}" class = "btn btn-info">Voir</a>
+                                <a href="{{route('answer.index',['id'=>$survey->id])}}" class = "btn btn-success">Répondre</a>
                             @endif
                             @if($survey->status_survey == 'PUBLISHED' || $survey->status_survey == 'FINISHED')
-                                <a href="{{route('surveys.result',['id'=>$survey->id, 'question_nb'=>1])}}" class = "btn btn-success">Results</a>
+                                <a href="{{route('surveys.result',['id'=>$survey->id, 'question_nb'=>1])}}" class = "btn btn-success">Résultats</a>
                             @endif
                             @if($survey->status_survey == 'FINISHED')
-                                <a href="{{route('surveys.reset',['id'=>$survey->id])}}" class = "btn btn-danger">Reset</a>
+                                <a href="{{route('surveys.reset',['id'=>$survey->id])}}" class = "btn btn-danger">Remettre à zéro</a>
                             @endif
                             @if($survey->status_survey == 'SAVED')
-                                <a href="{{route('surveys.edit',['id'=>$survey->id])}}" class = "btn btn-info">Edit</a>
+                                <a href="{{route('surveys.edit',['id'=>$survey->id])}}" class = "btn btn-info">Editer</a>
                             @endif
                             @if($survey->status_survey == 'PUBLISHED')
-                                <a href="{{route('surveys.stop',['id'=>$survey->id])}}" class = "btn btn-danger">Stop</a>
+                                <a href="{{route('surveys.stop',['id'=>$survey->id])}}" class = "btn btn-danger">Arrêter</a>
                             @endif
                             @if($survey->status_survey == 'SAVED' || $survey->status_survey == 'FINISHED')
-                                <a href="{{route('surveys.destroy',['id'=>$survey->id])}}" class = "btn btn-danger">Delete</a>
+                                <a href="{{route('surveys.destroy',['id'=>$survey->id])}}" class = "btn btn-danger">Supprimer</a>
                             @endif
                         </td>
                     </tr>

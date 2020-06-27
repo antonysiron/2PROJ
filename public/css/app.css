@@ -10954,6 +10954,10 @@ a.text-dark:focus {
   text-transform: uppercase;
 }
 
+.nav-link {
+  margin-right: 12px;
+}
+
 #btn-main {
   color: #ffffff;
   background-color: #3B79B6;

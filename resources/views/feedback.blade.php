@@ -11,13 +11,13 @@
         <div class="container-fluid">
             <div class="row align-items-center" style="height: 35vw">
                 <div class="col-2">
-                    <img src="/images/arrow_left.svg" style="width: 8vw; margin-left: 6vw">
+                    <img src="/images/arrow_left.svg" style="width: 5vw; margin-left: 6vw">
                 </div>
                 <div class="col">
                     <img src="/images/feedback_banner_card.svg" style="width: 60vw">
                 </div>
                 <div class="col-2">
-                    <img src="/images/arrow_right.svg" style="width: 8vw; margin-right: 6vw">
+                    <img src="/images/arrow_right.svg" style="width: 5vw; margin-right: 6vw">
                 </div>
             </div>
         </div>

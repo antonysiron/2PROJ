@@ -6,7 +6,7 @@
     / Answer
 @endsection
 @section('content')
-    <div class="survey-container">
+    <div class="index-container">
         <h1 style="text-align: center; margin-top: 50px">
             Merci d'avoir répondu à ce sondage!
         </h1>

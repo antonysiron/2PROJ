@@ -10989,7 +10989,7 @@ a.text-dark:focus {
   background-repeat: no-repeat;
   width: 100%;
   background-color: #54C1D8;
-  height: 100vh;
+  padding-bottom: 200px;
 }
 
 .cards {

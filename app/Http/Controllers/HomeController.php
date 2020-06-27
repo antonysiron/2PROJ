@@ -26,9 +26,9 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function examples()
+    public function example()
     {
-        return view('examples');
+        return view('example');
     }
 
     public function prices()

@@ -13,7 +13,7 @@
                             @csrf
 
                             <div class="form-group row">
-                                <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                                <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nom') }}</label>
 
                                 <div class="col-md-6">
                                     <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ Auth::user()->name }}" required autocomplete="name" autofocus>
@@ -27,7 +27,7 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                                <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail') }}</label>
 
                                 <div class="col-md-6">
                                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ Auth::user()->email }}" required autocomplete="email">
@@ -41,7 +41,7 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="new-password" class="col-md-4 col-form-label text-md-right">{{ __('New Password') }}</label>
+                                <label for="new-password" class="col-md-4 col-form-label text-md-right">{{ __('Mot de passe') }}</label>
 
                                 <div class="col-md-6">
                                     <input id="new-password" type="password" class="form-control @error('new-password') is-invalid @enderror" name="new-password" required autocomplete="new-password">
@@ -55,7 +55,7 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="new-password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm New Password') }}</label>
+                                <label for="new-password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirmation nouveau mot de passe') }}</label>
 
                                 <div class="col-md-6">
                                     <input id="new-password-confirm" type="password" class="form-control" name="new-password_confirmation" required autocomplete="new-password">
@@ -65,7 +65,7 @@
                             <div class="form-group row mb-0">
                                 <div class="col-md-6 offset-md-4">
                                     <button type="submit" class="btn btn-primary">
-                                        {{ __('Update') }}
+                                        {{ __('Editer mes informations') }}
                                     </button>
                                 </div>
                             </div>
@@ -77,11 +77,18 @@
                                     </div>
                                 @endif
                             </div>
+                            <div class="card-header text-center mt-4">{{ __('MON ESPACE') }}</div>
+                            <a href="{{ route('surveys.index') }}">
+                                <img src="/images/list.png" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="/images/list2.png" alt="">
+                            </a>
                         </form>
 
 
                     </div>
-                    <div class="card-header text-center">{{ __('MON ESPACE') }}</div>
+
                 </div>
             </div>
         </div>

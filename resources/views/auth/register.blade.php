@@ -4,7 +4,7 @@
 <div class="bg-main">
     <div class="container">
         <div class="row justify-content-center p-4 m-3">
-            <div class="col-md-8 text-center">
+            <div class="col-md-8 m-4 text-center">
                 <h1>Créer un compte GRATUIT</h1>
                 <p>Vous disposez déjà d'un compte ?</p>
                 <div class="p-2 m-3">

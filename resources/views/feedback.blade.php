@@ -5,18 +5,19 @@
 @endsection
 @section('content')
     <img src="/images/feedback_background.png" style="width: 100%; position:absolute; z-index: -999">
-    <h1 class="font-weight-bold" style="text-align: center; color: white; font-family: 'Segoe UI'; font-size:3vw; margin-top:6vw; text-shadow: 2px 2px 8px black">Ils nous font confiance</h1>
+    <img src="/images/feedback_background_shadow.svg" style="width: 100%; position:absolute; z-index: -998">
+    <h1 class="font-weight-bold" style="text-align: center; color: white; font-size:3vw; margin-top:6vw; text-shadow: 2px 2px 8px black">Ils nous font confiance</h1>
     <div style="text-align: center; margin-top:2vw; margin-bottom: 10%">
         <div class="container-fluid">
             <div class="row align-items-center" style="height: 35vw">
                 <div class="col-2">
-                    <img src="/images/arrow_left.svg" style="width: 8vw; margin-left: 6vw">
+                    <img src="/images/arrow_left.svg" style="width: 5vw; margin-left: 6vw">
                 </div>
                 <div class="col">
                     <img src="/images/feedback_banner_card.svg" style="width: 60vw">
                 </div>
                 <div class="col-2">
-                    <img src="/images/arrow_right.svg" style="width: 8vw; margin-right: 6vw">
+                    <img src="/images/arrow_right.svg" style="width: 5vw; margin-right: 6vw">
                 </div>
             </div>
         </div>
@@ -71,7 +72,7 @@
                     <h2 style="text-align: center; margin-bottom: 100px">Ecrivez notre histoire</h2>
                     <div class="form-group" style="margin-bottom: 30px">
                         <label for="mark">Notez nous : </label>
-                        <select name="mark" id="mark" style="width: 60px" required>
+                        <select name="mark" id="mark" style="width: 60px; background-color: #FEF3E6" required>
                             <option value=""></option>
                             <option value="0">0</option>
                             <option value="0.5">0.5</option>
@@ -89,11 +90,11 @@
                     </div>
                     <div class="form-group" style="margin-bottom: 30px">
                         <label for="title">Sujet : </label>
-                        <input type="text" name = "title" id = "title" class="form-control" required>
+                        <input type="text" name = "title" id = "title" class="form-control" style="background-color: #FEF3E6" required>
                     </div>
                     <div class="form-group" style="margin-bottom: 30px">
                         <label for="content">Avis : </label>
-                        <textarea name="content" id="content" class="form-control" required></textarea>
+                        <textarea name="content" id="content" class="form-control" style="background-color: #FEF3E6" required></textarea>
                     </div>
                     <div style="text-align: right">
                         <button type = "submit" name = "btn-action" class = "btn btn-info" value = "save" style="margin-top: 18px">Envoyer</button>

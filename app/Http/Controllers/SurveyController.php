@@ -66,14 +66,14 @@ class SurveyController extends Controller
         } elseif ($action == 'publish') {
             if($survey->nb_questions > 0) {
                 $survey->status_survey = 'PUBLISHED';
-                $msg = 'Survey Published Successfully';
+                $msg = 'Sondage publié';
             }
             else {
                 $survey->status_survet = 'SAVED';
-                $msg = ' Error : Survey Requires One Question To Be Published';
+                $msg = ' Error : Le sondage nécessite une question pour être publié';
             }
         } else {
-            $msg = 'Survey Saved Successfully';
+            $msg = 'Sondage enregistré';
         }
         $survey->name = $request->input('name');
         $survey->category = $request->input('category');
@@ -85,7 +85,7 @@ class SurveyController extends Controller
 
     public function destroy($id)
     {
-        $msg = " Survey Deleted Successfully";
+        $msg = " Sondage supprimé";
         try {
             $questions = Question::all()->where('survey_id', '=', $id);
             foreach ($questions as $question) {
@@ -97,7 +97,7 @@ class SurveyController extends Controller
             $survey = Survey::find($id);
             $survey->delete();
         } catch (\Exception $e) {
-            $msg = " Error : Failed To Delete the Survey";
+            $msg = " Error : Impossible de supprimer le sondage";
         }
 
         return redirect()->route('surveys.index')->with('msg',$msg);
@@ -107,7 +107,7 @@ class SurveyController extends Controller
     {
         $survey = Survey::find($id);$survey->status_survey = "FINISHED";
         $survey->save();
-        return redirect()->route('surveys.index')->with('msg', 'The survey ended before its end date');
+        return redirect()->route('surveys.index')->with('msg', 'Sondage arrêté');
     }
 
     public function reset($id)
@@ -127,7 +127,7 @@ class SurveyController extends Controller
         $survey->status_survey = "SAVED";
         $survey->save();
 
-        return redirect()->route('surveys.index')->with('msg', 'The survey has been reset');
+        return redirect()->route('surveys.index')->with('msg', 'Sondage remis a zéro');
     }
 
     public function result($id, $question_nb)

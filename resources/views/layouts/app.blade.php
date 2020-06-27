@@ -35,27 +35,24 @@
 
     <div id="app">
         @include('shared/header')
-
-        <div class="mega-container">
-            <main class="container">
-                @if (Session::has('msg'))
-                    @if(stripos(Session::get('msg'), 'error'))
-                        <div class="alert alert-danger">
-                            {!! Session::get('msg') !!}
-                        </div>
-                    @else
-                        <div class="alert alert-success">
-                            {!! Session::get('msg') !!}
-                        </div>
-                    @endif
+        <main class="container">
+            @if (Session::has('msg'))
+                @if(stripos(Session::get('msg'), 'error'))
+                    <div class="alert alert-danger">
+                        {!! Session::get('msg') !!}
+                    </div>
+                @else
+                    <div class="alert alert-success">
+                        {!! Session::get('msg') !!}
+                    </div>
                 @endif
+            @endif
 
 
-            </main>
-            @yield('content')
-            @include('shared/footer')
+        </main>
+        @yield('content')
+        @include('shared/footer')
     </div>
-</div>
 </body>
 </html>
 

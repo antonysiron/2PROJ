@@ -2,20 +2,15 @@
 
 namespace App\Http\Controllers;
 
-<<<<<<< HEAD
-=======
+
 use App\Answer;
 use App\Question;
 use App\Survey;
 use App\UserAnswerSurvey;
->>>>>>> 08d89ff13cf100cf3083c11cd06b30538dbf06d6
 use Illuminate\Http\Request;
 
 class AnswerController extends Controller
 {
-<<<<<<< HEAD
-    //
-=======
     public function index($id)
     {
         $survey = Survey::find($id);
@@ -130,5 +125,4 @@ class AnswerController extends Controller
     {
         //
     }
->>>>>>> 08d89ff13cf100cf3083c11cd06b30538dbf06d6
 }

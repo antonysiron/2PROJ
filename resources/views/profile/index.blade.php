@@ -78,12 +78,16 @@
                                 @endif
                             </div>
                             <div class="card-header text-center mt-4">{{ __('MON ESPACE') }}</div>
+                            <div class="row m-4 justify-content-center">
+
                             <a href="{{ route('surveys.index') }}">
                                 <img src="/images/list.png" alt="">
                             </a>
+                            
                             <a href="#">
                                 <img src="/images/list2.png" alt="">
                             </a>
+                        </div>
                         </form>
 
 

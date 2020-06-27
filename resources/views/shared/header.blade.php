@@ -45,28 +45,31 @@
                                 {{ __('Mes Sondage') }} <span class="caret"></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('surveys.index') }}"> {{ __('View Sondage') }}</a>
-                                <a class="dropdown-item" href="{{ route('surveys.create') }}">{{ __('New Sondage') }}</a>
+                                <a class="dropdown-item" href="{{ route('surveys.index') }}"> {{ __('Voir les Sondages') }}</a>
+                                <a class="dropdown-item" href="{{ route('surveys.create') }}">{{ __('Nouveau Sondage') }}</a>
                             </div>
                         </li>
 
+
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }} <span class="caret"></span>
+                                {{ Auth::user()->name }} <span class="caret avatar">
+                                    <img class="avatar" src="/images/pp.png" alt="avatar">
+                                </span>
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('user.profile') }}">{{ __('Mon Profile') }}</a>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
+                                    {{ __('Deconnexion') }}
                                 </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     @csrf
                                 </form>
 
-                                <a class="dropdown-item" href="{{ route('user.profile') }}">{{ __('Profile') }}</a>
                             </div>
                         </li>
                     @endguest

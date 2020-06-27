@@ -6,8 +6,8 @@
 @section('content')
 
 <div class="banner">
-    <h1>Poser des questions n'a jamais été aussi SIMPLE.</h1>
-        <img src="/images/robo.svg" alt="robot image">
+    <h1 style="width: 35%; margin-top: 8%; margin-left: 5%">Poser des questions n'a jamais été aussi SIMPLE.</h1>
+    <img src="/images/robo.svg" alt="robot image">
 </div>
 
 <div class="text-center column justify-content-center p-4">
@@ -54,7 +54,7 @@
   </div>
 
   <div class="item2">
-      <h1>NOS</h1>
+      <h1>NOS SONDAGES</h1>
       <p>- Chattez avec Biro-</p>
         <p>
             Nos surveys sont sous la forme d'un chat en ligne.

@@ -17,11 +17,11 @@
             </div>
             @if($user_answer_survey == null || $user_answer_survey->answer_status == 'IN_PROGRESS')
                 <div class="border-top">
-                    <a href="{{route('answer.index',['id'=>$survey->id])}}" class = "btn btn-success btn-lg" style="margin-top:50px;">Answer</a>
+                    <a href="{{route('answer.index',['id'=>$survey->id])}}" class = "btn btn-success btn-lg" style="margin-top:50px;">Répondre</a>
                 </div>
             @else
                 <div class="border-top" style="margin-top:50px; padding: 20px; color: #f6993f; font-size: large">
-                    You already answered this survey.
+                    Vous avez déjà répondu à ce sondage.
                 </div>
             @endif
         </div>

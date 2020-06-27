@@ -6,6 +6,7 @@
 @section('content')
     <div class="row mt-5">
         <div class="col-sm-12">
+            <a href="{{route('surveys.create')}}" class="btn btn-success"> + Nouveau Sondage</a>
             <table class="table">
                 <tr>
                     <th>Nom</th>
@@ -42,7 +43,7 @@
                                 <a href="{{route('surveys.reset',['id'=>$survey->id])}}" class = "btn btn-danger">Remettre à zéro</a>
                             @endif
                             @if($survey->status_survey == 'SAVED')
-                                <a href="{{route('surveys.edit',['id'=>$survey->id])}}" class = "btn btn-info">Editer</a>
+                                <a href="{{route('surveys.edit',['id'=>$survey->id])}}" class = "btn btn-info">Modifier</a>
                             @endif
                             @if($survey->status_survey == 'PUBLISHED')
                                 <a href="{{route('surveys.stop',['id'=>$survey->id])}}" class = "btn btn-danger">Arrêter</a>

@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <html lang="en">
 <head>
-    <title>@yield('title')</title>
+    <title>@yield('Big Brother')</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -10,7 +10,6 @@
     <link rel="icon" href="/images/favicon.ico" type="image">
 
     <!-- Fonts -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!--<link rel="dns-prefetch" href="//fonts.gstatic.com">-->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -24,7 +23,7 @@
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- CSRF Token -->
@@ -32,9 +31,12 @@
 
 </head>
 <body>
+
+
     <div id="app">
+        @include('shared/header')
+
         <div class="mega-container">
-            @include('shared/header')
             <main class="container">
                 @if (Session::has('msg'))
                     @if(stripos(Session::get('msg'), 'error'))
@@ -56,3 +58,6 @@
 </div>
 </body>
 </html>
+
+
+

@@ -48,32 +48,75 @@
 </div>
 
 
-<div class="info-container">
-    <div class="item">
-        <img src="/images/chat.png" alt="">
-  </div>
-
-  <div class="item2">
-      <h1>NOS SONDAGES</h1>
-      <p>- Chattez avec Biro-</p>
-        <p>
-            Nos surveys sont sous la forme d'un chat en ligne.
-            En effet cela donna l'impression à vos clients de discuter et d'intéragir
-            avec une personne et non de répondre à une liste infinie de questions
-            comme vous pouvez retrouver sur d'autres sites de suveys.
-            De plus, vous pouvez entièrement personnaliser votre questionnaire.
-            En passant par l'image du fond, la couleur des bulles, l'avatar de votre client,
-            le format et la taille des bulles, et bien plus encore.
-            Vous pouvez cliquez sour le bouton ci-dessous pour tester un de nos questionnaires.
-        </p>
-        <a href="#">En savoir plus</a>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-5" style="background-color: rgb(250,227,200); text-align: center;">
+            <img src="/images/chat.png" alt="" style="margin-top:30px; margin-bottom:30px; width:20vw">
+        </div>
+        <div class="col" style="background-color: #f3f0f1">
+            <div class="container" style="margin-top: 5vw">
+                <div class="row">
+                    <div class="col-5"></div>
+                    <div class="col align-self-center border-top border-warning" style="color: #f6993f"></div>
+                    <div class="col-5"></div>
+                </div>
+                <div class="row">
+                    <div class="col-5"></div>
+                    <div class="col align-self-center border-top border-warning" style="color: #f6993f"></div>
+                    <div class="col-5"></div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: center; margin-top: 0.5vw;">
+                        <h1 style="font-size: 2vw">NOS SONDAGES</h1>
+                    </div>
+                </div>
+                <div class="row" style="margin-bottom: 3vw">
+                    <div class="col" style="text-align: center;">
+                        <p style="color: #407ebd; font-size:1vw;">- Chattez avec Biro-</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: left; margin: 3vw; margin-bottom: 1.5vw; font-size: 1.25vw;">
+                        <div>Nos surveys sont sous la forme d'un chat en ligne.</div>
+                        <div>En effet cela donna l'impression à vos clients de discuter et d'intéragir
+                            avec une personne et non de répondre à une liste infinie de questions
+                            comme vous pouvez retrouver sur d'autres sites de sondage.</div>
+                        <div>De plus, vous pouvez entièrement personnaliser votre questionnaire.
+                            En passant par l'image du fond, la couleur des bulles, l'avatar de votre client,
+                            le format et la taille des bulles, et bien plus encore.</div>
+                        <div>Vous pouvez cliquez sour le bouton ci-dessous pour tester un de nos questionnaires.</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: left; margin-left: 3vw; margin-right: 3vw">
+                        <a href="#" style="font-size: 1vw">En savoir plus ></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
-</div>
-
-<div class="text-center column justify-content-center p-4">
-    <h1>Ils nous font confiance</h1>
-    <p>- Vos avis, des améliorations -</p>
+<div class="container" style="margin-top: 5vw">
+    <div class="row">
+        <div class="col-5"></div>
+        <div class="col align-self-center border-top border-warning" style="color: #f6993f"></div>
+        <div class="col-5"></div>
+    </div>
+    <div class="row">
+        <div class="col-5"></div>
+        <div class="col align-self-center border-top border-warning" style="color: #f6993f"></div>
+        <div class="col-5"></div>
+    </div>
+    <div class="row">
+        <div class="col" style="text-align: center; margin-top: 0.5vw;">
+            <h1 style="font-size: 2vw">Ils nous font confiance</h1>
+        </div>
+    </div>
+    <div class="row" style="margin-bottom: 3vw">
+        <div class="col" style="text-align: center;">
+            <p style="color: #407ebd; font-size:1vw;">- Vos avis, des améliorations -</p>
+        </div>
+    </div>
 </div>
 
 <div class="card-container">

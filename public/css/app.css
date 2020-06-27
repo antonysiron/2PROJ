@@ -11032,9 +11032,10 @@ a.text-dark:focus {
 .banner {
   background: #54C1D8;
   color: #ffffff;
-  padding: 2em 8em;
+  padding: 2em 3em;
   margin-bottom: 80px;
   display: flex;
+  width: 100%;
 }
 
 .banner h1 {
@@ -11043,8 +11044,20 @@ a.text-dark:focus {
 }
 
 .banner img {
-  height: 600px;
+  height: 50rem;
   margin-left: 200px;
+}
+
+@media only screen and (max-width: 600px) {
+  .banner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .banner img {
+    margin: 0 auto;
+    width: 20rem;
+  }
 }
 
 .card-container {
@@ -11101,6 +11114,17 @@ a.text-dark:focus {
 .info-container .item2 h1 {
   margin: 16px;
   padding-top: 8px;
+}
+
+@media only screen and (max-width: 600px) {
+  .info-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info-container .item2 {
+    width: 100%;
+  }
 }
 
 .survey-container {

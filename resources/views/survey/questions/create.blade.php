@@ -7,6 +7,7 @@
     / Create
 @endsection
 @section('content')
+<div class="index-container">
     <div class="row mt-5">
         <div class="col-sm-8 offset-sm-2">
             <form action="{{route('questions.store', ['id'=>$id])}}" method = "post">
@@ -82,4 +83,5 @@
             </form>
         </div>
     </div>
+</div>
 @endsection

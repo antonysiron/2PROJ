@@ -6,7 +6,7 @@
 @section('content')
 
 <div class="banner">
-    <h1 style="width: 35%; margin-top: 8%; margin-left: 5%">Poser des questions n'a jamais été aussi SIMPLE.</h1>
+    <h1 style="width: 35%; margin-top: 8%; margin-left: 5%">Poser des questions n'a jamais été aussi SIMPLE</h1>
     <img src="/images/robo.svg" alt="robot image">
 </div>
 

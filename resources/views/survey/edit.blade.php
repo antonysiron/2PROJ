@@ -5,6 +5,7 @@
     / Edit
 @endsection
 @section('content')
+<div class="index-container">
     <div class="row">
         <div class="col-sm-8 offset-sm-2">
             <form action="{{route('surveys.update')}}" method = "post">
@@ -44,4 +45,5 @@
             </form>
         </div>
     </div>
+</div>
 @endsection

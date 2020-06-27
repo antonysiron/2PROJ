@@ -6,15 +6,31 @@
     }
 
     img{
-        height: 600px;
+        height: 50rem;
         margin-left:200px;
     }
 
     background: $color-azure;
     color: $color-white;
-    padding: 2em 8em;
+    padding: 2em 3em;
     margin-bottom: 80px;
     display: flex;
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .banner{
+
+        img{
+            margin: 0 auto;
+            width: 20rem;
+        }
+        display: flex;
+        flex-direction: column;
+
+    }
+
 }
 
 .card-container{
@@ -72,7 +88,18 @@
       padding-top:8px;
     }
 
+}
 
+@media only screen and (max-width: 600px) {
+    .info-container{
+
+        .item2{
+            width: 100%;
+        }
+        display: flex;
+        flex-direction: column;
+
+    }
 
 }
 

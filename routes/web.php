@@ -14,7 +14,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/examples', 'HomeController@examples')->name('examples');
 Route::get('/prices', 'HomeController@prices')->name('prices');
 Route::get('/feedback', 'FeedbackController@index')->name('feedback.index');
-Route::post('/feedback', 'FeedbackController@store')->name('feedback.store');
+Route::post('/feedback', 'FeedbackController@store')->name('feedback.store')->middleware('auth', 'verified');
+Route::get('/contact', 'ContactController@index')->name('contact.index');
+Route::post('/contact', 'ContactController@store')->name('contact.store');
 
 // Survey routes
 Route::get('/surveys', 'SurveyController@index')->name('surveys.index')->middleware('auth', 'verified', 'surveyExpiry');

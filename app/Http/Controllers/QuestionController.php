@@ -50,7 +50,7 @@ class QuestionController extends Controller
         $survey->nb_questions++;
         $survey->save();
 
-        $msg = "Question Created Successfully";
+        $msg = "Question créée";
         $questions = Question::all()->where('survey_id', '=', $id)->sortBy('order_nb');
         return view('survey.questions.index', ['id'=>$id, 'questions'=>$questions])->with('msg', $msg);
     }
@@ -91,14 +91,14 @@ class QuestionController extends Controller
         }
         $question->save();
 
-        $msg = 'Question updated successfully';
+        $msg = 'Question enregistrée';
         return redirect()->route('questions.index', ['id'=>$id])->with('msg', $msg);
     }
 
 
     public function destroy($id, $question_id)
     {
-        $msg = " Error : Failed To Delete the Question";
+        $msg = " Error : Impossible de supprimer la question";
 
         try {
         $answers = Answer::all()->where('question_id', '=', $question_id);
@@ -106,7 +106,7 @@ class QuestionController extends Controller
             $answer->delete();
         $question = Question::find($question_id);
         $question->delete();
-        $msg = "Question Deleted Successfully";
+        $msg = "Question supprimée";
         } catch (\Exception $e) {
             return redirect()->route('questions.index', ['id'=>$id])->with('msg',$msg);
         }

@@ -65,7 +65,7 @@
         </div>
     </div>
     @auth
-        <div class="row mt-5 border-top" style="padding-top: 50px;">
+        <div class="row mt-5 border-top" style="padding-top: 50px; margin-bottom: 50px">
             <div class="col-sm-8 offset-sm-2">
                 <form action="{{route('feedback.store')}}" method = "post">
                 @csrf

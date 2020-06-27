@@ -11,7 +11,7 @@
                     <a href="/login">Se connecter</a>
                 </div>
             </div>
-                <div class="card col-8">
+                <div class="login-card col-8">
 
                     <div class="card-body">
                         <form method="POST" action="{{ route('register') }}">

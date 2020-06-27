@@ -51,10 +51,7 @@
 
         </main>
         @yield('content')
-        @include('shared/footer')
     </div>
+    @include('shared/footer')
 </body>
 </html>
-
-
-

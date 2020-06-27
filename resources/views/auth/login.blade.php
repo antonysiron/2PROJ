@@ -9,7 +9,7 @@
             <h1>Connectez-vous à votre compte</h1>
         </div>
 
-            <div class="card">
+            <div class="login-card">
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">

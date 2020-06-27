@@ -11032,9 +11032,10 @@ a.text-dark:focus {
   text-align: justify;
 }
 
-.card {
-  background-color: #ffffff;
+.login-card {
+  background-color: transparent;
   border: none;
+  margin-bottom: 200px;
 }
 
 .banner {
@@ -11081,64 +11082,6 @@ a.text-dark:focus {
   flex-direction: column;
 }
 
-.info-container {
-  margin-bottom: 100px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: auto;
-  padding: 50px;
-}
-
-.info-container .item2 {
-  width: 450px;
-  flex: 0 0 auto;
-  margin: 0px;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  padding-top: 8rem;
-}
-
-.info-container .item {
-  padding-top: 100px;
-  width: 450px;
-  flex: 0 0 auto;
-  margin: 0px;
-}
-
-.info-container .item img {
-  width: 20rem;
-}
-
-.info-container .item2 p {
-  margin: 16px;
-  text-align: center;
-  justify-content: center;
-  padding: 16px;
-}
-
-.info-container .item2 h1 {
-  margin: 16px;
-  padding-top: 8px;
-}
-
-@media only screen and (max-width: 600px) {
-  .info-container {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .info-container .item2 {
-    width: 100%;
-  }
-
-  .info-container .item {
-    width: 100%;
-  }
-}
-
 .survey-container {
   display: flex;
   justify-content: space-between;
@@ -11154,6 +11097,10 @@ a.text-dark:focus {
   margin-bottom: 250px;
 }
 
+.main-container {
+  margin-bottom: 200px;
+}
+
 .footer {
   background: #3B79B6;
   color: #ffffff;
@@ -11161,6 +11108,7 @@ a.text-dark:focus {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin-top: 200px;
 }
 
 .footer img {

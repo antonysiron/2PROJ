@@ -42,24 +42,27 @@
                     @else
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ __('Mes Sondage') }} <span class="caret"></span>
+                                {{ __('Mes sondages') }} <span class="caret avatar"></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('surveys.index') }}"> {{ __('Voir les Sondages') }}</a>
-                                <a class="dropdown-item" href="{{ route('surveys.create') }}">{{ __('Nouveau Sondage') }}</a>
+                                <a class="dropdown-item" href="{{ route('surveys.index') }}"> {{ __('Voir les sondages') }}</a>
+                                <a class="dropdown-item" href="{{ route('surveys.create') }}">{{ __('Nouveau sondage') }}</a>
                             </div>
                         </li>
 
 
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }} <span class="caret avatar">
+                                <span class="avatar">
+                                    {{ Auth::user()->name }}
+                                </span>
+                                <span class="caret avatar">
                                     <img class="avatar" src="/images/pp.png" alt="avatar">
                                 </span>
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('user.profile') }}">{{ __('Mon Profile') }}</a>
+                                <a class="dropdown-item" href="{{ route('user.profile') }}">{{ __('Mon profile') }}</a>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">

@@ -28,6 +28,9 @@
                             <a class="nav-link" href="{{ route('feedback.index') }}">{{ __('Avis') }}</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="{{ route('prices') }}">{{ __('Tarif') }}</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ route('contact.index') }}">{{ __('Contact') }}</a>
                         </li>
 

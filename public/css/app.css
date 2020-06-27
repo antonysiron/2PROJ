@@ -10987,7 +10987,7 @@ a.text-dark:focus {
 .cards {
   width: 300px;
   height: 400px;
-  margin: 16px;
+  margin: 42px;
   border-radius: 1rem;
   box-shadow: 10px 18px 40px 0px rgba(0, 0, 0, 0.3);
   display: inline-flex;
@@ -11044,7 +11044,7 @@ a.text-dark:focus {
 }
 
 .banner img {
-  height: 50rem;
+  height: 42rem;
   margin-left: 200px;
 }
 
@@ -11080,7 +11080,7 @@ a.text-dark:focus {
   flex-direction: row;
   justify-content: center;
   align-items: auto;
-  padding: 30px;
+  padding: 50px;
 }
 
 .info-container .item2 {
@@ -11123,6 +11123,10 @@ a.text-dark:focus {
   }
 
   .info-container .item2 {
+    width: 100%;
+  }
+
+  .info-container .item {
     width: 100%;
   }
 }
@@ -11174,5 +11178,6 @@ a.text-dark:focus {
 
 .form-control {
   border-radius: 12px;
+  background-color: #CADBEB;
 }
 

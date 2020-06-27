@@ -1,7 +1,7 @@
 <header>
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="{{ url('/home') }}">
+            <a class="navbar-brand" href="{{ url('/') }}">
                 <img src="/images/logo.png" alt="brand logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -28,7 +28,7 @@
                             <a class="nav-link" href="{{ route('feedback.index') }}">{{ __('Avis') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('surveys.index') }}">{{ __('Contact') }}</a>
+                            <a class="nav-link" href="{{ route('contact.index') }}">{{ __('Contact') }}</a>
                         </li>
 
                         <li class="nav-item">

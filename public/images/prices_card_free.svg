@@ -1,21 +1,29 @@
-<svg id="Gratuit" xmlns="http://www.w3.org/2000/svg" width="720" height="900" viewBox="0 0 720 900">
-  <g id="Rectangle_12" data-name="Rectangle 12" fill="#fff" stroke="#f29422" stroke-width="4">
-    <rect width="720" height="900" rx="55" stroke="none"/>
-    <rect x="2" y="2" width="716" height="896" rx="53" fill="none"/>
-  </g>
-  <text id="Et_plus..." data-name="Et plus..." transform="translate(302 837)" fill="#f29422" font-size="40" font-family="SegoeUI-SemilightItalic, Segoe UI" font-weight="300" font-style="italic"><tspan x="0" y="0">Et plus...</tspan></text>
-  <text id="Création_de_5_sondages_par_mois_Limité_à_20_questions_par_sondage_200_réponses_par_mois_Sécurité_des_données_" data-name="Création de 5 sondages par mois
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="900" viewBox="0 0 720 900">
+  <g id="Groupe_1" data-name="Groupe 1" transform="translate(-1151 -380)">
+    <g id="Gratuit" transform="translate(1151 380)">
+      <g id="Rectangle_12" data-name="Rectangle 12" fill="#fff" stroke="#f29422" stroke-width="4">
+        <rect width="720" height="900" rx="55" stroke="none"/>
+        <rect x="2" y="2" width="716" height="896" rx="53" fill="none"/>
+      </g>
+      <text id="Et_plus..." data-name="Et plus..." transform="translate(302 837)" fill="#f29422" font-size="40" font-family="SegoeUI-SemilightItalic, Segoe UI" font-weight="300" font-style="italic"><tspan x="0" y="0">Et plus...</tspan></text>
+      <text id="Création_de_5_sondages_par_mois_Limité_à_20_questions_par_sondage_200_réponses_par_mois_Sécurité_des_données_" data-name="Création de 5 sondages par mois
 
 Limité à 20 questions par sondage
 
 200 réponses par mois 
 
 Sécurité des données            " transform="translate(210 469)" fill="#343232" font-size="32" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="0">Création de 5 sondages par mois</tspan><tspan x="0" y="43"></tspan><tspan x="0" y="86">Limité à 20 questions par sondage</tspan><tspan x="0" y="129"></tspan><tspan x="0" y="172">200 réponses par mois </tspan><tspan x="0" y="215"></tspan><tspan x="0" y="258" xml:space="preserve">Sécurité des données            </tspan></text>
-  <text id="Gratuit-2" data-name="Gratuit" transform="translate(259 115)" fill="#f29422" font-size="61" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">Gratuit</tspan></text>
-  <g id="points" transform="translate(-478 -446)">
-    <circle id="Ellipse_10" data-name="Ellipse 10" cx="8" cy="8" r="8" transform="translate(647 903)" fill="#f29422"/>
-    <circle id="Ellipse_11" data-name="Ellipse 11" cx="8" cy="8" r="8" transform="translate(647 987)" fill="#f29422"/>
-    <circle id="Ellipse_12" data-name="Ellipse 12" cx="8" cy="8" r="8" transform="translate(647 1072)" fill="#f29422"/>
-    <circle id="Ellipse_22" data-name="Ellipse 22" cx="8" cy="8" r="8" transform="translate(647 1156)" fill="#f29422"/>
+      <text id="Gratuit-2" data-name="Gratuit" transform="translate(259 115)" fill="#f29422" font-size="61" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">Gratuit</tspan></text>
+      <g id="points" transform="translate(-478 -446)">
+        <circle id="Ellipse_10" data-name="Ellipse 10" cx="8" cy="8" r="8" transform="translate(647 903)" fill="#f29422"/>
+        <circle id="Ellipse_11" data-name="Ellipse 11" cx="8" cy="8" r="8" transform="translate(647 987)" fill="#f29422"/>
+        <circle id="Ellipse_12" data-name="Ellipse 12" cx="8" cy="8" r="8" transform="translate(647 1072)" fill="#f29422"/>
+        <circle id="Ellipse_22" data-name="Ellipse 22" cx="8" cy="8" r="8" transform="translate(647 1156)" fill="#f29422"/>
+      </g>
+    </g>
+    <g id="orange" transform="translate(581 -152)">
+      <rect id="Rectangle_14" data-name="Rectangle 14" width="301" height="74" transform="translate(780 768)" fill="#f29422"/>
+      <text id="S_inscrire" data-name="S&apos;inscrire" transform="translate(858 819)" fill="#fff" font-size="34" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">S&apos;inscrire</tspan></text>
+    </g>
   </g>
 </svg>

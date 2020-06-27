@@ -7,6 +7,6 @@
 @endsection
 @section('content')
     <h1 style="text-align: center; margin-top: 50px">
-        Thank you for completing this survey!
+        Merci d'avoir répondu à ce sondage!
     </h1>
 @endsection

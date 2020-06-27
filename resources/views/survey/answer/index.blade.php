@@ -19,11 +19,11 @@
                     <div style="margin-top:10px; text-align: center">
                         <label for="yes" class="btn-success btn-lg" style="margin-right: 50px;">
                             <input id="yes" type="radio" name="closed-ended" value="yes" required>
-                            YES
+                            OUI
                         </label>
                         <label for="no" class="btn-danger btn-lg">
                             <input id="no" type="radio" name="closed-ended" value="no">
-                            NO
+                            NON
                         </label>
                     </div>
                 @elseif($question->question_type == 'OPEN-ENDED')
@@ -31,7 +31,7 @@
                 @elseif($question->question_type == 'NUMERICAL')
                     <input type="number" name="numerical" placeholder=" enter a number" style="text-align: center">
                 @elseif($question->question_type == 'RATING')
-                        <input type="number" name="rating" min="0" max="{{$question->rating_scale}}" placeholder=" enter a number" style="text-align: center; width: 20%">
+                        <input type="number" name="rating" min="0" max="{{$question->rating_scale}}" placeholder=" entrez un nombre" style="text-align: center; width: 20%">
                         / {{$question->rating_scale}}
                 @elseif($question->question_type == 'MULTIPLE_CHOICE')
                     @for($i=0; $i<sizeof($choices); $i++)
@@ -51,9 +51,9 @@
                 <div>
                     <button type = "submit" name = "btn-action" class = "btn btn-info" value = "{{$question->question_type}}" style="margin-top: 100px;">
                         @if($question->order_nb >= $survey->nb_questions)
-                            Complete
+                            Terminé
                         @else
-                            Next
+                            Suivant
                         @endif
                     </button>
                 </div>

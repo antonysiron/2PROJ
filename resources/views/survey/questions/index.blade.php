@@ -6,7 +6,7 @@
     / Questions
 @endsection
 @section('content')
-    <a href="{{route('questions.create', ['id'=>$id])}}" class="btn btn-success"> + New Question</a>
+    <a href="{{route('questions.create', ['id'=>$id])}}" class="btn btn-success"> + Nouvelle Question</a>
     <div class="row mt-4">
         <div class="col-sm-12">
             <table class="table">
@@ -21,8 +21,8 @@
                             <td>{{$question->order_nb}}</td>
                             <td>{{$question->question}}</td>
                             <td>
-                                <a href="{{route('questions.edit', ['id'=>$question->survey_id, 'question_id'=>$question->id])}}" class="btn btn-info" >Edit</a>
-                                <a href="{{route('questions.destroy', ['id'=>$question->survey_id, 'question_id'=>$question->id])}}" class="btn btn-danger">Delete</a>
+                                <a href="{{route('questions.edit', ['id'=>$question->survey_id, 'question_id'=>$question->id])}}" class="btn btn-info" >Modifier</a>
+                                <a href="{{route('questions.destroy', ['id'=>$question->survey_id, 'question_id'=>$question->id])}}" class="btn btn-danger">Supprimer</a>
                             </td>
                         </tr>
                     @endforeach

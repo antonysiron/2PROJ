@@ -17,11 +17,12 @@ class CreateSurveysTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('category');
-            $table->string('description');
+            $table->string('description')->nullable();
             $table->string('status_survey')->nullable();
             $table->string('status_result')->nullable();
-            $table->tinyInteger('duration')->default('0');
+            $table->date('expiration_date')->nullable();
             $table->integer('creator_id')->unsigned();
+            $table->integer('nb_questions')->default(0);
             $table->foreign('creator_id')->references('id')->on('users');
             $table->timestamps();
         });

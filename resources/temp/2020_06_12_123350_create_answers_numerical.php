@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAnswersRating extends Migration
+class CreateAnswersNumerical extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateAnswersRating extends Migration
      */
     public function up()
     {
-        Schema::create('answers_rating', function (Blueprint $table) {
+        Schema::create('answers_numerical', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('question_id')->unsigned();
-            $table->foreign('question_id')->references('id')->on('questions_rating');
+            $table->foreign('question_id')->references('id')->on('questions');
             $table->integer('answer');
             $table->timestamps();
         });
@@ -29,6 +29,6 @@ class CreateAnswersRating extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('answers_rating');
+        Schema::dropIfExists('answers_numerical');
     }
 }

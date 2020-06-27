@@ -16,7 +16,7 @@ class CreateAnswersNumerical extends Migration
         Schema::create('answers_numerical', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('question_id')->unsigned();
-            $table->foreign('question_id')->references('id')->on('questions_numerical');
+            $table->foreign('question_id')->references('id')->on('questions');
             $table->integer('answer');
             $table->timestamps();
         });

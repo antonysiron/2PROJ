@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAnswersClosedEnded extends Migration
+class CreateQuestionsRating extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,13 @@ class CreateAnswersClosedEnded extends Migration
      */
     public function up()
     {
-        Schema::create('answers_closed-ended', function (Blueprint $table) {
+        Schema::create('questions_rating', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('question_id')->unsigned();
-            $table->foreign('question_id')->references('id')->on('questions_closed-ended');
-            $table->boolean('answer');
+            $table->integer('survey_id')->unsigned();
+            $table->foreign('survey_id')->references('id')->on('surveys');
+            $table->integer('order_nb');
+            $table->text('question');
+            $table->integer('rating_scale');
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ class CreateAnswersClosedEnded extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('answers_closed-ended');
+        Schema::dropIfExists('questions_rating');
     }
 }

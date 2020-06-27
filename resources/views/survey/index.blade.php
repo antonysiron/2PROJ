@@ -4,9 +4,14 @@
     / Surveys
 @endsection
 @section('content')
+<div class="index-container">
+
+<div class="survey-container">
+    <h1>Mes Sondages</h1>
+    <a href="{{route('surveys.create')}}" class="btn btn-success"> + Nouveau Sondage</a>
+</div>
     <div class="row mt-5">
-        <div class="col-sm-12">
-            <a href="{{route('surveys.create')}}" class="btn btn-success"> + Nouveau Sondage</a>
+        <div class="col-sm-12 text-center ml-auto mr-auto">
             <table class="table">
                 <tr>
                     <th>Nom</th>
@@ -56,5 +61,6 @@
                 @endforeach
             </table>
         </div>
+    </div>
     </div>
 @endsection

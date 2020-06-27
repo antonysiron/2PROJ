@@ -11098,6 +11098,20 @@ a.text-dark:focus {
   padding-top: 8px;
 }
 
+.survey-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.index-container {
+  box-shadow: 10px 18px 40px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  padding: 32px;
+  margin: 32px auto;
+  max-width: 960px;
+}
+
 .footer {
   background: #3B79B6;
   color: #ffffff;

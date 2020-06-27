@@ -7,7 +7,6 @@
 @endsection
 @section('content')
 <div class="index-container">
-
     <a href="{{route('questions.create', ['id'=>$id])}}" class="btn btn-success"> + Nouvelle Question</a>
     <div class="row mt-4">
         <div class="col-sm-12">

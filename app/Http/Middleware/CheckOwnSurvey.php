@@ -18,7 +18,7 @@ class CheckOwnSurvey
     {
         if(Survey::find($request->id)->creator_id == auth()->user()->id)
             return $next($request);
-        $msg = "You do not own this survey";
+        $msg = " Error : You do not own this survey";
         return redirect()->route('surveys.index')->with('msg', $msg);
     }
 }

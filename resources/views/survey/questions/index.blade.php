@@ -13,7 +13,6 @@
                 <tr>
                     <th>n°</th>
                     <th>question</th>
-                    <th>answers</th>
                     <th></th>
                 </tr>
                 <tr>
@@ -21,20 +20,6 @@
                         <tr>
                             <td>{{$question->order_nb}}</td>
                             <td>{{$question->question}}</td>
-                            <td>
-                                @switch($question->question_type)
-                                    @case('CLOSED-ENDED')
-
-                                    @case('OPEN-ENDED')
-
-                                    @case('MULTIPLE_CHOICE')
-
-                                    @case('NUMERICAL')
-
-                                    @case('RATING')
-
-                                @endswitch
-                            </td>
                             <td>
                                 <a href="{{route('questions.edit', ['id'=>$question->survey_id, 'question_id'=>$question->id])}}" class="btn btn-info" >Edit</a>
                                 <a href="{{route('questions.destroy', ['id'=>$question->survey_id, 'question_id'=>$question->id])}}" class="btn btn-danger">Delete</a>

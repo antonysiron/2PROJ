@@ -1,0 +1,75 @@
+.banner{
+
+    h1{
+        width: 10em;
+        padding-top: 100px;
+    }
+
+    img{
+        height: 600px;
+        margin-left:200px;
+    }
+
+    background: $color-azure;
+    color: $color-white;
+    padding: 2em 8em;
+    margin-bottom: 80px;
+    display: flex;
+}
+
+.card-container{
+    h1{
+        display: inline-flex;
+        flex-direction: column;
+    }
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 200px;
+}
+
+
+.info-container{
+    margin-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: auto;
+    padding:30px;
+
+    .item2{
+      width:450px;
+      flex: 0 0 auto;
+      margin: 0px;
+      text-align:center;
+      justify-content:center;
+      align-items:center;
+      padding-top:8rem;
+    }
+
+    .item{
+
+    img{
+        width:20rem;
+    }
+    padding-top:100px;
+    width:450px;
+    flex: 0 0 auto;
+    margin: 0px;
+    }
+
+    .item2 p{
+      margin:16px;
+      text-align:center;
+      justify-content:center;
+      padding:16px;
+    }
+
+    .item2 h1{
+      margin:16px;
+      padding-top:8px;
+    }
+
+}

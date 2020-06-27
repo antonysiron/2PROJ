@@ -1,0 +1,40 @@
+.cards{
+    img{
+        width: 180px;
+        height:200px;
+        margin: 0 auto;
+        padding: 25px 0;
+    }
+    width:300px;
+    height:400px;
+    margin: 16px;
+    border-radius: 1rem;
+    -webkit-box-shadow: 6px 4px 18px -3px #000000;
+    box-shadow: 10px 18px 40px 0px rgba(0,0,0,0.3);
+    display: inline-flex;
+    text-align: center;
+    flex-direction: column;
+    padding: 32px;
+}
+
+
+.icon-card{
+
+    img{
+        height: 220px;
+    }
+
+    h3{
+        text-align: center;
+    }
+
+    p{
+        text-align: justify;
+    }
+    width:300px;
+    margin: 24px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

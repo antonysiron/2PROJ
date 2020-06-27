@@ -16,7 +16,7 @@
                     <td></td>
                 </tr>
                 @foreach($surveys as $survey)
-                    <tr>
+                    <tr class='clickable-row'>
                         <td>{{ $survey->name }}</td>
                         <td>{{ $survey->category }}</td>
                         <td>{{ $survey->description}}</td>
@@ -32,10 +32,14 @@
                         </td>
                         <td>
                             @if($survey->status_survey == 'PUBLISHED')
-                                <a href="{{route('surveys.answer',['id'=>$survey->id])}}" class = "btn btn-success">Answer</a>
+                                <a href="{{route('surveys.view',['id'=>$survey->id])}}" class = "btn btn-info">View</a>
+                                <a href="{{route('answer.index',['id'=>$survey->id])}}" class = "btn btn-success">Answer</a>
                             @endif
                             @if($survey->status_survey == 'PUBLISHED' || $survey->status_survey == 'FINISHED')
-                                <a href="{{route('surveys.result',['id'=>$survey->id])}}" class = "btn btn-success">Results</a>
+                                <a href="{{route('surveys.result',['id'=>$survey->id, 'question_nb'=>1])}}" class = "btn btn-success">Results</a>
+                            @endif
+                            @if($survey->status_survey == 'FINISHED')
+                                <a href="{{route('surveys.reset',['id'=>$survey->id])}}" class = "btn btn-danger">Reset</a>
                             @endif
                             @if($survey->status_survey == 'SAVED')
                                 <a href="{{route('surveys.edit',['id'=>$survey->id])}}" class = "btn btn-info">Edit</a>

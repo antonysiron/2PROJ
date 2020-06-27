@@ -29,7 +29,7 @@ class QuestionController extends Controller
         $question = new Question();
         $question->survey_id = $id;
         if($questions->count() == 0)
-            $question->order_nb = 0;
+            $question->order_nb = 1;
         else
             $question->order_nb = $questions->last()->order_nb+1;
         $question->question = $request->input('question');
@@ -69,9 +69,30 @@ class QuestionController extends Controller
     }
 
 
-    public function update(Request $request, $id)
+    public function update(Request $request, $id, $question_id)
     {
-        //
+        $question = Question::find($question_id);
+
+        $question->question = $request->input('question');
+        $question->question_type = $request->input('question_type');
+
+        $question->choices = null;
+        $question->rating_scale = null;
+
+        switch ($request->input('question_type')){
+            case 'MULTIPLE_CHOICE':
+                $question->choices = $request->input('choices');
+                break;
+            case 'RATING':
+                $question->rating_scale = $request->input('rating_scale');
+                break;
+            default:
+                break;
+        }
+        $question->save();
+
+        $msg = 'Question updated successfully';
+        return redirect()->route('questions.index', ['id'=>$id])->with('msg', $msg);
     }
 
 
@@ -93,9 +114,9 @@ class QuestionController extends Controller
         $i = 0;
         $questions = Question::all()->where('survey_id', '=', $id)->sortBy('order_nb');
         foreach ($questions as $question){
+            $i++;
             $question->order_nb = $i;
             $question->save();
-            $i++;
         }
 
         $survey = Survey::find($id);

@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Answer;
 use App\Question;
-use Carbon\Carbon;
+use App\User;
+use App\UserAnswerSurvey;
 use Illuminate\Http\Request;
 use App\Survey;
 
@@ -33,6 +34,19 @@ class SurveyController extends Controller
         $survey->status_survey = 'SAVED';
         $survey->save();
         return redirect()->route('questions.create', ['id'=>$survey->id]);
+    }
+
+    public function show($id)
+    {
+        $survey = Survey::find($id);
+        $user_answer_survey = UserAnswerSurvey::all()
+            ->where('user_id', '=', auth()->user()->id)
+            ->where('survey_id', '=', $id);
+        if($user_answer_survey->count()>0)
+            $user_answer_survey = $user_answer_survey->first();
+        else
+            $user_answer_survey = null;
+        return view('survey.view', ['survey'=>$survey, 'user_answer_survey'=>$user_answer_survey]);
     }
 
     public function edit($id)
@@ -96,15 +110,92 @@ class SurveyController extends Controller
         return redirect()->route('surveys.index')->with('msg', 'The survey ended before its end date');
     }
 
-    public function answer($id)
+    public function reset($id)
     {
-        $surveys = Survey::all();
-        return view('survey.index',['surveys'=>$surveys]);
+        $questions = Question::all()->where('survey_id', '=', $id);
+        foreach ($questions as $question)
+        {
+            $answers = Answer::all()->where('question_id', '=', $question->id);
+            foreach ($answers as $answer)
+                $answer->delete();
+        }
+        $users_answer_survey = UserAnswerSurvey::all()->where('survey_id', '=', $id);
+        foreach ($users_answer_survey as $user_answer_survey)
+            $user_answer_survey->delete();
+
+        $survey = Survey::find($id);
+        $survey->status_survey = "SAVED";
+        $survey->save();
+
+        return redirect()->route('surveys.index')->with('msg', 'The survey has been reset');
     }
 
-    public function result($id)
+    public function result($id, $question_nb)
     {
-        $surveys = Survey::all();
-        return view('survey.result',['surveys'=>$surveys]);
+        $survey = Survey::find($id);
+        if($survey->nb_questions < $question_nb)
+            return redirect()->route('surveys.result', ['id'=>$id, 'question_nb'=>$question_nb+1]);
+
+        $question = Question::all()
+            ->where('survey_id', '=', $id)
+            ->where('order_nb', '=', $question_nb)->first();
+
+        $answers = Answer::all()
+            ->where('question_id', '=', $question->id);
+
+        switch($question->question_type){
+            case('CLOSED-ENDED'):
+                $nb_yes = $answers->where('closed_ended', '=', true)->count();
+                break;
+            case('OPEN-ENDED'):
+                $open_ended = array();
+                foreach ($answers as $answer) {
+                    if(isset($open_ended[$answer->open_ended]))
+                        $open_ended[$answer->open_ended]++;
+                    else
+                        $open_ended[$answer->open_ended] = 1;
+                }
+                break;
+            case('NUMERICAL'):
+                $numerical = array();
+                foreach ($answers as $answer) {
+                    if(isset($numerical[$answer->numerical]))
+                        $numerical[$answer->numerical]++;
+                    else
+                        $numerical[$answer->numerical] = 1;
+                }
+                break;
+            case('RATING'):
+                $rating = array();
+                for ($i=0; $i < $question->rating_scale+1; $i++)
+                    $rating[$i] = 0;
+                foreach($answers as $answer)
+                    $rating[$answer->rating]++;
+                break;
+            case('MULTIPLE_CHOICE'):
+                $multiple_choice = array();
+                $choices = explode(';', $question->choices);
+                foreach ($choices as $choice) {
+                    $ch = $choice;
+                    while($ch[0] == ' ')
+                        $ch = substr($ch, 1);
+                    $multiple_choice[$ch] = 0;
+                }
+                foreach ($answers as $answer){
+                    $selected_choices = explode(';', $answer->multiple_choice);
+                    foreach ($selected_choices as $choice)
+                        $multiple_choice[$choice]++;
+                }
+                break;
+            default:
+                break;
+        }
+
+        return view('survey.result',['id'=>$id, 'survey'=>$survey, 'question'=>$question, 'answers'=>$answers,
+            'nb_yes'=>isset($nb_yes)?$nb_yes:null,
+            'open_ended'=>isset($open_ended)?$open_ended:null,
+            'numerical'=>isset($numerical)?$numerical:null,
+            'rating'=>isset($rating)?$rating:null,
+            'multiple_choice'=>isset($multiple_choice)?$multiple_choice:null]);
     }
 }

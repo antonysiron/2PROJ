@@ -26,7 +26,7 @@
         <div class="col-sm-8 offset-sm-2">
             <h2 class="font-weight-bold" style="text-align: center; margin: 50px">Laissez nous votre avis, nous nous améliorons</h2>
             @foreach($feedbacks as $feedback)
-                <div class="row border-top" style="padding: 50px">
+                <div class="row border-top align-items-center" style="padding: 50px">
                     <div class="col-10">
                         <div class="row font-weight-bold" style="margin-bottom: 20px">
                             {{$feedback->title}}
@@ -46,18 +46,18 @@
                                 {{$feedback->date}}
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col" style="text-align: center">
-                                @for($i=1; $i<=5 ; $i++)
+                        <div class="row" style="margin-left: 15px; margin-right: 15px">
+                            @for($i=1; $i<=5 ; $i++)
+                                <div class="col" style="text-align: center; padding: 0">
                                     @if($feedback->mark-$i >= 0)
-                                        <img src="/images/star_full.png" style="width:18%">
+                                        <img src="/images/star_full.png" style="width:100%">
                                     @elseif($feedback->mark-$i == -0.5)
-                                        <img src="/images/star_half.png" style="width:18%">
+                                        <img src="/images/star_half.png" style="width:100%">
                                     @else
-                                        <img src="/images/star_empty.png" style="width:18%">
+                                        <img src="/images/star_empty.png" style="width:100%">
                                     @endif
-                                @endfor
-                            </div>
+                                </div>
+                            @endfor
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,399 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1739.5" height="3085.344" viewBox="0 0 1739.5 3085.344">
+  <defs>
+    <filter id="Rectangle_3" x="1148.5" y="0" width="591" height="210" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_2" x="575.5" y="0" width="591" height="210" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_1" x="1.5" y="0" width="591" height="210" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Tableau_tarifs" data-name="Tableau tarifs" transform="translate(-442.5 -265)">
+    <g id="Fond_tableau" data-name="Fond tableau" transform="translate(453 271)" fill="#f8f8f8" opacity="0.68">
+      <path d="M 1719 3078.84375 L 0.5 3078.84375 L 0.5 0.5002144575119019 L 1719 0.5002144575119019 L 1719 3078.84375 Z" stroke="none"/>
+      <path d="M 1 0.999755859375 L 1 3078.34326171875 L 1718.5 3078.34326171875 L 1718.5 0.999755859375 L 1 0.999755859375 M 0 -0.000244140625 L 1719.5 -0.000244140625 L 1719.5 3079.34326171875 L 0 3079.34326171875 L 0 -0.000244140625 Z" stroke="none" fill="#707070"/>
+    </g>
+    <g id="Bouton_s_inscrire" data-name="Bouton s&apos;inscrire" transform="translate(584.5 3207)">
+      <g id="orange" transform="translate(1146.5)">
+        <rect id="Rectangle_14" data-name="Rectangle 14" width="301" height="74" fill="#f29422"/>
+        <text id="S_inscrire" data-name="S&apos;inscrire" transform="translate(78 51)" fill="#fff" font-size="34" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">S&apos;inscrire</tspan></text>
+      </g>
+      <g id="vert" transform="translate(573.75)">
+        <rect id="Rectangle_14-2" data-name="Rectangle 14" width="301" height="74" fill="#bdde78"/>
+        <text id="S_inscrire-2" data-name="S&apos;inscrire" transform="translate(78 51)" fill="#fff" font-size="34" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">S&apos;inscrire</tspan></text>
+      </g>
+      <g id="_bleu" data-name=" bleu" transform="translate(1)">
+        <rect id="Rectangle_14-3" data-name="Rectangle 14" width="301" height="74" fill="#3b79b6"/>
+        <text id="S_inscrire-3" data-name="S&apos;inscrire" transform="translate(78 51)" fill="#fff" font-size="34" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">S&apos;inscrire</tspan></text>
+      </g>
+    </g>
+    <g id="Entête_tableau" data-name="Entête tableau" transform="translate(332 -1362)">
+      <g transform="matrix(1, 0, 0, 1, 110.5, 1627)" filter="url(#Rectangle_3)">
+        <g id="Rectangle_3-2" data-name="Rectangle 3" transform="translate(1157.5 6)" fill="#fff" stroke="#707070" stroke-width="1">
+          <rect width="573" height="192" stroke="none"/>
+          <rect x="0.5" y="0.5" width="572" height="191" fill="none"/>
+        </g>
+      </g>
+      <text id="Gratuit" transform="translate(1474 1749)" fill="#f29422" font-size="49" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">Gratuit</tspan></text>
+      <g transform="matrix(1, 0, 0, 1, 110.5, 1627)" filter="url(#Rectangle_2)">
+        <g id="Rectangle_2-2" data-name="Rectangle 2" transform="translate(584.5 6)" fill="#fff" stroke="#707070" stroke-width="1">
+          <rect width="573" height="192" stroke="none"/>
+          <rect x="0.5" y="0.5" width="572" height="191" fill="none"/>
+        </g>
+      </g>
+      <g id="prix_pro" data-name="prix pro" transform="translate(244 1082)">
+        <text id="_65_" data-name="65 €" transform="translate(810 668)" fill="#343232" font-size="44" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">65 €</tspan></text>
+        <text id="_m" data-name="/m" transform="translate(904 665)" fill="#343232" font-size="36" font-family="SegoeUI-Semilight, Segoe UI" font-weight="300" opacity="0.7"><tspan x="0" y="0">/m</tspan></text>
+      </g>
+      <text id="Entreprise" transform="translate(753 1748)" fill="#bdde78" font-size="49" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">Entreprise</tspan></text>
+      <g transform="matrix(1, 0, 0, 1, 110.5, 1627)" filter="url(#Rectangle_1)">
+        <g id="Rectangle_1-2" data-name="Rectangle 1" transform="translate(10.5 6)" fill="#fff" stroke="#707070" stroke-width="1">
+          <rect width="573" height="192" stroke="none"/>
+          <rect x="0.5" y="0.5" width="572" height="191" fill="none"/>
+        </g>
+      </g>
+      <g id="prix_essentiel" data-name="prix essentiel" transform="translate(-309 1082)">
+        <text id="_30_" data-name="30 €" transform="translate(810 668)" fill="#343232" font-size="44" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">30 €</tspan></text>
+        <text id="_m-2" data-name="/m" transform="translate(904 665)" fill="#343232" font-size="36" font-family="SegoeUI-Semilight, Segoe UI" font-weight="300" opacity="0.7"><tspan x="0" y="0">/m</tspan></text>
+      </g>
+      <text id="Essentials" transform="translate(213 1749)" fill="#3b79b6" font-size="49" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">Essentials</tspan></text>
+    </g>
+    <g id="ligne_séparation" data-name="ligne séparation">
+      <line id="Ligne_1" data-name="Ligne 1" x1="0.333" y2="2736" transform="translate(1026 401.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Ligne_1-2" data-name="Ligne 1" x2="8.167" y2="2674" transform="translate(1599.333 463.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Ligne_36" data-name="Ligne 36" x2="1719" transform="translate(453.5 587.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Ligne_37" data-name="Ligne 37" x2="1719" transform="translate(453.5 712.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Ligne_38" data-name="Ligne 38" x2="1719" transform="translate(454.5 837.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Ligne_39" data-name="Ligne 39" x2="1719" transform="translate(453.5 962.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Ligne_40" data-name="Ligne 40" x2="1719" transform="translate(454.5 1087.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Ligne_41" data-name="Ligne 41" x2="1719" transform="translate(453.5 1367.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Ligne_42" data-name="Ligne 42" x2="1719" transform="translate(455.5 1545.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Ligne_43" data-name="Ligne 43" x2="1719" transform="translate(453.5 1739.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Ligne_44" data-name="Ligne 44" x2="1719" transform="translate(456.5 1871.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Ligne_45" data-name="Ligne 45" x2="1719" transform="translate(442.5 2037.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Ligne_46" data-name="Ligne 46" x2="1719" transform="translate(449.5 2177.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Ligne_47" data-name="Ligne 47" x2="1719" transform="translate(456.5 2517.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Ligne_48" data-name="Ligne 48" x2="1719" transform="translate(453.5 2626.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Ligne_49" data-name="Ligne 49" x2="1719" transform="translate(452.5 2747.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Ligne_50" data-name="Ligne 50" x2="1719" transform="translate(452.5 2874.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Ligne_51" data-name="Ligne 51" x2="1719" transform="translate(456.5 2998.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Ligne_52" data-name="Ligne 52" x2="1719" transform="translate(449.5 3137.5)" fill="none" stroke="#707070" stroke-width="1"/>
+    </g>
+    <g id="Essentials-2" data-name="Essentials" transform="translate(44)">
+      <text id="Sondages_illimités" data-name="Sondages illimités" transform="translate(501 506)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="27">Sondages illimités</tspan></text>
+      <text id="Questions_illimités" data-name="Questions illimités" transform="translate(501 636)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="27">Questions illimités</tspan></text>
+      <text id="_2000_réponses_max_par_sondage" data-name="2000 réponses max par sondage" transform="translate(501 761)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="27">2000 réponses max par sondage</tspan></text>
+      <text id="Sondage_privé_ou_public" data-name="Sondage privé ou public" transform="translate(501 1004)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="27">Sondage privé ou public</tspan></text>
+      <text id="Possibilité_questionnaire_anonyme" data-name="Possibilité questionnaire anonyme" transform="translate(501 2091)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="27">Possibilité questionnaire anonyme</tspan></text>
+      <text id="_5_types_de_questions_disponibles_Ouvertes_texte_numérique_Fermées_Notation_Choix_multiples_" data-name="5 types de questions disponibles
+          Ouvertes (texte, numérique)
+          Fermées
+          Notation
+          Choix multiples
+" transform="translate(501 1136)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="27">5 types de questions disponibles</tspan><tspan x="0" y="60" xml:space="preserve">          Ouvertes (texte, numérique)</tspan><tspan x="0" y="93" xml:space="preserve">          Fermées</tspan><tspan x="0" y="126" xml:space="preserve">          Notation</tspan><tspan x="0" y="159" xml:space="preserve">          Choix multiples</tspan><tspan x="0" y="192"></tspan></text>
+      <text id="Création_de_quiz_avec_scoring_automatique_" data-name="Création de quiz avec scoring automatique
+" transform="translate(501 2545)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="27">Création de quiz avec scoring automatique</tspan></text>
+      <text id="Planifier_la_date_de_mise_en_ligne_et_de_fermeture_du_sondage_Personnalisation_des_mails_d_invitation" data-name="Planifier la date de mise en ligne et
+de fermeture du sondage
+Personnalisation des mails d&apos;invitation" transform="translate(501 1399)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="27">Planifier la date de mise en ligne et</tspan><tspan x="0" y="60">de fermeture du sondage</tspan><tspan x="0" y="93">Personnalisation des mails d&apos;invitation</tspan></text>
+      <text id="_5_templates_disponibles_Possibilité_d_acheter_d_autres_templates_" data-name="5 templates disponibles
+Possibilité d&apos;acheter d&apos;autres templates 
+
+" transform="translate(501 1597)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="27">5 templates disponibles</tspan><tspan x="0" y="60">Possibilité d&apos;acheter d&apos;autres templates </tspan><tspan x="0" y="93"></tspan><tspan x="0" y="126"></tspan></text>
+      <text id="Questionnaire_personnalisable_Couleur_de_l_arrière-plan_Logo_Couleur_des_bulles_" data-name="Questionnaire personnalisable
+          Couleur de l&apos;arrière-plan
+          Logo
+          Couleur des bulles
+
+" transform="translate(501 2231)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="27">Questionnaire personnalisable</tspan><tspan x="0" y="60" xml:space="preserve">          Couleur de l&apos;arrière-plan</tspan><tspan x="0" y="93" xml:space="preserve">          Logo</tspan><tspan x="0" y="126" xml:space="preserve">          Couleur des bulles</tspan></text>
+      <text id="Accès_aux_résultats_via_le_site_" data-name="Accès aux résultats via le site
+" transform="translate(501 1789)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="27">Accès aux résultats via le site</tspan></text>
+      <text id="Représentation_graphique_des_résultats_visible_sur_le_site" data-name="Représentation graphique des résultats visible sur le site" transform="translate(501 1918)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="27">Représentation graphique des résultats </tspan><tspan x="0" y="60">visible sur le site</tspan></text>
+      <text id="Exportation_des_données_récoltées_aux_formats_PDF_CSV_Excel" data-name="Exportation des données récoltées aux formats  PDF, CSV, Excel" transform="translate(501 2654)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="27">Exportation des données récoltées aux </tspan><tspan x="0" y="60" xml:space="preserve">formats  PDF, CSV, Excel</tspan></text>
+      <text id="Sécurité_des_données" data-name="Sécurité des données" transform="translate(501 881)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="27">Sécurité des données</tspan></text>
+      <g id="POINTS" transform="translate(-28 8)">
+        <circle id="Ellipse_48" data-name="Ellipse 48" cx="8" cy="8" r="8" transform="translate(497 892)" fill="#004aad"/>
+        <circle id="Ellipse_63" data-name="Ellipse 63" cx="8" cy="8" r="8" transform="translate(566 1173)" fill="#004aad"/>
+        <circle id="Ellipse_64" data-name="Ellipse 64" cx="8" cy="8" r="8" transform="translate(566 1205)" fill="#004aad"/>
+        <circle id="Ellipse_51" data-name="Ellipse 51" cx="8" cy="8" r="8" transform="translate(497 1400)" fill="#004aad"/>
+        <circle id="Ellipse_53" data-name="Ellipse 53" cx="8" cy="8" r="8" transform="translate(497 1792)" fill="#004aad"/>
+        <circle id="Ellipse_54" data-name="Ellipse 54" cx="8" cy="8" r="8" transform="translate(497 1931)" fill="#004aad"/>
+        <circle id="Ellipse_58" data-name="Ellipse 58" cx="8" cy="8" r="8" transform="translate(572 2267)" fill="#004aad"/>
+        <circle id="Ellipse_59" data-name="Ellipse 59" cx="8" cy="8" r="8" transform="translate(572 2304)" fill="#004aad"/>
+        <circle id="Ellipse_60" data-name="Ellipse 60" cx="8" cy="8" r="8" transform="translate(572 2341)" fill="#004aad"/>
+        <g id="Croix" transform="translate(489.826 502.5)">
+          <line id="Ligne_21" data-name="Ligne 21" y2="30" transform="translate(15)" fill="none" stroke="#004aad" stroke-width="8"/>
+          <line id="Ligne_22" data-name="Ligne 22" x2="30" transform="translate(0 15)" fill="none" stroke="#004aad" stroke-width="8"/>
+        </g>
+        <g id="Croix-2" data-name="Croix" transform="translate(489.826 632.5)">
+          <line id="Ligne_21-2" data-name="Ligne 21" y2="30" transform="translate(15)" fill="none" stroke="#004aad" stroke-width="8"/>
+          <line id="Ligne_22-2" data-name="Ligne 22" x2="30" transform="translate(0 15)" fill="none" stroke="#004aad" stroke-width="8"/>
+        </g>
+        <g id="Croix-3" data-name="Croix" transform="translate(489.826 754.5)">
+          <line id="Ligne_21-3" data-name="Ligne 21" y2="30" transform="translate(15)" fill="none" stroke="#004aad" stroke-width="8"/>
+          <line id="Ligne_22-3" data-name="Ligne 22" x2="30" transform="translate(0 15)" fill="none" stroke="#004aad" stroke-width="8"/>
+        </g>
+        <g id="Croix-4" data-name="Croix" transform="translate(489.826 1000.5)">
+          <line id="Ligne_21-4" data-name="Ligne 21" y2="30" transform="translate(15)" fill="none" stroke="#004aad" stroke-width="8"/>
+          <line id="Ligne_22-4" data-name="Ligne 22" x2="30" transform="translate(0 15)" fill="none" stroke="#004aad" stroke-width="8"/>
+        </g>
+        <g id="Croix-5" data-name="Croix" transform="translate(489.826 1130.5)">
+          <line id="Ligne_21-5" data-name="Ligne 21" y2="30" transform="translate(15)" fill="none" stroke="#004aad" stroke-width="8"/>
+          <line id="Ligne_22-5" data-name="Ligne 22" x2="30" transform="translate(0 15)" fill="none" stroke="#004aad" stroke-width="8"/>
+        </g>
+        <g id="Croix-6" data-name="Croix" transform="translate(558.826 1228.5)">
+          <line id="Ligne_21-6" data-name="Ligne 21" y2="30" transform="translate(15)" fill="none" stroke="#004aad" stroke-width="8"/>
+          <line id="Ligne_22-6" data-name="Ligne 22" x2="30" transform="translate(0 15)" fill="none" stroke="#004aad" stroke-width="8"/>
+        </g>
+        <g id="Croix-7" data-name="Croix" transform="translate(558.826 1265.5)">
+          <line id="Ligne_21-7" data-name="Ligne 21" y2="30" transform="translate(15)" fill="none" stroke="#004aad" stroke-width="8"/>
+          <line id="Ligne_22-7" data-name="Ligne 22" x2="30" transform="translate(0 15)" fill="none" stroke="#004aad" stroke-width="8"/>
+        </g>
+        <g id="Croix-8" data-name="Croix" transform="translate(489.826 1606.5)">
+          <line id="Ligne_21-8" data-name="Ligne 21" y2="30" transform="translate(15)" fill="none" stroke="#004aad" stroke-width="8"/>
+          <line id="Ligne_22-8" data-name="Ligne 22" x2="30" transform="translate(0 15)" fill="none" stroke="#004aad" stroke-width="8"/>
+        </g>
+        <g id="Croix-9" data-name="Croix" transform="translate(489.826 2084.5)">
+          <line id="Ligne_21-9" data-name="Ligne 21" y2="30" transform="translate(15)" fill="none" stroke="#004aad" stroke-width="8"/>
+          <line id="Ligne_22-9" data-name="Ligne 22" x2="30" transform="translate(0 15)" fill="none" stroke="#004aad" stroke-width="8"/>
+        </g>
+        <g id="Croix-10" data-name="Croix" transform="translate(489.826 2227.5)">
+          <line id="Ligne_21-10" data-name="Ligne 21" y2="30" transform="translate(15)" fill="none" stroke="#004aad" stroke-width="8"/>
+          <line id="Ligne_22-10" data-name="Ligne 22" x2="30" transform="translate(0 15)" fill="none" stroke="#004aad" stroke-width="8"/>
+        </g>
+        <g id="Croix-11" data-name="Croix" transform="translate(489.826 2540.5)">
+          <line id="Ligne_21-11" data-name="Ligne 21" y2="30" transform="translate(15)" fill="none" stroke="#004aad" stroke-width="8"/>
+          <line id="Ligne_22-11" data-name="Ligne 22" x2="30" transform="translate(0 15)" fill="none" stroke="#004aad" stroke-width="8"/>
+        </g>
+        <g id="Croix-12" data-name="Croix" transform="translate(489.826 2660.5)">
+          <line id="Ligne_21-12" data-name="Ligne 21" y2="30" transform="translate(15)" fill="none" stroke="#004aad" stroke-width="8"/>
+          <line id="Ligne_22-12" data-name="Ligne 22" x2="30" transform="translate(0 15)" fill="none" stroke="#004aad" stroke-width="8"/>
+        </g>
+      </g>
+    </g>
+    <g id="Gratuit-2" data-name="Gratuit" transform="translate(20)">
+      <text id="Création_de_5_sondages_par_mois" data-name="Création de 5 sondages par mois" transform="translate(1651 533)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="0">Création de 5 sondages par mois</tspan></text>
+      <text id="_20_questions_par_sondage" data-name="20 questions par sondage" transform="translate(1651 663)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="0">20 questions par sondage</tspan></text>
+      <text id="_200_réponses_maximum_par_mois_" data-name="200 réponses maximum par mois " transform="translate(1651 788)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="0">200 réponses maximum par mois </tspan></text>
+      <text id="Sécurité_des_données-2" data-name="Sécurité des données" transform="translate(1651 908)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="0">Sécurité des données</tspan></text>
+      <text id="Planifier_la_date_de_mise_en_ligne_et_de_fin_" data-name="Planifier la date de mise en ligne et de fin
+" transform="translate(1651 1426)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="0">Planifier la date de mise en ligne et de fin</tspan><tspan x="0" y="33"></tspan></text>
+      <text id="_2_templates_de_questionnaire_gratuit_Possibilité_d_acheter_d_autres_templates_à_partir_de_2_" data-name="2 templates de questionnaire gratuit
+   Possibilité d&apos;acheter d&apos;autres templates 
+   (à partir de 2€)
+" transform="translate(1643 1615)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="0">2 templates de questionnaire gratuit</tspan><tspan x="0" y="33" xml:space="preserve">   Possibilité d&apos;acheter d&apos;autres templates </tspan><tspan x="0" y="66" xml:space="preserve">   (à partir de 2€)</tspan><tspan x="0" y="99"></tspan></text>
+      <text id="Accès_au_résultats_via_le_site" data-name="Accès au résultats via le site" transform="translate(1651 1816)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="0">Accès au résultats via le site</tspan></text>
+      <text id="Représentation_graphique_des_résultats_visible_sur_le_site_" data-name="Représentation graphique des résultats 
+visible sur le site    " transform="translate(1651 1934)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="0">Représentation graphique des résultats </tspan><tspan x="0" y="33" xml:space="preserve">visible sur le site    </tspan></text>
+      <text id="_3_types_de_questions_disponibles_Ouvertes_-_Réponse_texte_-_Réponse_numérique_Fermées" data-name="3 types de questions disponibles
+        Ouvertes
+	- Réponse texte
+	- Réponse numérique
+        Fermées" transform="translate(1651 1163)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="0">3 types de questions disponibles</tspan><tspan x="0" y="33" xml:space="preserve">        Ouvertes</tspan><tspan x="0" y="66" xml:space="preserve">	- Réponse texte</tspan><tspan x="0" y="99" xml:space="preserve">	- Réponse numérique</tspan><tspan x="0" y="132" xml:space="preserve">        Fermées</tspan></text>
+      <text id="Sondage_public" data-name="Sondage public" transform="translate(1651 1031)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="0">Sondage public</tspan></text>
+      <g id="POINTS-2" data-name="POINTS" transform="translate(1114 8)">
+        <circle id="Ellipse_10" data-name="Ellipse 10" cx="8" cy="8" r="8" transform="translate(497 515)" fill="#f29422"/>
+        <circle id="Ellipse_46" data-name="Ellipse 46" cx="8" cy="8" r="8" transform="translate(497 645)" fill="#f29422"/>
+        <circle id="Ellipse_47" data-name="Ellipse 47" cx="8" cy="8" r="8" transform="translate(497 775)" fill="#f29422"/>
+        <circle id="Ellipse_48-2" data-name="Ellipse 48" cx="8" cy="8" r="8" transform="translate(497 892)" fill="#f29422"/>
+        <circle id="Ellipse_49" data-name="Ellipse 49" cx="8" cy="8" r="8" transform="translate(497 1009)" fill="#f29422"/>
+        <circle id="Ellipse_50" data-name="Ellipse 50" cx="8" cy="8" r="8" transform="translate(497 1135)" fill="#f29422"/>
+        <circle id="Ellipse_69" data-name="Ellipse 69" cx="8" cy="8" r="8" transform="translate(569 1172)" fill="#f29422"/>
+        <circle id="Ellipse_70" data-name="Ellipse 70" cx="8" cy="8" r="8" transform="translate(569 1268)" fill="#f29422"/>
+        <circle id="Ellipse_51-2" data-name="Ellipse 51" cx="8" cy="8" r="8" transform="translate(497 1400)" fill="#f29422"/>
+        <circle id="Ellipse_52" data-name="Ellipse 52" cx="8" cy="8" r="8" transform="translate(497 1590)" fill="#f29422"/>
+        <circle id="Ellipse_53-2" data-name="Ellipse 53" cx="8" cy="8" r="8" transform="translate(497 1792)" fill="#f29422"/>
+        <circle id="Ellipse_54-2" data-name="Ellipse 54" cx="8" cy="8" r="8" transform="translate(497 1910)" fill="#f29422"/>
+      </g>
+    </g>
+    <g id="Entreprise-2" data-name="Entreprise" transform="translate(28)">
+      <text id="Sondages_illimités-2" data-name="Sondages illimités" transform="translate(1057 533)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="0">Sondages illimités</tspan></text>
+      <text id="Questions_illimités_" data-name="Questions illimités
+" transform="translate(1057 636)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="27">Questions illimités</tspan></text>
+      <text id="Sécurité_des_données_" data-name="Sécurité des données
+" transform="translate(1057 908)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="0">Sécurité des données</tspan><tspan x="0" y="33"></tspan></text>
+      <text id="Nombre_de_réponses_illimité_" data-name="Nombre de réponses illimité
+" transform="translate(1057 788)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="0">Nombre de réponses illimité</tspan><tspan x="0" y="33"></tspan></text>
+      <text id="Sondage_privé_ou_public_" data-name="Sondage privé ou public
+" transform="translate(1057 1031)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="0">Sondage privé ou public</tspan><tspan x="0" y="33"></tspan></text>
+      <text id="Possibilité_questionnaire_anonyme_" data-name="Possibilité questionnaire anonyme
+" transform="translate(1057 2091)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="27">Possibilité questionnaire anonyme</tspan></text>
+      <text id="Créer_des_questionnaires_multilingues_" data-name="Créer des questionnaires multilingues
+" transform="translate(1057 3056)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="0">Créer des questionnaires multilingues</tspan><tspan x="0" y="33"></tspan></text>
+      <text id="_5_types_de_questions_disponibles_Ouvertes_texte_numérique_Fermées_Notation_Choix_multiples_Inclure_des_images_dans_les_questions_" data-name="5 types de questions disponibles
+         Ouvertes (texte, numérique)
+         Fermées
+         Notation
+         Choix multiples
+  Inclure des images dans les questions
+" transform="translate(1057 1163)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="0">5 types de questions disponibles</tspan><tspan x="0" y="33" xml:space="preserve">         Ouvertes (texte, numérique)</tspan><tspan x="0" y="66" xml:space="preserve">         Fermées</tspan><tspan x="0" y="99" xml:space="preserve">         Notation</tspan><tspan x="0" y="132" xml:space="preserve">         Choix multiples</tspan><tspan x="0" y="165" xml:space="preserve">  Inclure des images dans les questions</tspan><tspan x="0" y="198"></tspan></text>
+      <text id="Possibilité_de_branchement_conditionnel_des_questions" data-name="Possibilité de branchement conditionnel 
+des questions" transform="translate(1057 2932)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="0">Possibilité de branchement conditionnel </tspan><tspan x="0" y="33">des questions</tspan></text>
+      <text id="Création_de_quiz_avec_scoring_automatique_2" data-name="Création de quiz avec scoring automatique
+" transform="translate(1057 2548)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="27">Création de quiz avec scoring automatique</tspan></text>
+      <text id="Planifier_la_date_de_mise_en_ligne_et_de_fin_Possibilité_de_mailing_automatique_Personnalisation_avancée_des_mails_d_invitation_" data-name="Planifier la date de mise en ligne et de fin
+Possibilité de mailing automatique 
+Personnalisation avancée des mails d&apos;invitation 
+" transform="translate(1057 1426)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="0">Planifier la date de mise en ligne et de fin</tspan><tspan x="0" y="35">Possibilité de mailing automatique </tspan><tspan x="0" y="70">Personnalisation avancée des mails d&apos;invitation </tspan><tspan x="0" y="105"></tspan></text>
+      <text id="Tous_les_templates_du_site_disponibles" data-name="Tous les templates du site disponibles" transform="translate(1057 1635)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="0">Tous les templates du site disponibles</tspan></text>
+      <text id="Questionnaire_entièrement_personnalisable_Logo_Couleur_de_l_arrière_plan_Couleur_des_bulles_de_conversation_Format_des_bulles_de_conversation_Avatar_du_client_Possibilité_d_enregistrer_les_templates_créés_" data-name="Questionnaire entièrement personnalisable 
+      Logo
+      Couleur de l&apos;arrière plan
+      Couleur des bulles de conversation
+      Format des bulles de conversation
+      Avatar du client
+      Possibilité d&apos;enregistrer les templates créés
+" transform="translate(1057 2231)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="27">Questionnaire entièrement personnalisable </tspan><tspan x="0" y="63" xml:space="preserve">      Logo</tspan><tspan x="0" y="99" xml:space="preserve">      Couleur de l&apos;arrière plan</tspan><tspan x="0" y="135" xml:space="preserve">      Couleur des bulles de conversation</tspan><tspan x="0" y="171" xml:space="preserve">      Format des bulles de conversation</tspan><tspan x="0" y="207" xml:space="preserve">      Avatar du client</tspan><tspan x="0" y="243" xml:space="preserve">      Possibilité d&apos;enregistrer les templates créés</tspan></text>
+      <text id="Accès_aux_résultats_via_le_site_2" data-name="Accès aux résultats via le site
+" transform="translate(1057 1816)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="0">Accès aux résultats via le site</tspan><tspan x="0" y="33"></tspan></text>
+      <text id="Représentation_graphique_avancées_des_résultats_visible_sur_le_site_Possibilité_de_filtrer_segmenter_les_résultats_" data-name="Représentation graphique avancées des résultats 
+visible sur le site
+Possibilité de filtrer / segmenter les résultats
+" transform="translate(1057 1930)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="0">Représentation graphique avancées des résultats </tspan><tspan x="0" y="33">visible sur le site</tspan><tspan x="0" y="66">Possibilité de filtrer / segmenter les résultats</tspan><tspan x="0" y="99"></tspan></text>
+      <text id="Exportation_des_données_récoltées_aux_formats_PDF_CSV_Excel-2" data-name="Exportation des données récoltées aux formats 
+PDF, CSV, Excel" transform="translate(1057 2681)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="0">Exportation des données récoltées aux formats </tspan><tspan x="0" y="33">PDF, CSV, Excel</tspan></text>
+      <text id="Possibilité_d_exporter_les_graphiques_sous_forme_de_PowerPoint_Word_ou_PDF" data-name="Possibilité d&apos;exporter les graphiques sous forme 
+de PowerPoint, Word ou PDF" transform="translate(1057 2805)" fill="#343232" font-size="25" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="0">Possibilité d&apos;exporter les graphiques sous forme </tspan><tspan x="0" y="33">de PowerPoint, Word ou PDF</tspan></text>
+      <g id="POINTS-3" data-name="POINTS" transform="translate(528 8)">
+        <g id="Ellipse_10-2" data-name="Ellipse 10" transform="translate(497 515)" fill="#bdde78" stroke="#c9d990" stroke-width="1">
+          <circle cx="8" cy="8" r="8" stroke="none"/>
+          <circle cx="8" cy="8" r="7.5" fill="none"/>
+        </g>
+        <g id="Ellipse_46-2" data-name="Ellipse 46" transform="translate(497 645)" fill="#bdde78" stroke="#c9d990" stroke-width="1">
+          <circle cx="8" cy="8" r="8" stroke="none"/>
+          <circle cx="8" cy="8" r="7.5" fill="none"/>
+        </g>
+        <g id="Ellipse_48-3" data-name="Ellipse 48" transform="translate(497 892)" fill="#bdde78" stroke="#c9d990" stroke-width="1">
+          <circle cx="8" cy="8" r="8" stroke="none"/>
+          <circle cx="8" cy="8" r="7.5" fill="none"/>
+        </g>
+        <g id="Ellipse_49-2" data-name="Ellipse 49" transform="translate(497 1009)" fill="#bdde78" stroke="#c9d990" stroke-width="1">
+          <circle cx="8" cy="8" r="8" stroke="none"/>
+          <circle cx="8" cy="8" r="7.5" fill="none"/>
+        </g>
+        <g id="Ellipse_50-2" data-name="Ellipse 50" transform="translate(497 1135)" fill="#bdde78" stroke="#c9d990" stroke-width="1">
+          <circle cx="8" cy="8" r="8" stroke="none"/>
+          <circle cx="8" cy="8" r="7.5" fill="none"/>
+        </g>
+        <g id="Ellipse_65" data-name="Ellipse 65" transform="translate(566 1173)" fill="#bdde78" stroke="#c9d990" stroke-width="1">
+          <circle cx="8" cy="8" r="8" stroke="none"/>
+          <circle cx="8" cy="8" r="7.5" fill="none"/>
+        </g>
+        <g id="Ellipse_66" data-name="Ellipse 66" transform="translate(566 1204)" fill="#bdde78" stroke="#c9d990" stroke-width="1">
+          <circle cx="8" cy="8" r="8" stroke="none"/>
+          <circle cx="8" cy="8" r="7.5" fill="none"/>
+        </g>
+        <g id="Ellipse_67" data-name="Ellipse 67" transform="translate(566 1236)" fill="#bdde78" stroke="#c9d990" stroke-width="1">
+          <circle cx="8" cy="8" r="8" stroke="none"/>
+          <circle cx="8" cy="8" r="7.5" fill="none"/>
+        </g>
+        <g id="Ellipse_68" data-name="Ellipse 68" transform="translate(566 1268)" fill="#bdde78" stroke="#c9d990" stroke-width="1">
+          <circle cx="8" cy="8" r="8" stroke="none"/>
+          <circle cx="8" cy="8" r="7.5" fill="none"/>
+        </g>
+        <g id="Ellipse_51-3" data-name="Ellipse 51" transform="translate(497 1400)" fill="#bdde78" stroke="#c9d990" stroke-width="1">
+          <circle cx="8" cy="8" r="8" stroke="none"/>
+          <circle cx="8" cy="8" r="7.5" fill="none"/>
+        </g>
+        <g id="Ellipse_53-3" data-name="Ellipse 53" transform="translate(497 1792)" fill="#bdde78" stroke="#c9d990" stroke-width="1">
+          <circle cx="8" cy="8" r="8" stroke="none"/>
+          <circle cx="8" cy="8" r="7.5" fill="none"/>
+        </g>
+        <g id="Ellipse_55" data-name="Ellipse 55" transform="translate(497 2095)" fill="#bdde78" stroke="#c9d990" stroke-width="1">
+          <circle cx="8" cy="8" r="8" stroke="none"/>
+          <circle cx="8" cy="8" r="7.5" fill="none"/>
+        </g>
+        <g id="Ellipse_61" data-name="Ellipse 61" transform="translate(539 2271)" fill="#bdde78" stroke="#c9d990" stroke-width="1">
+          <circle cx="8" cy="8" r="8" stroke="none"/>
+          <circle cx="8" cy="8" r="7.5" fill="none"/>
+        </g>
+        <g id="Ellipse_62" data-name="Ellipse 62" transform="translate(539 2303)" fill="#bdde78" stroke="#c9d990" stroke-width="1">
+          <circle cx="8" cy="8" r="8" stroke="none"/>
+          <circle cx="8" cy="8" r="7.5" fill="none"/>
+        </g>
+        <g id="Ellipse_56" data-name="Ellipse 56" transform="translate(497 2554)" fill="#bdde78" stroke="#c9d990" stroke-width="1">
+          <circle cx="8" cy="8" r="8" stroke="none"/>
+          <circle cx="8" cy="8" r="7.5" fill="none"/>
+        </g>
+        <g id="Ellipse_57" data-name="Ellipse 57" transform="translate(497 2670)" fill="#bdde78" stroke="#c9d990" stroke-width="1">
+          <circle cx="8" cy="8" r="8" stroke="none"/>
+          <circle cx="8" cy="8" r="7.5" fill="none"/>
+        </g>
+        <g id="Croix-13" data-name="Croix" transform="translate(489.826 761.5)">
+          <line id="Ligne_21-13" data-name="Ligne 21" y2="30" transform="translate(15)" fill="none" stroke="#c9d990" stroke-width="8"/>
+          <line id="Ligne_22-13" data-name="Ligne 22" x2="30" transform="translate(0 15)" fill="none" stroke="#c9d990" stroke-width="8"/>
+        </g>
+        <g id="Croix-14" data-name="Croix" transform="translate(489.826 1426.5)">
+          <line id="Ligne_21-14" data-name="Ligne 21" y2="30" transform="translate(15)" fill="none" stroke="#c9d990" stroke-width="8"/>
+          <line id="Ligne_22-14" data-name="Ligne 22" x2="30" transform="translate(0 15)" fill="none" stroke="#c9d990" stroke-width="8"/>
+        </g>
+        <g id="Croix-15" data-name="Croix" transform="translate(504.826 1296.5)">
+          <line id="Ligne_21-15" data-name="Ligne 21" y2="30" transform="translate(15)" fill="none" stroke="#c9d990" stroke-width="8"/>
+          <line id="Ligne_22-15" data-name="Ligne 22" x2="30" transform="translate(0 15)" fill="none" stroke="#c9d990" stroke-width="8"/>
+        </g>
+        <g id="Croix-16" data-name="Croix" transform="translate(489.826 1467.5)">
+          <line id="Ligne_21-16" data-name="Ligne 21" y2="30" transform="translate(15)" fill="none" stroke="#c9d990" stroke-width="8"/>
+          <line id="Ligne_22-16" data-name="Ligne 22" x2="30" transform="translate(0 15)" fill="none" stroke="#c9d990" stroke-width="8"/>
+        </g>
+        <g id="Croix-17" data-name="Croix" transform="translate(489.826 1605.5)">
+          <line id="Ligne_21-17" data-name="Ligne 21" y2="30" transform="translate(15)" fill="none" stroke="#c9d990" stroke-width="8"/>
+          <line id="Ligne_22-17" data-name="Ligne 22" x2="30" transform="translate(0 15)" fill="none" stroke="#c9d990" stroke-width="8"/>
+        </g>
+        <g id="Croix-18" data-name="Croix" transform="translate(489.826 1897.5)">
+          <line id="Ligne_21-18" data-name="Ligne 21" y2="30" transform="translate(15)" fill="none" stroke="#c9d990" stroke-width="8"/>
+          <line id="Ligne_22-18" data-name="Ligne 22" x2="30" transform="translate(0 15)" fill="none" stroke="#c9d990" stroke-width="8"/>
+        </g>
+        <g id="Croix-19" data-name="Croix" transform="translate(489.826 1967.5)">
+          <line id="Ligne_21-19" data-name="Ligne 21" y2="30" transform="translate(15)" fill="none" stroke="#c9d990" stroke-width="8"/>
+          <line id="Ligne_22-19" data-name="Ligne 22" x2="30" transform="translate(0 15)" fill="none" stroke="#c9d990" stroke-width="8"/>
+        </g>
+        <g id="Croix-20" data-name="Croix" transform="translate(489.826 2225.5)">
+          <line id="Ligne_21-20" data-name="Ligne 21" y2="30" transform="translate(15)" fill="none" stroke="#c9d990" stroke-width="8"/>
+          <line id="Ligne_22-20" data-name="Ligne 22" x2="30" transform="translate(0 15)" fill="none" stroke="#c9d990" stroke-width="8"/>
+        </g>
+        <g id="Croix-21" data-name="Croix" transform="translate(489.826 2786.5)">
+          <line id="Ligne_21-21" data-name="Ligne 21" y2="30" transform="translate(15)" fill="none" stroke="#c9d990" stroke-width="8"/>
+          <line id="Ligne_22-21" data-name="Ligne 22" x2="30" transform="translate(0 15)" fill="none" stroke="#c9d990" stroke-width="8"/>
+        </g>
+        <g id="Croix-22" data-name="Croix" transform="translate(489.826 2916.5)">
+          <line id="Ligne_21-22" data-name="Ligne 21" y2="30" transform="translate(15)" fill="none" stroke="#c9d990" stroke-width="8"/>
+          <line id="Ligne_22-22" data-name="Ligne 22" x2="30" transform="translate(0 15)" fill="none" stroke="#c9d990" stroke-width="8"/>
+        </g>
+        <g id="Croix-23" data-name="Croix" transform="translate(489.826 3024.5)">
+          <line id="Ligne_21-23" data-name="Ligne 21" y2="30" transform="translate(15)" fill="none" stroke="#c9d990" stroke-width="8"/>
+          <line id="Ligne_22-23" data-name="Ligne 22" x2="30" transform="translate(0 15)" fill="none" stroke="#c9d990" stroke-width="8"/>
+        </g>
+        <g id="Croix-24" data-name="Croix" transform="translate(531.826 2334.5)">
+          <line id="Ligne_21-24" data-name="Ligne 21" y2="30" transform="translate(15)" fill="none" stroke="#c9d990" stroke-width="8"/>
+          <line id="Ligne_22-24" data-name="Ligne 22" x2="30" transform="translate(0 15)" fill="none" stroke="#c9d990" stroke-width="8"/>
+        </g>
+        <g id="Croix-25" data-name="Croix" transform="translate(531.826 2372.5)">
+          <line id="Ligne_21-25" data-name="Ligne 21" y2="30" transform="translate(15)" fill="none" stroke="#c9d990" stroke-width="8"/>
+          <line id="Ligne_22-25" data-name="Ligne 22" x2="30" transform="translate(0 15)" fill="none" stroke="#c9d990" stroke-width="8"/>
+        </g>
+        <g id="Croix-26" data-name="Croix" transform="translate(531.826 2410.5)">
+          <line id="Ligne_21-26" data-name="Ligne 21" y2="30" transform="translate(15)" fill="none" stroke="#c9d990" stroke-width="8"/>
+          <line id="Ligne_22-26" data-name="Ligne 22" x2="30" transform="translate(0 15)" fill="none" stroke="#c9d990" stroke-width="8"/>
+        </g>
+        <g id="Croix-27" data-name="Croix" transform="translate(531.826 2448.5)">
+          <line id="Ligne_21-27" data-name="Ligne 21" y2="30" transform="translate(15)" fill="none" stroke="#c9d990" stroke-width="8"/>
+          <line id="Ligne_22-27" data-name="Ligne 22" x2="30" transform="translate(0 15)" fill="none" stroke="#c9d990" stroke-width="8"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

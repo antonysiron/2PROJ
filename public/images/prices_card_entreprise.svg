@@ -1,0 +1,29 @@
+<svg id="Entreprise" xmlns="http://www.w3.org/2000/svg" width="720" height="900" viewBox="0 0 720 900">
+  <g id="Rectangle_12" data-name="Rectangle 12" fill="#fff" stroke="#97b754" stroke-width="4">
+    <rect width="720" height="900" rx="55" stroke="none"/>
+    <rect x="2" y="2" width="716" height="896" rx="53" fill="none"/>
+  </g>
+  <text id="Et_plus..." data-name="Et plus..." transform="translate(302 837)" fill="#7f9355" font-size="40" font-family="SegoeUI-SemilightItalic, Segoe UI" font-weight="300" font-style="italic"><tspan x="0" y="0">Et plus...</tspan></text>
+  <text id="Sondages_illimités_Questions_illimités_Réponses_illimités_Sécurité_des_données" data-name="Sondages illimités
+
+Questions illimités
+
+Réponses illimités
+
+Sécurité des données" transform="translate(218 456)" fill="#343232" font-size="32" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="0">Sondages illimités</tspan><tspan x="0" y="43"></tspan><tspan x="0" y="86">Questions illimités</tspan><tspan x="0" y="129"></tspan><tspan x="0" y="172">Réponses illimités</tspan><tspan x="0" y="215"></tspan><tspan x="0" y="258">Sécurité des données</tspan></text>
+  <g id="points" transform="translate(-475 -466)">
+    <circle id="Ellipse_10" data-name="Ellipse 10" cx="8" cy="8" r="8" transform="translate(647 903)" fill="#bdde78"/>
+    <circle id="Ellipse_11" data-name="Ellipse 11" cx="8" cy="8" r="8" transform="translate(647 987)" fill="#bdde78"/>
+    <circle id="Ellipse_12" data-name="Ellipse 12" cx="8" cy="8" r="8" transform="translate(647 1072)" fill="#bdde78"/>
+    <circle id="Ellipse_13" data-name="Ellipse 13" cx="8" cy="8" r="8" transform="translate(647 1156)" fill="#bdde78"/>
+  </g>
+  <g id="bouton_s_inscrire_vert" data-name="bouton s&apos;inscrire vert" transform="translate(-570 -468)">
+    <rect id="Rectangle_14" data-name="Rectangle 14" width="301" height="74" transform="translate(780 768)" fill="#bdde78"/>
+    <text id="S_inscrire" data-name="S&apos;inscrire" transform="translate(858 819)" fill="#fff" font-size="34" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">S&apos;inscrire</tspan></text>
+  </g>
+  <g id="prix_" data-name="prix " transform="translate(-594 -456)">
+    <text id="_65_" data-name="65 €" transform="translate(810 702)" fill="#343232" font-size="75" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">65 €</tspan></text>
+    <text id="_mois" data-name="/mois" transform="translate(977 699)" fill="#343232" font-size="50" font-family="SegoeUI-Semilight, Segoe UI" font-weight="300" opacity="0.7"><tspan x="0" y="0">/mois</tspan></text>
+  </g>
+  <text id="Entreprise-2" data-name="Entreprise" transform="translate(215 115)" fill="#bdde78" font-size="61" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">Entreprise</tspan></text>
+</svg>

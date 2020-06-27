@@ -1,0 +1,29 @@
+<svg id="Essentiels" xmlns="http://www.w3.org/2000/svg" width="720" height="900" viewBox="0 0 720 900">
+  <g id="Rectangle_12" data-name="Rectangle 12" fill="#fff" stroke="#3b79b6" stroke-width="4">
+    <rect width="720" height="900" rx="55" stroke="none"/>
+    <rect x="2" y="2" width="716" height="896" rx="53" fill="none"/>
+  </g>
+  <text id="Et_plus..." data-name="Et plus..." transform="translate(302 837)" fill="#3b79b6" font-size="40" font-family="SegoeUI-SemilightItalic, Segoe UI" font-weight="300" font-style="italic"><tspan x="0" y="0">Et plus...</tspan></text>
+  <text id="Sondages_illimités_Questions_illimités_2000_réponses_par_sondage_Sécurité_des_données" data-name="Sondages illimités
+
+Questions illimités
+
+2000 réponses par sondage
+
+Sécurité des données" transform="translate(116 485)" fill="#343232" font-size="32" font-family="SegoeUI-Light, Segoe UI" font-weight="300"><tspan x="0" y="0">Sondages illimités</tspan><tspan x="0" y="43"></tspan><tspan x="0" y="86">Questions illimités</tspan><tspan x="0" y="129"></tspan><tspan x="0" y="172">2000 réponses par sondage</tspan><tspan x="0" y="215"></tspan><tspan x="0" y="258">Sécurité des données</tspan></text>
+  <g id="points" transform="translate(-578 -437)">
+    <ellipse id="Ellipse_10" data-name="Ellipse 10" cx="8.5" cy="8" rx="8.5" ry="8" transform="translate(647 903)" fill="#3b79b6"/>
+    <ellipse id="Ellipse_11" data-name="Ellipse 11" cx="8.5" cy="8" rx="8.5" ry="8" transform="translate(647 987)" fill="#3b79b6"/>
+    <ellipse id="Ellipse_12" data-name="Ellipse 12" cx="8.5" cy="8" rx="8.5" ry="8" transform="translate(647 1072)" fill="#3b79b6"/>
+    <ellipse id="Ellipse_23" data-name="Ellipse 23" cx="8.5" cy="8" rx="8.5" ry="8" transform="translate(647 1156)" fill="#3b79b6"/>
+  </g>
+  <g id="bouton_s_inscrire_vert" data-name="bouton s&apos;inscrire vert" transform="translate(-570 -468)">
+    <rect id="Rectangle_14" data-name="Rectangle 14" width="301" height="74" transform="translate(780 768)" fill="#3b79b6"/>
+    <text id="S_inscrire" data-name="S&apos;inscrire" transform="translate(858 819)" fill="#fff" font-size="34" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">S&apos;inscrire</tspan></text>
+  </g>
+  <g id="prix_" data-name="prix " transform="translate(-594 -456)">
+    <text id="_30_" data-name="30 €" transform="translate(810 702)" fill="#343232" font-size="75" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">30 €</tspan></text>
+    <text id="_mois" data-name="/mois" transform="translate(977 699)" fill="#343232" font-size="50" font-family="SegoeUI-Semilight, Segoe UI" font-weight="300" opacity="0.7"><tspan x="0" y="0">/mois</tspan></text>
+  </g>
+  <text id="Essentials" transform="translate(223 115)" fill="#3b79b6" font-size="61" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">Essentials</tspan></text>
+</svg>

@@ -11024,6 +11024,11 @@ a.text-dark:focus {
   text-align: justify;
 }
 
+.card {
+  background-color: transparent;
+  border: none;
+}
+
 .banner {
   background: #54C1D8;
   color: #ffffff;
@@ -11141,5 +11146,9 @@ a.text-dark:focus {
 
 .copyright p {
   margin: 0;
+}
+
+.form-control {
+  border-radius: 12px;
 }
 

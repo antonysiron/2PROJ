@@ -1,4 +1,4 @@
-<div class="footer" style="margin-top: 150px">
+<div class="footer">
     <div>
         <h3>Contact</h3>
         <h1>Big Brother</h1>

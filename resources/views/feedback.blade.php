@@ -50,9 +50,9 @@
             <div class="col-sm-8 offset-sm-2">
                 <form action="{{route('feedback.store')}}" method = "post">
                 @csrf
-                    <h2 style="text-align: center; margin-bottom: 50px">Leave us a feedback !</h2>
+                    <h2 style="text-align: center; margin-bottom: 100px">Ecrivez notre histoire</h2>
                     <div class="form-group" style="margin-bottom: 30px">
-                        <label for="mark">Rate us : </label>
+                        <label for="mark">Notez nous : </label>
                         <select name="mark" id="mark" style="width: 60px" required>
                             <option value=""></option>
                             <option value="0">0</option>
@@ -70,14 +70,16 @@
                          / 5
                     </div>
                     <div class="form-group" style="margin-bottom: 30px">
-                        <label for="title">Title : </label>
+                        <label for="title">Sujet : </label>
                         <input type="text" name = "title" id = "title" class="form-control" required>
                     </div>
                     <div class="form-group" style="margin-bottom: 30px">
-                        <label for="content">Feedback : </label>
+                        <label for="content">Avis : </label>
                         <textarea name="content" id="content" class="form-control" required></textarea>
                     </div>
-                    <button type = "submit" name = "btn-action" class = "btn btn-success" value = "save" style="margin-top: 18px">Submit</button>
+                    <div style="text-align: right">
+                        <button type = "submit" name = "btn-action" class = "btn btn-info" value = "save" style="margin-top: 18px">Envoyer</button>
+                    </div>
                 </form>
             </div>
         </div>

@@ -27,7 +27,7 @@ class AddExpirationDateToSurveysRemoveDuration extends Migration
     public function down()
     {
         Schema::table('surveys', function (Blueprint $table) {
-            $table->date('expiration_date');
+            $table->dropColumn('expiration_date');
             $table->tinyInteger('duration')->default('0');
         });
     }

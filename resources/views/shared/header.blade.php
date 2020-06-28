@@ -23,10 +23,10 @@
                             <a class="nav-link line" href="{{ route('prices') }}">{{ __('Tarif') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link line" href="{{ route('contact.index') }}">{{ __('Contact') }}</a>
+                            <a class="nav-link line" href="{{ route('home.example') }}">{{ __('Exemple') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link line" href="{{ route('home.example') }}">{{ __('Exemple') }}</a>
+                            <a class="nav-link line" href="{{ route('contact.index') }}">{{ __('Contact') }}</a>
                         </li>
                 </ul>
 

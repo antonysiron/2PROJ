@@ -52,7 +52,7 @@
                         <!-- search bar -->
                         <div class="row align-items-center" style="margin-right: 50px">
                             <div class="col" style="padding: 0; margin-left: 2vw">
-                                <input id="SearchBarHeader" class="font-italic" type="text" style="width: 100%; height: 30px; text-align: center; background-color: #d6e3ef; border:0px">
+                                <input id="SearchBarHeader" class="font-italic" placeholder="rechercher" type="text" style="height: 30px; text-align: center; background-color: #d6e3ef; border:0px">
                             </div>
                             <a id="SearchBtnHeader" href="{{route('search', ['search_value'=>'/'])}}/" class="col-1" style="padding: 0;">
                                 <img src="/images/search_icon.svg" style="height: 30px;">

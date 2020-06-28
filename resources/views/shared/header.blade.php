@@ -47,6 +47,7 @@
                         @endif
 
                         @if (Route::has('login'))
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
 
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -60,6 +61,7 @@
                                 <a class="dropdown-item" href="{{ route('user.profile') }}">{{ __('Mon compte') }}</a>
                             </div>
                         </li>
+
                         @endif
 
                     @else

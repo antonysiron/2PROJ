@@ -10949,7 +10949,7 @@ a.text-dark:focus {
   width: 50px;
   height: 45px;
   text-transform: capitalize;
-  color: #000;
+  color: rgba(0, 0, 0, 0.5);
   text-decoration: none;
 }
 
@@ -10960,6 +10960,10 @@ a.text-dark:focus {
 
 .nav-item {
   text-transform: uppercase;
+}
+
+.nav-item a {
+  text-decoration: none;
 }
 
 .nav-link {

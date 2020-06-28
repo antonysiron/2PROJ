@@ -39,7 +39,7 @@
                         </li>
 
 
-                    
+
                         @if (Route::has('register'))
                             <li class="nav-item">
                                 <a class="nav-link" id="btn-main" href="{{ route('register') }}">{{ __('Inscription') }}</a>
@@ -49,7 +49,7 @@
                         @if (Route::has('login'))
 
                         <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <a id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
 
                                 <span>
                                     <img class="avatar" src="/images/pp.png" alt="avatar">
@@ -64,7 +64,7 @@
 
                     @else
                         <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <a id="navbarDropdown" class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ __('Mes sondages') }} <span class="caret avatar"></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -75,7 +75,7 @@
 
 
                         <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <a id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 <span class="avatar">
                                     {{ Auth::user()->name }}
                                 </span>

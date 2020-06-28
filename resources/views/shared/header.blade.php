@@ -79,12 +79,18 @@
                             </div>
                         </li>
                     @endguest
-                    <li>
-                        <img class="avatar" src="/images/pp.png" alt="avatar">
+
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+
+                            <span>
+                                <img class="avatar" src="/images/pp.png" alt="avatar">
+                            </span>
+                        </a>
+
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ route('user.profile') }}">{{ __('Mon compte') }}</a>
                         </div>
-
                     </li>
 
 

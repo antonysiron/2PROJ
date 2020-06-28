@@ -88,7 +88,7 @@
                 </div>
                 <div class="row">
                     <div class="col" style="text-align: left; margin-left: 3vw; margin-right: 3vw">
-                        <a href="#" style="font-size: 1vw">En savoir plus ></a>
+                        <a href="{{route('home.example')}}" style="font-size: 1vw">En savoir plus ></a>
                     </div>
                 </div>
             </div>

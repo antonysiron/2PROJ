@@ -10,34 +10,50 @@
 
     <div>
         <h3>Ressources</h3>
-        <p>Surveys</p>
-        <p>Analyses</p>
-        <p>Tarifs</p>
-        <p>Contact</p>
+        <a class="nav-link" href="/surveys">
+            <p>Surveys</p>
+        </a>
+        <a class="nav-link" href="#">
+            <p>Analyses</p>
+        </a>
+        <a class="nav-link" href="/prices">
+            <p>Tarifs</p>
+        </a>
+        <a class="nav-link" href="/contact">
+            <p>Contact</p>
+        </a>
     </div>
 
     <div>
         <h3>Nous Suivre</h3>
         <div class="icons">
             <img src="/images/facebook.png" alt="">
-            <p>Facebook</p>
+            <a class="nav-link" href="#">
+                <p>Facebook</p>
+            </a>
         </div>
 
         <div class="icons">
         <img src="/images/twitter.png" alt="">
-        <p>Twitter</p>
+            <a class="nav-link" href="#">
+                <p>Twitter</p>
+            </a>
         </div>
 
 
         <div class="icons">
         <img src="/images/instagram.png" alt="">
-        <p>Instagram</p>
+            <a class="nav-link" href="#">
+                <p>Instagram</p>
+            </a>
         </div>
 
 
         <div class="icons">
         <img src="/images/pinterest.png" alt="">
-        <p>Pinterest</p>
+            <a class="nav-link" href="#">
+                <p>Pinterest</p>
+            </a>
         </div>
 
     </div>

@@ -11120,6 +11120,10 @@ a.text-dark:focus {
   width: 80px;
 }
 
+.footer .nav-link {
+  color: #ffffff;
+}
+
 .footer .icons {
   display: flex;
   align-items: center;

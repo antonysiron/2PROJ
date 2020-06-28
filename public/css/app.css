@@ -11120,8 +11120,9 @@ a.text-dark:focus {
   width: 80px;
 }
 
-.footer .nav-link {
+.footer .nav-link p {
   color: #ffffff;
+  margin: 0;
 }
 
 .footer .icons {

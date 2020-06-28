@@ -37,12 +37,13 @@
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     .navbar-expand-md{
         .avatar{
-            display: none;
-
-
+        display: none;
+    }
+        .line{
+        border: none;
     }
 }
 }

@@ -84,4 +84,5 @@
         </div>
     </div>
 </div>
+<script src="{{asset('js/question.js')}}"></script>
 @endsection

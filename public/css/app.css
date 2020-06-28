@@ -10982,11 +10982,11 @@ a.text-dark:focus {
 .bg-main {
   background-image: url("/images/robo-bg.svg");
   background-repeat: no-repeat;
-  height: 30rem;
 }
 
 .bg-main img {
   height: 400px;
+  width: 100%;
 }
 
 .bg-robo {

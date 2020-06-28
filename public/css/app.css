@@ -11061,11 +11061,19 @@ a.text-dark:focus {
 .banner h1 {
   width: 10em;
   padding-top: 100px;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
 .banner img {
   height: 42rem;
   margin-left: 200px;
+}
+
+.header {
+  font-family: "Tauri-Regular", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
 @media only screen and (max-width: 600px) {

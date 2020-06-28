@@ -6,12 +6,12 @@
 @section('content')
 
 <div class="banner">
-    <h1 style="width: 35%; margin-top: 8%; margin-left: 5%">Poser des questions n'a jamais été aussi SIMPLE</h1>
+    <h1 style="width: 35%; margin-top: 8%; margin-left: 5%">Poser des questions n'a jamais été aussi <strong>SIMPLE</strong></h1>
     <img src="/images/robo.svg" alt="robot image">
 </div>
 
-<div class="text-center column justify-content-center p-4">
-    <h1>Des engagements pour répondre à vos besoins</h1>
+<div class="text-center text-uppercase column justify-content-center p-4">
+    <h1 class="header">Des engagements pour répondre à vos besoins</h1>
     <p>- des points clés -</p>
 </div>
 
@@ -109,7 +109,7 @@
     </div>
     <div class="row">
         <div class="col" style="text-align: center; margin-top: 0.5vw;">
-            <h1 style="font-size: 2vw">Ils nous font confiance</h1>
+            <h1 class="header" style="font-size: 2vw">Ils nous font confiance</h1>
         </div>
     </div>
     <div class="row" style="margin-bottom: 3vw">

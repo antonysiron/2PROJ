@@ -5,9 +5,16 @@
 }
 
 .avatar{
+
+    a{
+        color:#000;
+        text-decoration:none;
+    }
     width:50px;
     height:45px;
     text-transform: capitalize;
+    color:#000;
+    text-decoration:none;
 }
 
 .nav-item{

@@ -37,11 +37,31 @@
                         <li class="nav-item">
                             <a class="nav-link" id="btn" href="{{ route('login') }}">{{ __('Connexion') }}</a>
                         </li>
+
+
+                    
                         @if (Route::has('register'))
                             <li class="nav-item">
                                 <a class="nav-link" id="btn-main" href="{{ route('register') }}">{{ __('Inscription') }}</a>
                             </li>
                         @endif
+
+                        @if (Route::has('login'))
+
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+
+                                <span>
+                                    <img class="avatar" src="/images/pp.png" alt="avatar">
+                                </span>
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('user.profile') }}">{{ __('Mon compte') }}</a>
+                            </div>
+                        </li>
+                        @endif
+
                     @else
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -55,7 +75,7 @@
 
 
                         <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <a id="navbarDropdown" class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 <span class="avatar">
                                     {{ Auth::user()->name }}
                                 </span>
@@ -80,18 +100,7 @@
                         </li>
                     @endguest
 
-                    <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
 
-                            <span>
-                                <img class="avatar" src="/images/pp.png" alt="avatar">
-                            </span>
-                        </a>
-
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('user.profile') }}">{{ __('Mon compte') }}</a>
-                        </div>
-                    </li>
 
 
 

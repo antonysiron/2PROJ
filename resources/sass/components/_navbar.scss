@@ -22,6 +22,11 @@
         text-decoration: none;
     }
     text-transform: uppercase;
+
+    .line{
+        border-left: 1px solid $color-orange;
+        height: 30px;     
+    }
 }
 
 .nav-link{

@@ -10966,6 +10966,11 @@ a.text-dark:focus {
   text-decoration: none;
 }
 
+.nav-item .line {
+  border-left: 1px solid #ffc107;
+  height: 30px;
+}
+
 .nav-link {
   margin-right: 12px;
 }

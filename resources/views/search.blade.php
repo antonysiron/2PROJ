@@ -7,9 +7,9 @@
     <div class="index-container">
         <div class="row align-items-start">
             <div class="col" style="padding: 0; margin-left: 2vw">
-                <input id="SearchBar" class="font-italic" placeholder="rechercher" type="text" style="width: 100%; height: 30px; text-align: center; background-color: #d6e3ef; border:0px">
+                <input autofocus="true" id="SearchBar" class="font-italic" value="{{$search_value}}" placeholder="rechercher" type="text" style="width: 100%; height: 30px; text-align: center; background-color: #d6e3ef; border:0px">
             </div>
-            <a id="SearchBtn" href="{{route('search', ['search_value'=>' '])}}/" class="col-1" style="padding: 0;">
+            <a id="SearchBtn" href="{{route('search', ['search_value'=>'/'])}}/" class="col-1" style="padding: 0;">
                 <img src="/images/search_icon.svg" style="height: 30px;">
             </a>
         </div>

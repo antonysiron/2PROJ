@@ -83,8 +83,8 @@
                             <a href="{{ route('surveys.index') }}">
                                 <img src="/images/list.png" alt="">
                             </a>
-                            
-                            <a href="#">
+
+                            <a href="{{ route('surveys.index') }}">
                                 <img src="/images/list2.png" alt="">
                             </a>
                         </div>

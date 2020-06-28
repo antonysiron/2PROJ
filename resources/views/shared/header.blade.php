@@ -79,6 +79,16 @@
                             </div>
                         </li>
                     @endguest
+                    <li>
+                        <img class="avatar" src="/images/pp.png" alt="avatar">
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('user.profile') }}">{{ __('Mon compte') }}</a>
+                        </div>
+
+                    </li>
+
+
+
                 </ul>
             </div>
         </div>

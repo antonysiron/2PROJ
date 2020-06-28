@@ -19,32 +19,54 @@
                     <!-- Authentication Links -->
                     @guest
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('surveys.index') }}">{{ __('Sondage') }}</a>
+                            <a class="nav-link line" href="{{ route('surveys.index') }}">{{ __('Sondage') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('surveys.index') }}">{{ __('Analyse') }}</a>
+                            <a class="nav-link line" href="{{ route('surveys.index') }}">{{ __('Analyse') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('feedback.index') }}">{{ __('Avis') }}</a>
+                            <a class="nav-link line" href="{{ route('feedback.index') }}">{{ __('Avis') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('prices') }}">{{ __('Tarif') }}</a>
+                            <a class="nav-link line" href="{{ route('prices') }}">{{ __('Tarif') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('contact.index') }}">{{ __('Contact') }}</a>
+                            <a class="nav-link line" href="{{ route('contact.index') }}">{{ __('Contact') }}</a>
                         </li>
 
                         <li class="nav-item">
                             <a class="nav-link" id="btn" href="{{ route('login') }}">{{ __('Connexion') }}</a>
                         </li>
+
+
+
                         @if (Route::has('register'))
                             <li class="nav-item">
                                 <a class="nav-link" id="btn-main" href="{{ route('register') }}">{{ __('Inscription') }}</a>
                             </li>
                         @endif
+
+                        @if (Route::has('login'))
+                        <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search">
+
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+
+                                <span>
+                                    <img class="avatar" src="/images/pp.png" alt="avatar">
+                                </span>
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('user.profile') }}">{{ __('Mon compte') }}</a>
+                            </div>
+                        </li>
+
+                        @endif
+
                     @else
                         <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <a id="navbarDropdown" class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ __('Mes sondages') }} <span class="caret avatar"></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -55,7 +77,7 @@
 
 
                         <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <a id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 <span class="avatar">
                                     {{ Auth::user()->name }}
                                 </span>
@@ -79,6 +101,11 @@
                             </div>
                         </li>
                     @endguest
+
+
+
+
+
                 </ul>
             </div>
         </div>

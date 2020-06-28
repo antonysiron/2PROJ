@@ -10946,16 +10946,41 @@ a.text-dark:focus {
 }
 
 .avatar {
-  width: 30px;
+  width: 50px;
+  height: 45px;
   text-transform: capitalize;
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+}
+
+.avatar a {
+  color: #000;
+  text-decoration: none;
 }
 
 .nav-item {
   text-transform: uppercase;
 }
 
+.nav-item a {
+  text-decoration: none;
+}
+
+.nav-item .line {
+  border-left: 2px solid #ffc107;
+  height: 25px;
+  padding: 0 16px;
+  margin-top: 12px;
+}
+
 .nav-link {
   margin-right: 12px;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar-expand-md .avatar {
+    display: none;
+  }
 }
 
 #btn-main {
@@ -11061,11 +11086,19 @@ a.text-dark:focus {
 .banner h1 {
   width: 10em;
   padding-top: 100px;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
 .banner img {
   height: 42rem;
   margin-left: 200px;
+}
+
+.header {
+  font-family: "Tauri-Regular", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
 @media only screen and (max-width: 600px) {

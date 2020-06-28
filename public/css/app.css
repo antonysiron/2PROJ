@@ -10967,8 +10967,10 @@ a.text-dark:focus {
 }
 
 .nav-item .line {
-  border-left: 1px solid #ffc107;
-  height: 30px;
+  border-left: 2px solid #ffc107;
+  height: 25px;
+  padding: 0 16px;
+  margin-top: 12px;
 }
 
 .nav-link {

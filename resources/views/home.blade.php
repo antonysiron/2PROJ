@@ -33,7 +33,7 @@
         <img src="/images/questions.png" alt="question icon">
         <h3>QUESTIONS</h3>
         <p>
-            Sondages ouverts ou fermés. Définissez une durée pour vos questionnaire et ils s'acieront et se fermeront automatiquement.
+            Sondages ouverts ou fermés. Définissez une durée pour vos questionnaire et ils s'ouvriront et se fermeront automatiquement.
         </p>
     </div>
 
@@ -76,10 +76,10 @@
                 </div>
                 <div class="row">
                     <div class="col" style="text-align: left; margin: 3vw; margin-bottom: 1.5vw; font-size: 1.25vw;">
-                        <div>Nos surveys sont sous la forme d'un chat en ligne.</div>
+                        <div>Nos sondages sont sous la forme d'un tchat en ligne.</div>
                         <div>En effet cela donna l'impression à vos clients de discuter et d'intéragir
                             avec une personne et non de répondre à une liste infinie de questions
-                            comme vous pouvez retrouver sur d'autres sites de sondage.</div>
+                            comme vous pouvez le retrouver sur d'autres sites de sondage.</div>
                         <div>De plus, vous pouvez entièrement personnaliser votre questionnaire.
                             En passant par l'image du fond, la couleur des bulles, l'avatar de votre client,
                             le format et la taille des bulles, et bien plus encore.</div>

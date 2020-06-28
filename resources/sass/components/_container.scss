@@ -16,6 +16,8 @@
     margin-bottom: 80px;
     display: flex;
     width: 100%;
+    font-family: 'Tauri-Regular', sans-serif;
+
 }
 
 
@@ -43,14 +45,21 @@
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 200px;
+    font-family: 'Tauri-Regular', sans-serif;
+
 }
 
 
 //survey-container
 .survey-container{
+    h1{
+        font-family: 'Tauri-Regular', sans-serif;
+    }
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Tauri-Regular', sans-serif;
+
 }
 
 .index-container{

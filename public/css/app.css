@@ -11007,6 +11007,7 @@ a.text-dark:focus {
   text-align: center;
   flex-direction: column;
   padding: 32px;
+  font-family: "OpenSans", sans-serif;
 }
 
 .cards img {
@@ -11023,6 +11024,7 @@ a.text-dark:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: "Tauri-Regular", sans-serif;
 }
 
 .icon-card img {
@@ -11031,16 +11033,19 @@ a.text-dark:focus {
 
 .icon-card h3 {
   text-align: center;
+  font-family: "Tauri-Regular", sans-serif;
 }
 
 .icon-card p {
   text-align: justify;
+  font-family: "OpenSans", sans-serif;
 }
 
 .login-card {
   background-color: transparent;
   border: none;
   margin-bottom: 200px;
+  font-family: "Tauri-Regular", sans-serif;
 }
 
 .banner {
@@ -11050,6 +11055,7 @@ a.text-dark:focus {
   margin-bottom: 80px;
   display: flex;
   width: 100%;
+  font-family: "Tauri-Regular", sans-serif;
 }
 
 .banner h1 {
@@ -11080,6 +11086,7 @@ a.text-dark:focus {
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 200px;
+  font-family: "Tauri-Regular", sans-serif;
 }
 
 .card-container h1 {
@@ -11091,6 +11098,11 @@ a.text-dark:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: "Tauri-Regular", sans-serif;
+}
+
+.survey-container h1 {
+  font-family: "Tauri-Regular", sans-serif;
 }
 
 .index-container {

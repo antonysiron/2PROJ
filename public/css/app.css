@@ -10960,6 +10960,7 @@ a.text-dark:focus {
 
 .nav-item {
   text-transform: uppercase;
+  width: 100%;
 }
 
 .nav-item a {
@@ -10970,7 +10971,6 @@ a.text-dark:focus {
 .nav-item .line {
   border-left: 2px solid #ffc107;
   height: 25px;
-  margin-top: 12px;
   padding: 0 50px;
 }
 
@@ -10980,6 +10980,7 @@ a.text-dark:focus {
 
 .nav-link {
   margin-right: 12px;
+  width: 120px;
 }
 
 @media only screen and (max-width: 800px) {

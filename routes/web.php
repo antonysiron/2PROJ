@@ -18,6 +18,7 @@ Route::post('/feedback', 'FeedbackController@store')->name('feedback.store')->mi
 Route::get('/contact', 'ContactController@index')->name('contact.index');
 Route::post('/contact', 'ContactController@store')->name('contact.store');
 Route::get('/example', 'HomeController@example')->name('home.example');
+Route::get('/search/{search_value}', 'SearchController@index')->name('search');
 
 // Survey routes
 Route::get('/surveys', 'SurveyController@index')->name('surveys.index')->middleware('auth', 'verified', 'surveyExpiry');

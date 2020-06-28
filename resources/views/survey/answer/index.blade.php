@@ -27,11 +27,11 @@
                         </label>
                     </div>
                 @elseif($question->question_type == 'OPEN-ENDED')
-                    <textarea name="open-ended" style="width: 100%"></textarea>
+                    <textarea name="open-ended" style="width: 70%;" required></textarea>
                 @elseif($question->question_type == 'NUMERICAL')
-                    <input type="number" name="numerical" placeholder=" enter a number" style="text-align: center">
+                    <input type="number" name="numerical" placeholder=" enter a number" style="text-align: center" required>
                 @elseif($question->question_type == 'RATING')
-                        <input type="number" name="rating" min="0" max="{{$question->rating_scale}}" placeholder=" entrez un nombre" style="text-align: center; width: 20%">
+                        <input type="number" name="rating" min="0" max="{{$question->rating_scale}}" placeholder=" entrez un nombre" style="text-align: center; width: 20%" required>
                         / {{$question->rating_scale}}
                 @elseif($question->question_type == 'MULTIPLE_CHOICE')
                     @for($i=0; $i<sizeof($choices); $i++)
@@ -49,7 +49,7 @@
                     {{$question->order_nb}} / {{$survey->nb_questions}}
                 </div>
                 <div>
-                    <button type = "submit" name = "btn-action" class = "btn btn-info" value = "{{$question->question_type}}" style="margin-top: 100px;">
+                    <button id="checkBtn" type = "submit" name = "btn-action" class = "btn btn-info" value = "{{$question->question_type}}" style="margin-top: 100px;">
                         @if($question->order_nb >= $survey->nb_questions)
                             Terminé
                         @else
@@ -60,4 +60,7 @@
             </form>
         </div>
     </div>
+    @if($question->question_type == 'MULTIPLE_CHOICE')
+        <script src="{{asset('js/answer.js')}}"></script>
+    @endif
 @endsection

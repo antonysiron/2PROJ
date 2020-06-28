@@ -1,5 +1,4 @@
 <header>
-
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <a class="navbar-brand" href="{{ url('/') }}">
                 <img src="/images/logo.png" alt="brand logo">
@@ -26,7 +25,9 @@
                         <li class="nav-item">
                             <a class="nav-link line" href="{{ route('contact.index') }}">{{ __('Contact') }}</a>
                         </li>
-
+                        <li class="nav-item">
+                            <a class="nav-link line" href="{{ route('home.example') }}">{{ __('Exemple') }}</a>
+                        </li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -47,12 +48,21 @@
                             </li>
                         @endif
 
-                        @if (Route::has('login'))
-                        <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search">
+                    @endguest
+                        <!-- search bar -->
+                        <div class="row align-items-center" style="margin-right: 50px">
+                            <div class="col" style="padding: 0; margin-left: 2vw">
+                                <input id="SearchBarHeader" class="font-italic" placeholder="rechercher" type="text" style="width: 100%; height: 30px; text-align: center; background-color: #d6e3ef; border:0px">
+                            </div>
+                            <a id="SearchBtnHeader" href="{{route('search', ['search_value'=>'/'])}}/" class="col-1" style="padding: 0;">
+                                <img src="/images/search_icon.svg" style="height: 30px;">
+                            </a>
+                        </div>
 
+                    @guest
+                        @if (Route::has('login'))
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-
                                 <span>
                                     <img class="avatar" src="/images/pp.png" alt="avatar">
                                 </span>
@@ -102,12 +112,8 @@
                             </div>
                         </li>
                     @endguest
-
-
-
-
-
                 </ul>
             </div>
     </nav>
+    <script src="{{asset('js/header.js')}}"></script>
 </header>

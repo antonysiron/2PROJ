@@ -1,3 +1,5 @@
+
+
 .navbar-brand{
     img{
         width: 200px;
@@ -20,15 +22,22 @@
 .nav-item{
     a{
         text-decoration: none;
+        text-align: center;
     }
     text-transform: uppercase;
 
     .line{
+
+        a{
+            margin: 0 20px;
+
+        }
         border-left: 2px solid $color-orange;
         height: 25px;
-        padding: 0 16px;
         margin-top:12px;
+        padding: 0 50px;
     }
+    width: 100%;
 
 }
 
@@ -44,6 +53,8 @@
     }
         .line{
         border: none;
+        padding: 4px 10px;
     }
+    text-align: left;
 }
 }

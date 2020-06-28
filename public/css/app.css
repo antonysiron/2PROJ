@@ -10964,13 +10964,18 @@ a.text-dark:focus {
 
 .nav-item a {
   text-decoration: none;
+  text-align: center;
 }
 
 .nav-item .line {
   border-left: 2px solid #ffc107;
   height: 25px;
-  padding: 0 16px;
   margin-top: 12px;
+  padding: 0 50px;
+}
+
+.nav-item .line a {
+  margin: 0 20px;
 }
 
 .nav-link {
@@ -10978,12 +10983,17 @@ a.text-dark:focus {
 }
 
 @media only screen and (max-width: 800px) {
+  .navbar-expand-md {
+    text-align: left;
+  }
+
   .navbar-expand-md .avatar {
     display: none;
   }
 
   .navbar-expand-md .line {
     border: none;
+    padding: 4px 10px;
   }
 }
 

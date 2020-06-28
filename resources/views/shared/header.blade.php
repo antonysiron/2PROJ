@@ -1,4 +1,5 @@
 <header>
+
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <a class="navbar-brand" href="{{ url('/') }}">
                 <img src="/images/logo.png" alt="brand logo">
@@ -10,13 +11,6 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav mr-auto">
-
-                </ul>
-
-                <!-- Right Side Of Navbar -->
-                <ul class="navbar-nav ml-auto">
-                    <!-- Authentication Links -->
-                    @guest
                         <li class="nav-item">
                             <a class="nav-link line" href="{{ route('surveys.index') }}">{{ __('Sondage') }}</a>
                         </li>
@@ -32,6 +26,14 @@
                         <li class="nav-item">
                             <a class="nav-link line" href="{{ route('contact.index') }}">{{ __('Contact') }}</a>
                         </li>
+
+                </ul>
+
+                <!-- Right Side Of Navbar -->
+                <ul class="navbar-nav">
+                    <!-- Authentication Links -->
+                    @guest
+
 
                         <li class="nav-item">
                             <a class="nav-link" id="btn" href="{{ route('login') }}">{{ __('Connexion') }}</a>

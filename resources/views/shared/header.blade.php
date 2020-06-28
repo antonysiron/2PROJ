@@ -25,7 +25,9 @@
                         <li class="nav-item">
                             <a class="nav-link line" href="{{ route('contact.index') }}">{{ __('Contact') }}</a>
                         </li>
-
+                        <li class="nav-item">
+                            <a class="nav-link line" href="{{ route('home.example') }}">{{ __('Exemple') }}</a>
+                        </li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->

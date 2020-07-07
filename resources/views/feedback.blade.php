@@ -1,8 +1,5 @@
 @extends('layouts.app')
 @section('title', 'Feedback')
-@section('path')
-    / Feedback
-@endsection
 @section('content')
     <img src="/images/feedback_background.png" style="width: 100%; position:absolute; z-index: -999">
     <img src="/images/feedback_background_shadow.svg" style="width: 100%; position:absolute; z-index: -998">

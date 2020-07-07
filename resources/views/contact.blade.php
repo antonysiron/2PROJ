@@ -1,8 +1,5 @@
 @extends('layouts.app')
 @section('title', 'Contact')
-@section('path')
-    / Contact
-@endsection
 @section('content')
     <img src="/images/contact_background.png" style="width: 100%; position:absolute; z-index: -999">
     <img src="/images/contact_background_shadow.svg" style="width: 100%; position:absolute; z-index: -998; margin-top:-0.75vw">

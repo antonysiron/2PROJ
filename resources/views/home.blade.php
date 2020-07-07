@@ -1,8 +1,5 @@
 @extends('layouts.app')
 @section('title', 'Home')
-@section('path')
-    / Home
-@endsection
 @section('content')
 <div class="banner">
     <h1 style="width: 35%; margin-top: 8%; margin-left: 5%">Poser des questions n'a jamais été aussi <strong>SIMPLE</strong></h1>

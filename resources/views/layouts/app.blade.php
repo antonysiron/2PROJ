@@ -50,6 +50,9 @@
 
 
         </main>
+        <div style="position:absolute;">
+            @yield('path')
+        </div>
         @yield('content')
     </div>
     @include('shared/footer')

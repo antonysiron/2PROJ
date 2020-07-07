@@ -1,8 +1,5 @@
 @extends('layouts.app')
 @section('title', 'Prices')
-@section('path')
-    / Prices
-@endsection
 @section('content')
     <img src="/images/prices_banner_background.png" style="width:100%; height: 60vw; position:absolute; z-index: -999">
     <h1 style="text-align: center; color: white; font-size: 2.5vw; margin: 3vw; margin-bottom: 10vw">Choisissez un abonnement ou payez à l'unité</h1>
